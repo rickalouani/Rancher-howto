@@ -58,43 +58,41 @@ screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kub
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-2.png)
 
-7. Step 7
+7. **Click CREATE A SERVICE**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-3.png)
 
-8. Step 8
+8. Give the Service Account a name
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-4.png)
 
-9. Step 9
+9. On the select a role tab select **project/viewer**, **kubernetes-engine/admin**, 
+   and **service-account/user** IAM roles
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-5.png)
 
-10. Step 10
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-6.png)
 
-11. Step 11
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-7.png)
 
-12. Step 12
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-8.png)
 
-13. Step 13
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-9.png)
 
-14. Step 14
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-10.png)
 
-15. Step 15
+10. **Click on the three dots to the right of the new service account name** as seen in 
+    the above screenshot
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-11.png)
 
-16. Step 16
+16. **Click Create**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-12.png)
 17. Step 17
