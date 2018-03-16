@@ -14,7 +14,7 @@ cloud-provider-gnostic and cli driven. So, to deploy and manage multiple
 Kubernetes clusters requires system administrator skills and the clusters
 have to be managed independently.
 
-In this article, I am going to show the power of Rancher 2.0 and use it to deploy a kubernetes cluster
+In this article, I am going to demonstrate the power of Rancher 2.0 and use it to deploy a kubernetes cluster
 4 different ways:
    1. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
    2. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
