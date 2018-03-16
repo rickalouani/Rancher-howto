@@ -124,30 +124,6 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-12.png)
-Pros: all of the Rancher AD/policy stuff works.  Workload experience works
 
-Cons: have to use Google's current version of k8s. NOt much confi options with kubernetes.
 
-Create a local cluster using RKE
-
-pros: Runs anywhere
-
-Pros: easy to create a resiliant cluster (3 etcd nodes, 2 managers, 1+ workers)
-
-Pros: easy upgrade.
-
-Create a cluster in Digital Ocean/Packet/AWS
-
-using the Node Drivers in Rancher (which are based on Docker Machine)
-
-Pros - runs on any cloud - easy to automate
-
-Pros - rancher automates the upgrade of the cluster
-
-Cons - not as tightly integrated with the cloud provider as GKE/EKS/Azure Kubernetes.
-
-Import a cluster that you create outside of Rancher
-
-Pros - visibility into any cluster, even if it already exists
-
-Cons - Rancher doesn't have the ability to expand the number of nodes.
+**Enabling RKE on Google Cloud Platform**
