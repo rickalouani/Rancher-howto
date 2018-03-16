@@ -100,7 +100,6 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 12. A Json file will be saved to your local machine. We need this file to continue setting up the cluster.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-7.png)
 
 
 13. Copy and Paste or upload the JSON file as seen in the following screenshot
