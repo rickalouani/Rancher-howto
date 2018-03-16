@@ -11,8 +11,8 @@ have to be managed independently.
 
 In this article, I am going to show the power of Rancher 2.0 and use it to deploy a kubernetes cluster
 4 different ways:
-   1. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
-   2. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
+   1. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
+   2. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
    3. On AWS
    4. Custom cluster using VMs
 
@@ -23,6 +23,9 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 * assumption: User has already configured Rancher 2.0
 
 **Create a cluster using RKE (Rancher Kubernetes Engine)**
+  Please note that RKE is not enabled by default on Google Cloud Platform. Please see Enabling RKE on Google Cloud Platform     section at the end of the document.
+  
+  
 
 1. Log in to Rancher 2.0 server
 
@@ -106,30 +109,21 @@ The credentials will be provided by Google in a JSON format after the service ac
   
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
 
-Pros: all of the Rancher AD/policy stuff works.  Workload experience works
 
-Cons: have to use Google's current version of k8s. NOt much confi options with kubernetes.
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-8.png)
 
-Create a local cluster using RKE
 
-pros: Runs anywhere
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-9.png)
 
-Pros: easy to create a resiliant cluster (3 etcd nodes, 2 managers, 1+ workers)
 
-Pros: easy upgrade.
 
-Create a cluster in Digital Ocean/Packet/AWS
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-10.png)
 
-using the Node Drivers in Rancher (which are based on Docker Machine)
 
-Pros - runs on any cloud - easy to automate
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-11.png)
 
-Pros - rancher automates the upgrade of the cluster
 
-Cons - not as tightly integrated with the cloud provider as GKE/EKS/Azure Kubernetes.
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-12.png)
 
-Import a cluster that you create outside of Rancher
 
-Pros - visibility into any cluster, even if it already exists
-
-Cons - Rancher doesn't have the ability to expand the number of nodes.
+**Enabling RKE on Google Cloud Platform**
