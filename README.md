@@ -23,6 +23,9 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 * assumption: User has already configured Rancher 2.0
 
 **Create a cluster using RKE (Rancher Kubernetes Engine)**
+  Please note that RKE is not enabled by default on Google Cloud Platform. Please see Enabling RKE on Google Cloud Platform     section at the end of the document.
+  
+  
 
 1. Log in to Rancher 2.0 server
 
