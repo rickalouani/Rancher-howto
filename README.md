@@ -44,7 +44,9 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
 
 At this point, you need to log on to you Google Cloud account and create a SERVICE ACCOUNT. Please note in the above
-screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles: 
+screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles:
+We need the service account credentials to be able to access the Google Cloud account and deploy our kubernetes cluster.
+The credentials will be provided by Google in a JSON format after the service account is created. We can paste the JSON content into Service Account in the screenshot above, please see step
       
       
 
@@ -96,13 +98,14 @@ screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kub
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-12.png)
 
-12. A Json file will be saved to your local machine
+12. A Json file will be saved to your local machine. We need this file to continue setting up the cluster.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-7.png)
 
 
-
-
+13. Copy and Paste or upload the JSON file as seen in the following screenshot
+  
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
 
 Pros: all of the Rancher AD/policy stuff works.  Workload experience works
 
