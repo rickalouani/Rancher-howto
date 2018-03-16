@@ -40,6 +40,61 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
 Click CREATE SERVICE ACCOUNT  
 
+5. Step 5
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-5.png)
+
+6. Create service account
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-1.png)
+
+7. Step 7
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-2.png)
+
+8. Step 8
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-3.png)
+
+9. Step 9
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-4.png)
+
+10. Step 10
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-5.png)
+
+11. Step 11
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-6.png)
+
+12. Step 12
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-7.png)
+
+13. Step 13
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-8.png)
+
+14. Step 14
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-9.png)
+
+15. Step 15
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-10.png)
+
+16. Step 16
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-11.png)
+
+17. Step 17
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-12.png)
+18. Step 18
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-7.png)
+
+
 
 
 
