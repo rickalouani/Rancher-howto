@@ -43,7 +43,7 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
 
-At this point, you need to log on to you GKE account and create a SERVICE ACCOUNT. Please note in the above
+At this point, you need to log on to you Google Cloud account and create a SERVICE ACCOUNT. Please note in the above
 screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles: 
       
       
