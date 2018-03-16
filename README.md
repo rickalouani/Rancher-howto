@@ -129,41 +129,40 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 
 1. Step 1
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE1.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE1.png)
 
 2. Step 2
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE2.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE2.png)
 
 3. Step 3
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE3.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE3.png)
 
 4. Step 4
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE4.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE4.png)
 
 
 5. Step 5
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE5.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE5.png)
 
 
 6. Step 6
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE6.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE6.png)
 
 
+7. Step 7
 
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE7.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE7.png)
 
 
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE8.png
+8. Step 8
 
-
-
-https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE1.png
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE8.png)
 
 
 **Enabling RKE on Google Cloud Platform**
