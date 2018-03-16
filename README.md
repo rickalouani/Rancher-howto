@@ -1,8 +1,15 @@
-Four ways to build Kubernetes clusters with Rancher 2.0
+**Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Deploying a production grade Kubernetes cluster is by no means an 
-easy task. A Kubernetes cluster has many moving parts, and no standard way to deploy it across platforms. Depending on your use case you need to select the right tool for your deployment. Tools include KOPS, KUBEADM, conjure-up, minikube, RKE etc. 
-In this article, I am going to show the power of Rancher 2.0 and use it to deploy a kubernetes cluster 
+Deploying a production grade Kubernetes cluster is by no means an easy task.
+A Kubernetes cluster has many moving parts, and no standard way to deploy it
+across cloud platforms. If your use-case calls for multiple deployments across
+cloud providers the complexity increases tremendously. The deployment
+tools available such as KOPS, KUBEADM, conjure-up, minikube, etc, are all
+cloud-provider-gnostic and cli driven. So, to deploy and manage multiple
+Kubernetes clusters requires system administrator skills and the clusters
+have to be managed independently.
+
+In this article, I am going to show the power of Rancher 2.0 and use it to deploy a kubernetes cluster
 4 different ways:
    1. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
    2. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
@@ -15,22 +22,30 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 * assumption: User has already configured Rancher 2.0
 
-Create a cluster using RKE (Rancher Kubernetes Engine)
+**Create a cluster using RKE (Rancher Kubernetes Engine)**
 
-1. 
-Log in to Rancher 2.0 server
-Click Add Cluster  
-Click Select in the Launch a Cloud Cluster Tab
-Give the cluster a name
-Click
+1. Log in to Rancher 2.0 server
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-1.png)
+
+2. Click **Add Cluster**
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-2.png)
+
+3. Click **Select** in the Launch a Cloud Cluster Tab
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
+4. Give the cluster a name
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
 Click CREATE SERVICE ACCOUNT  
 
 
-    
+
 
 Pros: all of the Rancher AD/policy stuff works.  Workload experience works
 
-Cons: have to use Google's current version of k8s. NOt much confi options with kubernetes. 
+Cons: have to use Google's current version of k8s. NOt much confi options with kubernetes.
 
 Create a local cluster using RKE
 
@@ -38,9 +53,9 @@ pros: Runs anywhere
 
 Pros: easy to create a resiliant cluster (3 etcd nodes, 2 managers, 1+ workers)
 
-Pros: easy upgrade. 
+Pros: easy upgrade.
 
-Create a cluster in Digital Ocean/Packet/AWS 
+Create a cluster in Digital Ocean/Packet/AWS
 
 using the Node Drivers in Rancher (which are based on Docker Machine)
 
@@ -48,7 +63,7 @@ Pros - runs on any cloud - easy to automate
 
 Pros - rancher automates the upgrade of the cluster
 
-Cons - not as tightly integrated with the cloud provider as GKE/EKS/Azure Kubernetes. 
+Cons - not as tightly integrated with the cloud provider as GKE/EKS/Azure Kubernetes.
 
 Import a cluster that you create outside of Rancher
 
