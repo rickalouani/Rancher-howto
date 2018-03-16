@@ -37,7 +37,7 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-5.png)
 4. Give the cluster a name
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
 
 
 5. Create service account
