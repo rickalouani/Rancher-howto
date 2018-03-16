@@ -31,11 +31,15 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-2.png)
 
+
 2. Click **Add Cluster**
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-5.png)
 
+
 3. Click **Select** in the Launch a Cloud Cluster Tab
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
 
