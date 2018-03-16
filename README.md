@@ -88,14 +88,15 @@ screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kub
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-10.png)
 
 10. **Click on the three dots to the right of the new service account name** as seen in 
-    the above screenshot
+    the above screenshot and select **Create key**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-11.png)
 
-16. **Click Create**
+11. **Click Create**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-12.png)
-17. Step 17
+
+12. A Json file will be saved to your local machine
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-7.png)
 
