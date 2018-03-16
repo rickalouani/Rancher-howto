@@ -28,72 +28,83 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-1.png)
 
-2. Click **Add Cluster**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-2.png)
 
-3. Click **Select** in the Launch a Cloud Cluster Tab
+
+2. Click **Add Cluster**
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-5.png)
-4. Give the cluster a name
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
 
 
-5. Create service account
+3. Click **Select** in the Launch a Cloud Cluster Tab
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
+
+At this point, you need to log on to you Google Cloud account and create a SERVICE ACCOUNT. Please note in the above
+screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles:
+We need the service account credentials to be able to access the Google Cloud account and deploy our kubernetes cluster.
+The credentials will be provided by Google in a JSON format after the service account is created. We can paste the JSON content into Service Account in the screenshot above, please see step
+      
+      
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-1.png)
 
-6. Step 6
+
+5. On the upper left of the page **Click Product and Services** and **select
+   IAM & admin -> Service accounts**
+
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-2.png)
 
-7. Step 7
+7. **Click CREATE A SERVICE**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-3.png)
 
-8. Step 8
+8. Give the Service Account a name
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-4.png)
 
-9. Step 9
+9. On the select a role tab select **project/viewer**, **kubernetes-engine/admin**, 
+   and **service-account/user** IAM roles
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-5.png)
 
-10. Step 10
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-6.png)
 
-11. Step 11
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-7.png)
 
-12. Step 12
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-8.png)
 
-13. Step 13
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-9.png)
 
-14. Step 14
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-10.png)
 
-15. Step 15
+10. **Click on the three dots to the right of the new service account name** as seen in 
+    the above screenshot and select **Create key**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-11.png)
 
-16. Step 16
+11. **Click Create**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-12.png)
-17. Step 17
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-7.png)
-
+   A Json file will be saved to your local machine as seen above
 
 
 
+13. Copy and Paste or upload the JSON file as seen in the following screenshot and **click Next**
+  
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-3.png)
 
 Pros: all of the Rancher AD/policy stuff works.  Workload experience works
 
