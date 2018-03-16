@@ -47,15 +47,14 @@ At this point, you need to log on to you Google Cloud account and create a SERVI
 screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles: 
       
       
-     
-
-
-
-5. Create service account
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-1.png)
 
-6. Step 6
+
+5. On the upper left of the page **Click Product and Services** and **select
+   IAM & admin -> Service accounts**
+
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-sa-2.png)
 
