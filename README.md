@@ -14,6 +14,7 @@ Kubernetes clusters requires system administrator skills and the
 clusters have to be managed independently. And if you decide to change
 cloud provider after the implementation, it would be a big challenge 
 migrating it over to a different vendor.
+
 Rancher 2.0 is an opensource UI based container orchestration that includes its own Kuberentes Engine RKE, and
 allows the user to create, manage, and monitor multiple kubernetes clusters across different cloud 
 providers. Furthermore, it allows a user to import (management of) existing Kubernetes clusters as I will 
