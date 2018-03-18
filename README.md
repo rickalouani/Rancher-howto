@@ -5,27 +5,34 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Deploying a production grade Kubernetes cluster is by no means an easy task.
 A Kubernetes cluster has many moving parts, and no standard way to deploy it
 across cloud platforms. If your use-case calls for multiple deployments across
 cloud providers the complexity increases tremendously. The deployment
-tools available such as KOPS, KUBEADM, conjure-up, minikube, etc, are all
-cloud-provider-gnostic and cli driven. So, to deploy and manage multiple
-Kubernetes clusters requires system administrator skills and the clusters
-have to be managed independently.
+tools available such as KOPS, KUBEADM, conjure-up, minikube are all
+cloud-provider-gnostic and CLI based. To deploy and manage multiple
+Kubernetes clusters requires system administrator skills and the 
+clusters have to be managed independently. And if you decide to change
+cloud provider after the implementation, it would be a big challenge 
+migrating it over to a different vendor.
+Rancher 2.0 is an opensource UI based container orchestration that includes its own Kuberentes Engine RKE, and
+allows the user to create, manage, and monitor multiple kubernetes clusters across different cloud 
+providers. Furthermore, it allows a user to import (management of) existing Kubernetes clusters as I will 
+demonstrate later in the document.
 
-In this article, I am going to demonstrate the power of Rancher 2.0 and use it to deploy a kubernetes cluster
-4 different ways:
+
+In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0, 
+and use it to deploy a kubernetes cluster 4 different ways:
+
    1. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
    2. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
-   3. On AWS
+   3. On DigitalOcean
    4. Custom cluster using VMs
 
 Along the way, I will highlight some of the pros and cons of each method of deployment.
 
-* assumption: Google Cloud Platform, and, or AWS account is already setup.  < I will add links to how to docs>
+* assumption: Google Cloud Platform, and, or AWS account is already setup.  < I will add links to how-to-docs>
 
-* assumption: User has already configured Rancher 2.0
+* assumption: User has already configured Rancher 2.0 < will add links to how-to-docs>
 
 **Create a cluster using RKE (Rancher Kubernetes Engine)**
   Please note that RKE is not enabled by default on Google Cloud Platform. Please see Enabling RKE on Google Cloud Platform     section at the end of the document.
