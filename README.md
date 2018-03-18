@@ -1,3 +1,8 @@
+**** This is a work in progress ****
+
+
+
+
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
 Deploying a production grade Kubernetes cluster is by no means an easy task.
@@ -9,7 +14,7 @@ cloud-provider-gnostic and cli driven. So, to deploy and manage multiple
 Kubernetes clusters requires system administrator skills and the clusters
 have to be managed independently.
 
-In this article, I am going to show the power of Rancher 2.0 and use it to deploy a kubernetes cluster
+In this article, I am going to demonstrate the power of Rancher 2.0 and use it to deploy a kubernetes cluster
 4 different ways:
    1. RKE (Rancher Kubernetes Engine) on Google Cloud Platform
    2. GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
@@ -124,6 +129,45 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-12.png)
+
+**GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0***
+
+
+1. Step 1
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE1.png)
+
+2. Step 2
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE2.png)
+
+3. Step 3
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE3.png)
+
+4. Step 4
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE4.png)
+
+
+5. Step 5
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE5.png)
+
+
+6. Step 6
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE6.png)
+
+
+7. Step 7
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE7.png)
+
+
+8. Step 8
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE8.png)
 
 
 **Enabling RKE on Google Cloud Platform**
