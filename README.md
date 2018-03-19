@@ -175,18 +175,19 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 8. Step 8
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE8.png)
-
-
-
-9. Step 9
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke10.png)
 
-10. Step 10
+
+
+Step 9
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke12.png)
 
+10. Step 10
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke13.png)
+
+11. Step 11
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke14.png)
 
