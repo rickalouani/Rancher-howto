@@ -185,7 +185,10 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke14.png)
 
+10. Step 10
 
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke15.png)
+11. Step 11
 
-
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke16.png)
 **Enabling RKE on Google Cloud Platform**
