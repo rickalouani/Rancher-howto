@@ -155,7 +155,6 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 4. Step 4
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE4.png)
 
 
 5. Step 5
