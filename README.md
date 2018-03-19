@@ -2,19 +2,24 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-A Kubernetes cluster has many moving parts, and no standard 
+A Kubernetes cluster has many moving parts, and no standard way to deploy it 
+across cloud platforms. The tools avaialbe for bootstraping a Kubernetes cluster 
+such as  KOPS, KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
+a cluster, and do make the process very easy, however, they are all cloud-provider-gnostic 
+and CLI based. So, to deploy and manage multiple Kubernetes clusters requires system 
+administrator skills. Furthermore, If your use-case calls for multiple deployments across 
+different cloud providers the complexity increases tremendously. Some of the challenges 
+include, Each deployment would have to be version-controlled in a seperate branch, all 
+updates, upgrades, rolebacks, and patches would have to be deployed separately for each 
+cluster, it could get overwhelming pretty quick. 
 
-way to deploy it across cloud platforms. If your use-case calls for multiple deployments across cloud providers the complexity increases tremendously. The deployment tools available 
+Rancher 2.0 is an opensource UI based container orchestration platform that includes its own 
+Kuberentes Engine RKE, and allows the user to create, manage, and monitor multiple kubernetes 
+clusters across different cloud providers. It also allows a user to import the management of 
+existing Kubernetes clusters as I will demonstrate later in the document.
 
-such as KOPS, KUBEADM, conjure-up, and MINIKUBE are all 
-
-cloud-provider-gnostic and CLI based. To deploy and manage multiple Kubernetes clusters requires system administrator skills and the clusters have to be managed independently.  Switching  cloud provider after the deployment, would be a big challenge.
-
-Rancher 2.0 is an opensource UI based container orchestration platform that includes its own Kuberentes Engine RKE, and allows the user to create, manage, and monitor multiple kubernetes clusters across different cloud providers. Furthermore, it allows a user to import management of existing Kubernetes clusters as 
-
-I will demonstrate later in the document.
-
-In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0\. I will use it to deploy a kubernetes cluster 4 different ways:
+In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0. 
+I will use it to deploy a kubernetes cluster 4 different ways:
 
    1.  RKE (Rancher Kubernetes Engine) on Google Cloud Platform
    2.  GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
@@ -27,7 +32,10 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 *   assumption: User has already configured Rancher 2.0 < will add links to how-to-docs>
 
-**Create a cluster using RKE (Rancher Kubernetes Engine)** Please note that RKE is not enabled by default on Google Cloud Platform. Please see Enabling RKE on Google Cloud Platform section at the end of the document.
+**Create a cluster using RKE (Rancher Kubernetes Engine)** 
+
+Please note that RKE is not enabled by default on Google Cloud Platform. Please see 
+Enabling RKE on Google Cloud Platform section at the end of the document.
 
 
   
