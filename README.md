@@ -142,52 +142,46 @@ The credentials will be provided by Google in a JSON format after the service ac
 **GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0***
 
 
-1. Step 1
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE1.png)
-
-2. Step 2
+1. Step 1 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE2.png)
 
-3. Step 3
+2. Step 2
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE3.png)
 
-4. Step 4
+3. Step 3
 
-
-
-5. Step 5
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE5.png)
 
 
-6. Step 6
+4. Step 4
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE6.png)
 
 
-7. Step 7
+5. Step 5
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/GKE7.png)
 
 
-8. Step 8
+6. Step 6
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke10.png)
 
 
 
-Step 9
+7. Step 7
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke12.png)
 
-10. Step 10
+8. Step 8
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke13.png)
 
-11. Step 11
+9. Step 9
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke14.png)
 
