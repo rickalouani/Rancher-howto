@@ -3,7 +3,7 @@
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
-technologies(docker, SDN, CNI, RESTful API design, ...) integrated together 
+technologies(docker, SDN, CNI, RESTful API design) integrated together 
 beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
 Once provisioned, Kubernetes will abstract away the complexity of managing 
 multiple hosts and present a multinode cluster as a single entity. If Node 
