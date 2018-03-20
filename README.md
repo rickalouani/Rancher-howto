@@ -2,15 +2,25 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-A Kubernetes cluster has many moving parts, and no standard way to deploy it 
-across cloud platforms. The tools avaialbe for bootstraping a Kubernetes cluster 
-such as  KOPS, KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
-a cluster, and do make the process very easy, however, they are all cloud-provider-gnostic 
-and CLI based. So, to deploy and manage multiple Kubernetes clusters requires system 
-administrator skills. Furthermore, If your use-case calls for multiple deployments across 
-different cloud providers the complexity increases tremendously. Some of the challenges 
-include, Each deployment would have to be version-controlled in a seperate branch, all 
-updates, upgrades, rolebacks, and patches would have to be deployed separately for each 
+A Kubernetes cluster is a collection of resources(hosts, storage, and great 
+technologies(docker, SDN, CNI, RESTful API design, ...) integrated together 
+beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
+Once provisioned, Kubernetes will abstract away the complexity of managing 
+multiple hosts and present a multinode cluster as a single entity. If Node 
+affinity is not a requirement, a user would launch workloadsand kubernetes 
+would schedule them somewhere in the cluster. 
+The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
+KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
+a cluster, and do make the process very easy. However, they are all cloud 
+platform gnostic and CLI based, furthermore, as long as AWS, GOOGLE, AZURE, 
+ALIBABA, and the rest of the cloud providers insist on using proprietery 
+APIs for obvious reasons, the situation is not going to change anytime soon. 
+So, to deploy and manage multiple Kubernetes clusters requires system 
+administrator skills. Furthermore, If your use-case calls for multiple 
+deployments across different cloud providers the complexity increases 
+tremendously. Some of the challenges include, Each deployment would have to be 
+version-controlled in a seperate branch, all updates, upgrades, rolebacks, 
+and patches would have to be deployed separately for each 
 cluster, it could get overwhelming pretty quick. 
 
 Rancher 2.0 is an opensource UI based container orchestration platform that includes its own 
