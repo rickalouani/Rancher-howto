@@ -23,17 +23,18 @@ version-controlled in a seperate branch, all updates, upgrades, rolebacks,
 and patches would have to be deployed separately for each 
 cluster, it could get overwhelming pretty quick. 
 
-Rancher 2.0 is an opensource UI based container orchestration platform that includes its own 
-Kuberentes Engine RKE, and allows the user to create, manage, and monitor multiple kubernetes 
-clusters across different cloud providers. It also allows a user to import the management of 
-existing Kubernetes clusters as I will demonstrate later in the document.
+Rancher 2.0 is an opensource UI based container orchestration platform that includes 
+its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
+to create, manage, and monitor multiple kubernetes clusters across different cloud 
+providers from a single UI. It also allows a user to import existing Kubernetes clusters 
+as I will demonstrate later in the article.
 
 In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0. 
 I will use it to deploy a kubernetes cluster 4 different ways:
 
-   1.  RKE (Rancher Kubernetes Engine) on Google Cloud Platform
+   1.  RKE to build  on Google Cloud Platform  from scratch
    2.  GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
-   3.  On DigitalOcean
+   3.  Create a Kubernetes cluster on DigitalOcean  from scratch
    4.  Custom cluster using VMs
 
 Along the way, I will highlight some of the pros and cons of each method of deployment.
@@ -201,4 +202,23 @@ The credentials will be provided by Google in a JSON format after the service ac
 11. Step 11
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/gke16.png)
+
+**Create a Kubernetes cluster on DigitalOcean  from scratch**
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean2.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean3.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean4.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean5.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean6.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean7.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean8.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean9.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean10.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean11.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean12.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean13.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean14.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean15.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean16.png)
 **Enabling RKE on Google Cloud Platform**
