@@ -72,6 +72,10 @@ What I am hoping to accomplish here in this article is to help you setup a Kuber
 cluster to help give you a test bed where you can experiment with containers 
 as you create them. You will have a play ground where you can take your newly made
 containers on test drives. 
+The Diagram below highlights some of Kubernetes features and how it provides
+a solid platform for a successfull migration to microservices.
+
+![]https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
 technologies(docker, SDN, CNI, RESTful API design) integrated together 
