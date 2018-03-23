@@ -85,6 +85,8 @@ and matches it's desired state stored on ETCD.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign1.png)
 
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
 a cluster, and do make the process very easy. However, they are CLI based, 
@@ -92,10 +94,6 @@ and do require Linux skills. In this article I would love to convince you to giv
 Rancher 2.0 a try as a tool to bootstrap new or import existing Kubernetes clusters
 and Manage them through a friendly and very intuitive WebUI or using Rancher 2.0
 CLI. 
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
-
 
 Rancher 2.0 is an opensource container orchestration platform that works very well with
 Kubernetes. It is a great tool for standing up a Kubernetes cluster. It allows the user
