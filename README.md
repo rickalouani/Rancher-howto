@@ -99,11 +99,14 @@ CLI.
 
 Rancher 2.0 is an opensource container orchestration platform that works very well with
 Kubernetes. It is a great tool for standing up a Kubernetes cluster. It allows the user
-to customise the cluster before deployment. that includes 
+to customise the cluster(s) through either Rancher 2.0 CLI or a friendly untuitive UI that
+provides the user with access to configuration variables. 
 its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
 to create, manage, and monitor multiple kubernetes clusters across different cloud 
 providers from a single UI. It also allows a user to import existing Kubernetes clusters 
 as I will demonstrate later in the article.
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-2.0.png)
 
 
    1.  RKE to build  on Google Cloud Platform  from scratch
