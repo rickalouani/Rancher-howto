@@ -75,7 +75,7 @@ containers on test drives.
 The Diagram below highlights some of Kubernetes features and how it provides
 a solid platform for a successfull migration to microservices.
 
-![]https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
 technologies(docker, SDN, CNI, RESTful API design) integrated together 
