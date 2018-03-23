@@ -92,7 +92,11 @@ and do require Linux skills. In this article I would love to convince you to giv
 Rancher 2.0 a try as a tool to bootstrap new or import existing Kubernetes clusters
 and Manage them through a friendly and very intuitive WebUI or using Rancher 2.0
 CLI. 
+
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+
+
 Rancher 2.0 is an opensource container orchestration platform that includes 
 its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
 to create, manage, and monitor multiple kubernetes clusters across different cloud 
