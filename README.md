@@ -128,7 +128,7 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 *   assumption: User has already configured Rancher 2.0 < will add links to how-to-docs>
 
 
-
+**RKE to build on Google Cloud Platform from scratch**
 
 1. Log in to Rancher 2.0 server
 
