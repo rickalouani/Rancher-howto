@@ -7,7 +7,7 @@ In this article, I will try to help you in your journey if you are contemplating
 or just starting the process of adopting the micro-services paradigm. In a
 series of articles I will demonstrate and comment on some tools, provide some
 tips and links to resources I come across that I hope will save you time.
-Making the leap to micro-services is not as daunting anymore as it was even
+Making the leap to micro-services is not as daunting as it was even
 10 years ago. The abundance of information shared by many companies that went
 through the process successfully, published best practices, case studies,
 videos, etc, and a number of great opensource tools should make the process
