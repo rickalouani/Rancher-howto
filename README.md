@@ -100,8 +100,13 @@ CLI.
 Rancher 2.0 is an opensource container orchestration platform that works very well with
 Kubernetes. It is a great tool for standing up a Kubernetes cluster. It allows the user
 to customise the cluster(s) through either Rancher 2.0 CLI or a an intuitive, and clean WebUI.
-The user can select the size of the deployment(number of nodes) and how to assign them 
-could select the number of nodes that
+The user can select the size of the deployment(number of nodes) and how to deploy each node
+(ETCD, MASTER, or WORKER) it also gives guideline on the number of ETCD nodes in the ETCD cluster.
+Note that tool forces an ODD number of nodes (1,3,or 5) which is an industry best practice in 
+leader elected clusters. The odd number ensures a clear majority in case of a cluster split. 
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/addnodes.png)
+
 provides the user with access to configuration variables, API endpoints, among other things
 its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
 to create, manage, and monitor multiple kubernetes clusters across different cloud 
