@@ -13,7 +13,7 @@ through the process successfully, published best practices, case studies,
 videos, etc, and a number of great opensource tools should make the process
 not as challenging it seems.
 Many of the early adopters were thriving companies (Amazon, Google,
-Netflix, ...), growing fast and and growing. The had to make a radical shift in
+Netflix, ...), growing fast and the outlook was great. They had to make a radical shift in
 the way they conducted business. they had to come up with a different business
 model to continually meet projected demand. They were realizing that scaling
 vertically to meet demand did not make business sense anymore.
