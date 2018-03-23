@@ -47,19 +47,31 @@ The goal was the ability to assign exact dedicated resources to
 application functions vs all the functions sharing single resources. Getting
 the pieces to play nice with each other was the responsibility of the OS with
 quality of the application source code having a big influence.
-The overall solution they came up shared similar concepts and directly
-lead to CONTAINERS. Linux provided the tools necessary to provide separation of
-concerns one of the core principle the micro-services paradigm. With the User
-majority of leading architecture principles for microservices
-applications into smaller more manageable services that could be developed
-independently and communicate with each other using a common API. However,
-breaking up the monolith did not simplify the situation, it complicated
-it enormously. With a monolith, you install it configure it and run it. All
-the pieces are built and packaged together (executables and libraries).
+The overall solution they came up with shared similar concepts and directly
+lead to CONTAINERS. Linux provided the tools necessary(NAMESPACES, CGROUPS,) 
+to provide separation of concerns one of the core principle in the the micro-services 
+architecture. Applications had to be divided into smaller more manageable services 
+that could be developed independently and communicate with each other using a 
+common API. However, breaking up the monolith did not simplify the situation, 
+it complicated it enormously. With a monolith, you install it configure it and run it. 
+Allthe pieces are built and packaged together (executables and libraries).
 interactions between application modules was straight forward because all
 the pieces were installed together on the same host and share the same OS
 resources such as RPC, thread management, message queues, etc. The OS was also
 responsible for Scheduling and managing resources.
+Breaking down the monolith presented a different challenge. How are all these 
+newly packages pieces of my application are going to communicate and work with each 
+other to produce at least the same functionality and reliability my monolith? if
+these micro-services can run independly and can be assign resources why not go further
+and develop the ability to have them run on different hosts, maybe even on 
+different networks.
+The result is containers and container orchestration. 
+Kubernetes was devoloped by google to solve the container orchestration puzzle.
+What I am hoping to accomplish here in this article is to help you setup a Kubernetes
+cluster to help give you a test bed where you can experiment with containers 
+as you create them. You will have a play ground where you can take your newly made
+containers on test drives. 
+
 
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
 technologies(docker, SDN, CNI, RESTful API design) integrated together 
