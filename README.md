@@ -2,6 +2,65 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
+In this article, I will try to help you in your journey if you are contemplating
+or just starting the process of adopting the micro-services paradigm. In a
+series of articles I will demonstrate and comment on some tools, provide some
+tips and links to resources I come across that I hope will save you time.
+Making the leap to micro-services is not as daunting anymore as it was even
+10 years ago. The abundance of information shared by many companies that went
+through the process successfully, published best practices, case studies,
+videos, etc, and a number of great opensource tools should make the process
+not as challenging it seems.
+Many of the early adopters were thriving companies (Amazon, Google,
+Netflix, ...), growing fast and and growing. The had to make a radical shift in
+the way they conducted business. they had to come up with a different business
+model to continually meet projected demand. They were realizing that scaling
+vertically to meet demand did not make business sense anymore.
+It became apparent to these early adopters that adding more data centers every
+time demand increase is cost prohibitive, and not practical.
+It was becoming harder and harder to justify buying more capacity when
+these companies' own metrics were showing capacity usage hovering around 20% at
+peak. These companies saw a gold mine in the 80% capacity waste. Think about it!
+not only were they out to solve their vertical scaling problem, but the reward
+of getting back 80% of precious resources was the bigger business driver
+in my opinion.
+The problem was obvious, the way resources were managed had to be improved and
+by a lot. To make a long story short, it became apparent that a new business
+model was in order. The way applications were developed, built, packaged, and
+executed was at the heart of the problem. When thousands of line of code are
+developed over many years by many developers are compiled, built, and later executed 
+resource allocation is for all intent and purposes are left to the OS and the quality 
+of the source code. Application functions come up and die together, share the same 
+CPUs, Memory, and Storage local or remote. A small memory leak caused by some trivial 
+function that the system could have done without.
+It became obvious that any solution selected had to include the ability to abstract 
+away resource allocation responsibilites from the OS and to assign resources to specific
+functions at a finer granularity. For instance a single CPU core is divided into units of 
+m (millicpu). The idea is simple, when a function foo is assigned 200m vCPU, all it means is
+that the underlying OS scheduler is supposed to service our function requests at least 20% of 
+of the time while running. If foo runs for the 5 min we can be confident that foo received 
+least one minute of CPU, if the system is not busy, the OS might give foo more resources but
+that is not guaranteed. Memory and Storage are straight forward with only one minor detail,
+the units are in bytes and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K
+or in binary 1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki.
+The goal was the ability to assign exact dedicated resources to
+application functions vs all the functions sharing single resources. Getting
+the pieces to play nice with each other was the responsibility of the OS with
+quality of the application source code having a big influence.
+The overall solution they came up shared similar concepts and directly
+lead to CONTAINERS. Linux provided the tools necessary to provide separation of
+concerns one of the core principle the micro-services paradigm. With the User
+majority of leading architecture principles for microservices
+applications into smaller more manageable services that could be developed
+independently and communicate with each other using a common API. However,
+breaking up the monolith did not simplify the situation, it complicated
+it enormously. With a monolith, you install it configure it and run it. All
+the pieces are built and packaged together (executables and libraries).
+interactions between application modules was straight forward because all
+the pieces were installed together on the same host and share the same OS
+resources such as RPC, thread management, message queues, etc. The OS was also
+responsible for Scheduling and managing resources.
+
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
 technologies(docker, SDN, CNI, RESTful API design) integrated together 
 beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
