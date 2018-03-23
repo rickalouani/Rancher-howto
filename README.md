@@ -83,7 +83,7 @@ will store the manifest in it's data store ETCD. When the scheduler finds a node
 enough free resources to satisfy a request the workload would get scheduled on that node.
 and matches it's desired state stored on ETCD.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign4.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign1.png)
 
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
