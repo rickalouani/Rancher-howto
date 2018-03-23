@@ -1,39 +1,4 @@
-<<<<<<< HEAD
 
-A Kubernetes cluster is a collection of resources (hosts, storage, networking)
-and technologies(docker, SDN, CNI, RESTful API design) integrated together
-intelligently to provide a potent container and batch job orchestration
-platform. Kubernetes' design is beautifully simple, a well design API, an api
-a reliable data, a scheduler
-
-
-Kubernetes emboddies the concept of the DATA CENTER as a computer.
-Once provisioned, Kubernetes will abstract away the complexity of managing
-multiple hosts and present a multinode cluster as a single entity. If Node
-affinity is not a requirement, a user would launch workloadsand kubernetes
-would schedule them somewhere in the cluster.
-The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS,
-KUBEADM, conjure-up, and MINIKUBE are great tools for standing up
-a cluster, and do make the process very easy. However, they are all cloud
-platform gnostic and CLI based, furthermore, as long as AWS,y GOOGLE, AZURE,
-ALIBABA, and the rest of the cloud providers insist on using proprietery
-APIs for obvious reasons, the situation is not going to change anytime soon.
-So, to deploy and manage multiple Kubernetes clusters requires system
-administrator skills. Furthermore, If your use-case calls for multiple
-deployments across different cloud providers the complexity increases
-tremendously. Some of the challenges include, Each deployment would have to be
-version-controlled in a seperate branch, all updates, upgrades, rolebacks,
-and patches would have to be deployed separately for each
-cluster, it could get overwhelming pretty quick.
-
-Rancher 2.0 is an opensource UI based container orchestration platform that includes
-its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user
-to create, manage, and monitor multiple kubernetes clusters across different cloud
-providers from a single UI. It also allows a user to import existing Kubernetes clusters
-as I will demonstrate later in the article.
-
-In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0.
-=======
 **** This is a work in progress ****
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
@@ -108,21 +73,22 @@ cluster to help give you a test bed where you can experiment with containers
 as you create them. You will have a play ground where you can take your newly made
 containers on test drives. 
 
-
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
 technologies(docker, SDN, CNI, RESTful API design) integrated together 
 beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
 Once provisioned, Kubernetes will abstract away the complexity of managing 
-multiple hosts and present a multinode cluster as a single entity. If Node 
-affinity is not a requirement, a user would submit a desired state in the form
-of a yaml manifest of a workloads and the API server will schedule the workload
+multiple hosts and present a multinode cluster as a single entity. A user would 
+submit a desired state of workloads in the form of a yaml manifest and the API server 
+will store the manifest in it's data store ETCD, a c schedule the workload
 on a node that could satisfy the requested resourses and start the workload and make
 sure it matches the desired state stored on ETCD.
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
-a cluster, and do make the process very easy. However, they areCLI based, 
-and do require Linux skills. For this article, I am going to use Rancher 2.0
-I hope I'll convince you to give it a try.
+a cluster, and do make the process very easy. However, they are CLI based, 
+and do require Linux skills. In this article I would love to convince you to give
+Rancher 2.0 a try as a tool to bootstrap a new or import an existing Kubernetes clusters
+and Manage them through a friendly and very intuitive WebUI or using Rancher 2.0
+CLI. 
 
 Rancher 2.0 is an opensource container orchestration platform that includes 
 its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
@@ -130,9 +96,6 @@ to create, manage, and monitor multiple kubernetes clusters across different clo
 providers from a single UI. It also allows a user to import existing Kubernetes clusters 
 as I will demonstrate later in the article.
 
-In the following pages I am going to demonstrate the power and friendliness of Rancher 2.0. 
->>>>>>> 7b8f0e646da862934b784713c04a0125974db240
-I will use it to deploy a kubernetes cluster 4 different ways:
 
    1.  RKE to build  on Google Cloud Platform  from scratch
    2.  GKE (Google Kubernetes Engine) and importing the cluster to Rancher 2.0
