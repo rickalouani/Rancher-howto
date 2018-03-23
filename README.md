@@ -78,23 +78,17 @@ technologies(docker, SDN, CNI, RESTful API design) integrated together
 beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
 Once provisioned, Kubernetes will abstract away the complexity of managing 
 multiple hosts and present a multinode cluster as a single entity. If Node 
-affinity is not a requirement, a user would launch workloadsand kubernetes 
-would schedule them somewhere in the cluster. 
+affinity is not a requirement, a user would submit a desired state in the form
+of a yaml manifest of a workloads and the API server will schedule the workload
+on a node that could satisfy the requested resourses and start the workload and make
+sure it matches the desired state stored on ETCD.
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, and MINIKUBE are great tools for standing up 
-a cluster, and do make the process very easy. However, they are all cloud 
-platform gnostic and CLI based, furthermore, as long as AWS, GOOGLE, AZURE, 
-ALIBABA, and the rest of the cloud providers insist on using proprietery 
-APIs for obvious reasons, the situation is not going to change anytime soon. 
-So, to deploy and manage multiple Kubernetes clusters requires system 
-administrator skills. Furthermore, If your use-case calls for multiple 
-deployments across different cloud providers the complexity increases 
-tremendously. Some of the challenges include, Each deployment would have to be 
-version-controlled in a seperate branch, all updates, upgrades, rolebacks, 
-and patches would have to be deployed separately for each 
-cluster, it could get overwhelming pretty quick. 
+a cluster, and do make the process very easy. However, they areCLI based, 
+and do require Linux skills. For this article, I am going to use Rancher 2.0
+I hope I'll convince you to give it a try.
 
-Rancher 2.0 is an opensource UI based container orchestration platform that includes 
+Rancher 2.0 is an opensource container orchestration platform that includes 
 its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
 to create, manage, and monitor multiple kubernetes clusters across different cloud 
 providers from a single UI. It also allows a user to import existing Kubernetes clusters 
