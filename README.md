@@ -3,15 +3,17 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-In this article, I will try to help you in your journey if you are contemplating
-or just starting the process of adopting the micro-services paradigm. In a
-series of articles I will demonstrate and comment on some tools, provide some
-tips and links to resources I come across that I hope will save you time.
 Making the leap to micro-services is not as daunting as it was even
-10 years ago. The abundance of information shared by many companies that went
-through the process successfully, published best practices, case studies,
-videos, etc, and a number of great opensource tools should make the process
-not as challenging it seems.
+10 years ago. The abundance of information and case studies shared by many 
+companies that went through the trials and tribulations of making the shift 
+helped establish solid industry best practices. Coupled with many new great 
+opensource tools donnated or developped and supported by a great community 
+of contributors took the mystery out of the process.
+In this article, I am going to demonstrate two tools that I am confident
+will make your adoption of microservices less challenging. Kubernetes
+arguably the best container orchestration platform and Rancher 2.0 to deploy, 
+customise and manage kubernetes clusters and your worloads.  
+
 Many of the early adopters were thriving companies (Amazon, Google,
 Netflix, ...), growing fast and the outlook was great. They had to make a radical shift in
 the way they conducted business. they had to come up with a different business
