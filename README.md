@@ -5,14 +5,14 @@
 
 Making the leap to micro-services is not as daunting as it was even
 10 years ago. The abundance of information and case studies shared by many 
-companies that went through the trials and tribulations of making the shift 
-helped establish solid industry best practices. Coupled with many new great 
-opensource tools donnated or developped and supported by a great community 
-of contributors took the mystery out of the process.
-In this article, I am going to demonstrate two tools that I am confident
-will make your adoption of microservices less challenging. Kubernetes
-arguably the best container orchestration platform and Rancher 2.0 to deploy, 
-customise and manage kubernetes clusters and your worloads.  
+companies that went through the trials and tribulations helped establish 
+solid industry best practices. Coupled with many new great opensource tools 
+donnated or developped and supported by a great community of contributors took 
+the mystery out of the process. In this article, I am going to demonstrate two 
+tools that I am confident will make your adoption of microservices less challenging. 
+Kubernetes arguably the best container orchestration platform and Rancher 2.0 another
+great opensource tool to deploy, customise and manage kubernetes clusters and 
+your worloads.  
 
 Many of the early adopters were thriving companies (Amazon, Google,
 Netflix, ...), growing fast and the outlook was great. They had to make a radical shift in
