@@ -166,6 +166,7 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 log in to digital ocean account
 1.
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-key.png)
 
