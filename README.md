@@ -31,7 +31,7 @@ four different ways:
 
 **3.  RKE on AWS**  
 
-**4.  Custom cluster using VMs **
+**4.  Custom cluster using VMs**
 
 Many of the early adopters were thriving companies (Amazon, Google,
 Netflix, ...), growing fast and the outlook was great. They were having to 
