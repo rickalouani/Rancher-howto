@@ -168,7 +168,6 @@ log in to digital ocean account
 1.
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/second.png)
 
 2.
 
