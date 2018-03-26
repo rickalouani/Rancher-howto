@@ -171,13 +171,11 @@ log in to digital ocean account
 
 2.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-15.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
 
 3.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
-
-4.
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digit4.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-14.png)
 
