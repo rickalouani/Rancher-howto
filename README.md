@@ -50,27 +50,28 @@ built, packaged, and executed was at the heart of the problem. An application
 was the end product of thousands of line of code developed over many years by 
 many developers, compiled, and built into an executable, and packaged together 
 with library files. When the application is installed and executed as a 
-monolith that runs and dies as a single entity. Resource allocation for it is 
-left to the OS and the quality of the source code. Functions within the 
-application, share the same CPUs, Shared Memory, and Storage local or remote. 
-A small memory leak caused by some trivial function that the system could have 
-done without. It became obvious that any solution selected had to include 
-the ability to abstract away resource allocation responsibilites from the OS 
-and to assign resources to specific functions at a finer granularity. For 
-instance a single CPU core is divided into units of m (millicpu). The idea is 
-quite simple, when a function foo is assigned 200m vCPU, all it means is that 
-the underlying OS scheduler is supposed to service our function requests at 
-least 20% of of the time while running. If foo runs for the 5 min we can be 
-confident that foo received least one minute of CPU, if the system is not busy,
-the OS might give foo more resources but that is not guaranteed. Memory and 
-Storage are straight forward with only one minor detail, the units are in bytes 
-and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K or in binary 
-1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki. The goal was the ability to assign exact 
-dedicated resources to application functions vs all the functions sharing single 
-resources. Getting the pieces to play nice with each other was the 
-responsibility of the OS with quality of the application source code having a 
-big influence. The overall solution they came up with shared similar concepts 
-and directly lead to CONTAINERS. Linux provided the tools necessary(NAMESPACES, 
+monolith that runs and dies as a single entity, allocating resources for it 
+was the responsibility of OS and under the mercy of the quality of the source code. 
+Functions within the application, shared the same CPUs, Shared Memory, and Storage local 
+or remote. When whole systems were crashing because of a memory leak caused by some badly 
+written trivial function It became obvious that any solution selected had to include
+a new software design paradigm where applications are divided into smaller more managable 
+modules that could be managed independetly(containers) and the ability to assign resources 
+at a finer granularity to application modules directly.
+The current covention is as follows:
+   * A CPU core is divided into units of m (millicpu). The idea is quite simple, 
+     when a function foo is assigned 200m vCPU, all it means is that 
+     the underlying OS scheduler is supposed to service our function requests at 
+     least 20% of of the time while running. If foo runs for the 5 min we can be 
+     confident that foo received least one minute of CPU, if the system is not busy,
+     the OS might give foo more resources but that is not guaranteed. 
+   * Memory and Storage are straight forward with only one minor detail, the units are in bytes 
+     and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K or in binary 
+     1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki. The goal was the ability to assign exact 
+     dedicated resources to application functions vs all the functions sharing single 
+     resources. 
+The overall solution they each came up with shared similar concepts and directly 
+Containers and Container orchestration. Linux provided the tools necessary(NAMESPACES, 
 CGROUPS,) to provide separation of concerns one of the core principle in the 
 the micro-services architecture. Applications had to be divided into smaller 
 more manageable services that could be developed independently and communicate
@@ -105,7 +106,10 @@ multiple hosts and present a multinode cluster as a single entity. A user would
 submit a desired state of workloads in the form of a yaml manifest and the API server 
 will store the manifest in it's data store ETCD. When the scheduler finds a node with 
 enough free resources to satisfy a request the workload would get scheduled on that node.
-and matches it's desired state stored on ETCD.
+A watch loop constantly compares the current state and the desired state(stored in ETCD)
+and if they vary kubelet(kubernetes agent on the nodes) will inform the API server.
+The API server will engage the appropriate controller to bring the current state in line with
+the desired state.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign1.png)
 
