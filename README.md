@@ -164,8 +164,9 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 
 
-log in to digital ocean account
-1.
+From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as illustrated below:
+
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
 
 
