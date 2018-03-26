@@ -206,14 +206,14 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
   
 
   **# sudo apt update -y**
-**# sudo apt dist-upgrade -y**
-**# sudo apt-get remove docker docker-engine docker.io**
+  **# sudo apt dist-upgrade -y**
+  **# sudo apt-get remove docker docker-engine docker.io**
 
-**# sudo apt-get install \**
-**apt-transport-https \**
-**ca-certificates \**
-**curl \**
-**software-properties-common**
+  **# sudo apt-get install \**
+  **apt-transport-https \**
+  **ca-certificates \**
+  **curl \**
+  **software-properties-common**
 
  - Add Docker’s official GPG key
 
