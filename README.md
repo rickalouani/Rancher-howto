@@ -179,7 +179,8 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
 
 
-**4. Now swith bach to your desktop and to use and existing or create a new ssh key pair** 
+**4. On a terminal on your desktop create a new ssh key pair** 
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
 
