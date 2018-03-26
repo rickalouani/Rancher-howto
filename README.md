@@ -493,7 +493,7 @@ The credentials will be provided by Google in a JSON format after the service ac
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean7.png)
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean8.png)
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean9.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean10.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean10.png=-
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean11.png)
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean12.png)
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean13.png)
