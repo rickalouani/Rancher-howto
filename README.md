@@ -155,7 +155,9 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
- The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run our microservices). The basic architecture is bellow
+ The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
+ 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run our microservices). 
+ The basic architecture is bellow
  
  
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
@@ -164,15 +166,19 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 log in to digital ocean account
 1.
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-1.png)
 
 2.
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-15.png)
 
 3.
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
 
 4.
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-14.png)
 
 
