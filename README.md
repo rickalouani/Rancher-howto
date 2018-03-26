@@ -25,7 +25,7 @@ Rancher 2.0 as I will demonstrate makes customizing, bootstrapping, and managing
 a Kubernetes cluster a breeze. I will use it to deploy a Kubernetes cluster 
 four different ways:
 
-1.  **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+**1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
 **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
 
