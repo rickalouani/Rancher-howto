@@ -241,7 +241,6 @@ sudo apt-key add -
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
  
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30000.png)
 
 **point you browser to the ip address of your Rancher 2.0 server**
 **Accept the certificate and enter the default user name and password (admin admin)**
