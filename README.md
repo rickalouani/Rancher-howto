@@ -1,4 +1,3 @@
-
 **** This is a work in progress ****
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
@@ -7,83 +6,172 @@ Making the leap to microservices is not as daunting as it was even
 10 years ago. The abundance of information and case studies shared by many 
 companies that went through the trials and tribulations helped establish 
 solid industry best practices. Coupled with many new great opensource tools 
-donnated or developped and supported by a great community of contributors took 
-the mystery out of the process. In this article, I am going to demonstrate two 
-tools that I am confident will make your adoption of microservices less challenging.
-Kubernetes arguably the best container orchestrator and Rancher 2.0 another
-great opensource tool to deploy, customise and manage kubernetes clusters and 
-your worloads(microservices). A Kubernetes Cluster is a great habitat for 
-microservices. The platform provides a wealth of built in functionality and solutions 
-and also provides a great API that you can leverage to customise your clusters or to 
-use as a baseline for your own [extending kubernetes]. Rancher 2.0 as I will 
-demonstrate makes bootstraping a kubernetes cluster a breeze. I will use it to
-deploy a kubernetes cluster 4 different ways:
-       
-   1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   2.  Import the management of an existing GKE(Google Kubernetes Engine) 
-       to Rancher 2.0
-   3.  RKE on AWS  
-   4.  Custom cluster using VMs
+Making the leap to micro-services is not as daunting as it was even 10 years 
+ago. The abundance of information and case studies shared by many companies 
+that went through the trials and tribulations helped establish solid industry 
+best practices. Coupled with many new great open-source tools donated or 
+developed and supported by a great community of contributors took the mystery 
+out of the process. In this article, I am going to demonstrate two great 
+opensource tools that I am confident can make your adoption of micro-services 
+less challenging. Kubernetes, arguably the best open source container 
+orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes
+clusters.  
+A Kubernetes Cluster is a great habitat for micro-services. The platform 
+provides a wealth of built in functionality and solutions and supported by
+a wonderful opensource community and a huge ecosystem. It also provides a great 
+API that you can leverage to customize your clusters or to use as a baseline for
+your own [extending Kubernetes]. 
+Rancher 2.0 as I will demonstrate makes customizing, bootstrapping, and managing
+a Kubernetes cluster a breeze. I will use it to deploy a Kubernetes cluster 
+four different ways:
+
+1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+2.  Import the management of an existing GKE(Google Kubernetes Engine) 
+    to Rancher 2.0
+3.  RKE on AWS  
+4.  Custom cluster using VMs
 
 Many of the early adopters were thriving companies (Amazon, Google,
 Netflix, ...), growing fast and the outlook was great. They were having to 
 scale up their resources to meet demand, unfortunately most the scaling was 
-Vertical. It became apparent to them that adding more data centers to meet demand
-was cost prohibitive, and logistacly not practical. Furthermore, some of these companies' 
-own metrics were showing capacity usage hovering around 20% at peak. 
-They realized they were heading towards a scalability nightmare, and who wouldn't. 
-Conceptually, it took them 5 data centers to service the same number of requests
-as would a single data center where resources are managed appropriately.  
-The problem was clearly defined CPU core, and Memory need to be managed better, simple, 
-right? 
-To make a long story short, it became apparent that a new business model was in order. 
-The way applications were developed, built, packaged, and executed was at the heart 
-of the problem. An application was the end product of thousands of line of code developed 
-over many years by many developers, compiled, and built into an executable, and packaged 
-together with library files. When the application is installed and executed as a 
-monolith that runs and dies as a single entity. Resource allocation for it is left to 
-the OS and the quality of the source code. Functions within the application, share the same CPUs, Memory, and 
-Storage local or remote. A small memory leak caused by some trivial function that the 
-system could have done without. It became obvious that any solution selected had to include 
-the ability to abstract away resource allocation responsibilites from the OS and to assign 
-resources to specific functions at a finer granularity. For instance a single CPU core 
-is divided into units of m (millicpu). The idea is simple, when a function foo is assigned 
-200m vCPU, all it means isthat the underlying OS scheduler is supposed to service our function requests at least 20% of 
-of the time while running. If foo runs for the 5 min we can be confident that foo received 
-least one minute of CPU, if the system is not busy, the OS might give foo more resources but
-that is not guaranteed. Memory and Storage are straight forward with only one minor detail,
-the units are in bytes and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K
-or in binary 1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki.
-The goal was the ability to assign exact dedicated resources to
-application functions vs all the functions sharing single resources. Getting
-the pieces to play nice with each other was the responsibility of the OS with
-quality of the application source code having a big influence.
-The overall solution they came up with shared similar concepts and directly
-lead to CONTAINERS. Linux provided the tools necessary(NAMESPACES, CGROUPS,) 
-to provide separation of concerns one of the core principle in the the micro-services 
-architecture. Applications had to be divided into smaller more manageable services 
-that could be developed independently and communicate with each other using a 
-common API. However, breaking up the monolith did not simplify the situation, 
-it complicated it enormously. With a monolith, you install it configure it and run it. 
-Allthe pieces are built and packaged together (executables and libraries).
-interactions between application modules was straight forward because all
-the pieces were installed together on the same host and share the same OS
-resources such as RPC, thread management, message queues, etc. The OS was also
-responsible for Scheduling and managing resources.
+Vertical. It became apparent to them that adding more data centers to meet 
+demand was cost prohibitive, and logistically not practical. Furthermore, some 
+of these companies' own metrics were showing capacity usage hovering around 
+20% at peak. They realized they were heading towards a scalability nightmare, 
+and who wouldn't. Conceptually, it took them 5 data centers to service the same 
+number of requests as would a single data center where resources are managed 
+appropriately. The problem was clearly defined CPU core, and Memory need to be 
+managed better, simple, right? 
+To make a long story short, The problem was a direct result of the monolithic 
+architecture used to develop software. The way applications were developed, 
+built, packaged, and executed was at the heart of the problem. An application 
+was the end product of thousands of line of code developed over many years by 
+many developers, compiled, and built into an executable, and packaged together 
+with library files. When the application is installed and executed as a 
+monolith that runs and dies as a single entity. Resource allocation for it is 
+left to the OS and the quality of the source code. Functions within the 
+application, share the same CPUs, Shared Memory, and Storage local or remote. 
+A small memory leak caused by some trivial function that the system could have 
+done without. It became obvious that any solution selected had to include 
+the ability to abstract away resource allocation responsibilites from the OS 
+and to assign resources to specific functions at a finer granularity. For 
+instance a single CPU core is divided into units of m (millicpu). The idea is 
+quite simple, when a function foo is assigned 200m vCPU, all it means is that 
+the underlying OS scheduler is supposed to service our function requests at 
+least 20% of of the time while running. If foo runs for the 5 min we can be 
+confident that foo received least one minute of CPU, if the system is not busy,
+the OS might give foo more resources but that is not guaranteed. Memory and 
+Storage are straight forward with only one minor detail, the units are in bytes 
+and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K or in binary 
+1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki. The goal was the ability to assign exact 
+dedicated resources to application functions vs all the functions sharing single 
+resources. Getting the pieces to play nice with each other was the 
+responsibility of the OS with quality of the application source code having a 
+big influence. The overall solution they came up with shared similar concepts 
+and directly lead to CONTAINERS. Linux provided the tools necessary(NAMESPACES, 
+CGROUPS,) to provide separation of concerns one of the core principle in the 
+the micro-services architecture. Applications had to be divided into smaller 
+more manageable services that could be developed independently and communicate
+with each other using a common API. However, breaking up the monolith did not 
+simplify the situation, it complicated it enormously. With a monolith, you 
+install it configure it and run it. All the pieces are built and packaged 
+together (executables and libraries). interactions between application modules 
+was straight forward because all the pieces were installed together on the same 
+host and share the same OS resources such as RPC, thread management, message 
+queues, etc. The OS was also responsible for Scheduling and managing resources.
 Breaking down the monolith presented a different challenge. How are all these 
-newly packages pieces of my application are going to communicate and work with each 
-other to produce at least the same functionality and reliability my monolith? if
-these micro-services can run independly and can be assign resources why not go further
-and develop the ability to have them run on different hosts, maybe even on 
-different networks.
-The result is containers and container orchestration. 
-Kubernetes was devoloped by google to solve the container orchestration puzzle.
-What I am hoping to accomplish here in this article is to help you setup a Kubernetes
-cluster to help give you a test bed where you can experiment with containers 
-as you create them. You will have a play ground where you can take your newly made
-containers on test drives. 
+newly packages pieces of my application are going to communicate and work with 
+each other to produce at least the same functionality and reliability my 
+monolith? if these micro-services can run independently and can be assign 
+resources why not go further and develop the ability to have them run on 
+different hosts, maybe even on different networks. The result is containers and 
+container orchestration. Kubernetes was devolopped by google to solve the 
+container orchestration puzzle. What I am hoping to accomplish here in this 
+article is to help you setup a Kubernetes cluster to help give you a test bed 
+where you can experiment with containers as you create them. You will have a 
+play ground where you can take your newly made containers on test drives. 
 The Diagram below highlights some of Kubernetes features and how it provides
-a solid platform for a successfull migration to microservices.
+a solid platform for a successful migration to micro-services.
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+
+A Kubernetes cluster is a collection of resources(hosts, storage, and great 
+technologies(docker, SDN, CNI, RESTful API design) integrated together 
+beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
+Once provisioned, Kubernetes will abstract away the complexity of managing 
+multiple hosts and present a multinode cluster as a single entity. A user would 
+submit a desired state of workloads in the form of a yaml manifest and the API server 
+will store the manifest in it's data store ETCD. When the scheduler finds a node with 
+enough free resources to satisfy a request the workload would get scheduled on that node.
+and matches it's desired state stored on ETCD.
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign1.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+
+The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
+KUBEADM, conjure-up, kube-spray, and MINIKUBE are great tools for standing up 
+a cluster, and do make the process very easy. However, they are CLI based,  
+and do require Linux skills and configuration and scripts would have to be version controlled. 
+In this article I would love to demonstrate Rancher 2.0  you to give
+[Rancher 2.0]: http://rancher.com/rancher2-0/  a try as a tool to bootstrap new or import existing Kubernetes clusters
+and Manage them through a friendly and very intuitive WebUI or using Rancher 2.0
+CLI. 
+
+Rancher 2.0 is an opensource container orchestration platform that works very well with
+Kubernetes. It is a great tool for standing up a Kubernetes cluster. It allows the user
+to customise the cluster(s) through either Rancher 2.0 CLI or through a friendly and intuitive
+WebUI.
+The user can select the size of the deployment(number of nodes) and how to deploy each node
+(ETCD, MASTER, or WORKER) it also gives guideline on the number of ETCD nodes in the ETCD cluster.
+Note that tool forces an ODD number of nodes (1,3,or 5) which is an industry best practice in 
+leader elected clusters. The odd number ensures a clear majority in case of a cluster split. 
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/addnodes.png)
+
+provides the user with access to configuration variables, API endpoints, among other things
+its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
+to create, manage, and monitor multiple kubernetes clusters across different cloud 
+providers from a single UI. It also allows a user to import existing Kubernetes clusters 
+as I will demonstrate later in the article.
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-2.0.png)
+
+
+
+
+Along the way, I will highlight some of the pros and cons of each method of deployment.
+
+*   assumption: Google Cloud Platform, and, or AWS account is already setup. < I will add links to how-to-docs>
+
+*   assumption: User has already configured Rancher 2.0 < will add links to how-to-docs>
+
+
+**RKE to build on Google Cloud Platform from scratch**
+
+1. Log in to Rancher 2.0 server
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-1.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-2.png)
+
+
+2. Click **Add Cluster**
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-5.png)
+
+
+3. Click **Select** in the Launch a Cloud Cluster Tab
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-4.png)
+
+At this point, you need to log on to you Google Cloud account and create a SERVICE ACCOUNT. Please note in the above
+screenshot, the SERVICE ACCOUNT has to be created with **project/viewer**, **kubernetes-engine/admin**, and **service-account/user** IAM roles:
+We need the service account credentials to be able to access the Google Cloud account and deploy our kubernetes cluster.
+The credentials will be provided by Google in a JSON format after the service account is created. We can paste the JSON content into Service Account in the screenshot above, please see step
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
