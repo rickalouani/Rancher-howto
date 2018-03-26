@@ -176,11 +176,14 @@ log in to digital ocean account
 3.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
+
+
 **4. Now swith bach to your desktop and to use and existing or create a new ssh key pair** 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
 
 **5. Copy and paste you Public key**
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
