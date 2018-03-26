@@ -189,13 +189,8 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
-select os I will be using ubuntu 16 here
-on the same screen you get to select the the size for vm
-talk about prices a little bit.
 
 
-----screenshot of finished VM
----screenshot of ip address 
 Verify that your newly provisioned VM is ssh accessible.
 I will use the ssh private key we created in step  xxxx :
 - picture for ssh to vms.
