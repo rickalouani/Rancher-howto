@@ -208,7 +208,7 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 
 **# sudo apt update -y**
 **# sudo apt dist-upgrade -y**
-**# sudo apt-get remove docker docker-engine docker.io
+**# sudo apt-get remove docker docker-engine docker.io**
 
 **# sudo apt-get install \**
 **apt-transport-https \**
@@ -478,20 +478,5 @@ The credentials will be provided by Google in a JSON format after the service ac
 
 **Create a Kubernetes cluster on DigitalOcean  from scratch**
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean2.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean3.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean4.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean5.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean6.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean7.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean8.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean9.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean10.png=-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean11.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean12.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean13.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean14.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean15.png)
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean16.png)
+
 **Enabling RKE on Google Cloud Platform**
