@@ -181,7 +181,6 @@ log in to digital ocean account
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
 
-6.
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
 select os I will be using ubuntu 16 here
 on the same screen you get to select the the size for vm
