@@ -154,6 +154,71 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 
 
 **RKE to build on Google Cloud Platform from scratch**
+log in to digital ocean account
+-picture 1
+select os I will be using ubuntu 16 here
+on the same screen you get to select the the size for vm
+talk about prices a little bit.
+
+
+----screenshot of finished VM
+---screenshot of ip address 
+Verify that your newly provisioned VM is ssh accessible.
+I will use the ssh private key we created in step  xxxx :
+- picture for ssh to vms.
+# **ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
+-------picture of loging scree to rancher-server
+
+#  **sudo apt update -y**
+#  **sudo apt dist-upgrade -y**
+
+
+install docker on the VM as follow:
+
+ **Note:** I am going to use docker community edition but you are free to use any of the versions supported by Rancher 2.0)
+supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#supported-docker-versions
+   
+    - Remove old versions of docker 
+        not necessary if starting with a fresh VM, because docker is not included in the standard distribution of Ubuntu
+ 
+
+# sudo apt-get remove docker docker-engine docker.io
+
+  - Install https required packages
+# sudo apt-get install \
+apt-transport-https \
+ca-certificates \
+curl \
+software-properties-common
+
+
+ - Add Docker’s official GPG key
+
+# curl -fsSL \
+https://download.docker.com/linux/ubuntu/gpg | \
+sudo apt-key add -
+
+- Update the repository
+# sudo add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable"
+
+# sudo apt-get update
+- Install docker-ce
+# sudo apt-get install docker-ce -y
+
+- Make sure that docker is running
+ # systemctl status docker
+
+----picture of docker status.
+- Run the Rancher server container as follows
+# sudo docker run -d --restart=unless-stopped  \ 
+-p 80:80 -p 443:443 rancher/server:preview
+ 
+
+
+
 
 1. Log in to Rancher 2.0 server
 
