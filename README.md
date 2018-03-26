@@ -3,44 +3,52 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Making the leap to micro-services is not as daunting as it was even
+Making the leap to microservices is not as daunting as it was even
 10 years ago. The abundance of information and case studies shared by many 
 companies that went through the trials and tribulations helped establish 
 solid industry best practices. Coupled with many new great opensource tools 
 donnated or developped and supported by a great community of contributors took 
 the mystery out of the process. In this article, I am going to demonstrate two 
-tools that I am confident will make your adoption of microservices less challenging. 
-Kubernetes arguably the best container orchestration platform and Rancher 2.0 another
+tools that I am confident will make your adoption of microservices less challenging.
+Kubernetes arguably the best container orchestrator and Rancher 2.0 another
 great opensource tool to deploy, customise and manage kubernetes clusters and 
-your worloads.  
+your worloads(microservices). A Kubernetes Cluster is a great habitat for 
+microservices. The platform provides a wealth of built in functionality and solutions 
+and also provides a great API that you can leverage to customise your clusters or to 
+use as a baseline for your own [extending kubernetes]. Rancher 2.0 as I will 
+demonstrate makes bootstraping a kubernetes cluster a breeze. I will use it to
+deploy a kubernetes cluster 4 different ways:
+       
+   1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   2.  Import the management of an existing GKE(Google Kubernetes Engine) 
+       to Rancher 2.0
+   3.  RKE on AWS  
+   4.  Custom cluster using VMs
 
 Many of the early adopters were thriving companies (Amazon, Google,
-Netflix, ...), growing fast and the outlook was great. They had to make a radical shift in
-the way they conducted business. they had to come up with a different business
-model to continually meet projected demand. They were realizing that scaling
-vertically to meet demand did not make business sense anymore.
-It became apparent to these early adopters that adding more data centers every
-time demand increase is cost prohibitive, and not practical.
-It was becoming harder and harder to justify buying more capacity when
-these companies' own metrics were showing capacity usage hovering around 20% at
-peak. These companies saw a gold mine in the 80% capacity waste. Think about it!
-not only were they out to solve their vertical scaling problem, but the reward
-of getting back 80% of precious resources was the bigger business driver
-in my opinion.
-The problem was obvious, the way resources were managed had to be improved and
-by a lot. To make a long story short, it became apparent that a new business
-model was in order. The way applications were developed, built, packaged, and
-executed was at the heart of the problem. When thousands of line of code are
-developed over many years by many developers are compiled, built, and later executed 
-resource allocation is for all intent and purposes are left to the OS and the quality 
-of the source code. Application functions come up and die together, share the same 
-CPUs, Memory, and Storage local or remote. A small memory leak caused by some trivial 
-function that the system could have done without.
-It became obvious that any solution selected had to include the ability to abstract 
-away resource allocation responsibilites from the OS and to assign resources to specific
-functions at a finer granularity. For instance a single CPU core is divided into units of 
-m (millicpu). The idea is simple, when a function foo is assigned 200m vCPU, all it means is
-that the underlying OS scheduler is supposed to service our function requests at least 20% of 
+Netflix, ...), growing fast and the outlook was great. They were having to 
+scale up their resources to meet demand, unfortunately most the scaling was 
+Vertical. It became apparent to them that adding more data centers to meet demand
+was cost prohibitive, and logistacly not practical. Furthermore, some of these companies' 
+own metrics were showing capacity usage hovering around 20% at peak. 
+They realized they were heading towards a scalability nightmare, and who wouldn't. 
+Conceptually, it took them 5 data centers to service the same number of requests
+as would a single data center where resources are managed appropriately.  
+The problem was clearly defined CPU core, and Memory need to be managed better, simple, 
+right? 
+To make a long story short, it became apparent that a new business model was in order. 
+The way applications were developed, built, packaged, and executed was at the heart 
+of the problem. An application was the end product of thousands of line of code developed 
+over many years by many developers, compiled, and built into an executable, and packaged 
+together with library files. When the application is installed and executed as a 
+monolith that runs and dies as a single entity. Resource allocation for it is left to 
+the OS and the quality of the source code. Functions within the application, share the same CPUs, Memory, and 
+Storage local or remote. A small memory leak caused by some trivial function that the 
+system could have done without. It became obvious that any solution selected had to include 
+the ability to abstract away resource allocation responsibilites from the OS and to assign 
+resources to specific functions at a finer granularity. For instance a single CPU core 
+is divided into units of m (millicpu). The idea is simple, when a function foo is assigned 
+200m vCPU, all it means isthat the underlying OS scheduler is supposed to service our function requests at least 20% of 
 of the time while running. If foo runs for the 5 min we can be confident that foo received 
 least one minute of CPU, if the system is not busy, the OS might give foo more resources but
 that is not guaranteed. Memory and Storage are straight forward with only one minor detail,
@@ -122,11 +130,7 @@ as I will demonstrate later in the article.
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-2.0.png)
 
 
-   1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   2.  Import the management of an existing GKE(Google Kubernetes Engine) 
-       to Rancher 2.0
-   3.  
-   4Custom cluster using VMs
+   
 
 Along the way, I will highlight some of the pros and cons of each method of deployment.
 
