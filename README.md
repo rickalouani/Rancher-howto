@@ -184,7 +184,7 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
 
-**5. Copy and paste you Public key**
+**5. Copy and paste your Public key**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
 
@@ -200,28 +200,21 @@ I will use the ssh private key we created in step  xxxx :
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
 
-#  **sudo apt update -y**
-#  **sudo apt dist-upgrade -y**
-
-
-install docker on the VM as follow:
+Now let's update the distribution, repositories and install Docker
 
  **Note:** I am going to use docker community edition but you are free to use any of the versions supported by Rancher 2.0)
 supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#supported-docker-versions
-   
-    - Remove old versions of docker 
-        not necessary if starting with a fresh VM, because docker is not included in the standard distribution of Ubuntu
- 
+  
 
+#  **sudo apt update -y**
+#  **sudo apt dist-upgrade -y**
 # sudo apt-get remove docker docker-engine docker.io
 
-  - Install https required packages
 # sudo apt-get install \
 apt-transport-https \
 ca-certificates \
 curl \
 software-properties-common
-
 
  - Add Docker’s official GPG key
 
@@ -241,6 +234,7 @@ stable"
 
 - Make sure that docker is running
  # systemctl status docker
+
 
 ----picture of docker status.
 - Run the Rancher server container as follows
