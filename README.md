@@ -195,7 +195,10 @@ Verify that your newly provisioned VM is ssh accessible.
 I will use the ssh private key we created in step  xxxx :
 - picture for ssh to vms.
 # **ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
--------picture of loging scree to rancher-server
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
 
 #  **sudo apt update -y**
 #  **sudo apt dist-upgrade -y**
