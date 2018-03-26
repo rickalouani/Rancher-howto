@@ -243,9 +243,15 @@ sudo apt-key add -
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30000.png)
 
+**point you browser to the ip address of your Rancher 2.0 server**
+**Accept the certificate and enter the default user name and password (admin admin)**
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
 
+**clic Create Cluster**
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
 
@@ -262,6 +268,10 @@ sudo apt-key add -
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
