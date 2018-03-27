@@ -215,7 +215,7 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 
  - Add Docker’s official GPG key
 
-# curl -fsSL \
+  **# curl -fsSL \**
 https://download.docker.com/linux/ubuntu/gpg | \
 sudo apt-key add -
 
