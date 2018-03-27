@@ -65,7 +65,7 @@ Let's look at a hypothetical deployment of a Kubernetes cluster on AWS using KOP
 A minimum list of requirement would be inlcude:
 understanding of AWS fundamentals 
   - setup AIM accounts with the proper permissions
-  - Setup Route43
+  - Setup Route53
   - Setup an S3 bucket to host the cluster configuration  
 Ability to install and or configure the correct binaries 
 for your Desktop OS:
