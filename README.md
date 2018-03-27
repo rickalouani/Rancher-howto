@@ -120,18 +120,9 @@ KUBEADM, conjure-up, kube-spray, and MINIKUBE are great tools for standing up
 a cluster, and do make the process very easy. However, they are CLI based,  
 and do require Linux skills and configuration and scripts would have to be version controlled. 
 In this article I would love to demonstrate Rancher 2.0  you to give
-[Rancher 2.0]: http://rancher.com/rancher2-0/  a try as a tool to bootstrap new or import existing Kubernetes clusters
-and Manage them through a friendly and very intuitive WebUI or using Rancher 2.0
-CLI. 
-
-Rancher 2.0 is an opensource container orchestration platform that works very well with
-Kubernetes. It is a great tool for standing up a Kubernetes cluster. It allows the user
-to customise the cluster(s) through either Rancher 2.0 CLI or through a friendly and intuitive
-WebUI.
-The user can select the size of the deployment(number of nodes) and how to deploy each node
-(ETCD, MASTER, or WORKER) it also gives guideline on the number of ETCD nodes in the ETCD cluster.
-Note that tool forces an ODD number of nodes (1,3,or 5) which is an industry best practice in 
-leader elected clusters. The odd number ensures a clear majority in case of a cluster split. 
+[Rancher 2.0]: http://rancher.com/rancher2-0/  a try as a tool to bootstrap new or import 
+existing Kubernetes clusters and Manage them through a friendly and very intuitive WebUI or 
+Rancher 2.0 CLI. 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/addnodes.png)
 
@@ -278,15 +269,6 @@ We need a Node Template a token in this case from DigitalOcean
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
 
-
-
-
-
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
 
 1. Log in to Rancher 2.0 server
