@@ -5,27 +5,17 @@
 Making the leap to microservices is not as daunting as it was even
 10 years ago. The abundance of information and case studies shared by many 
 companies that went through the trials and tribulations helped establish 
-solid industry best practices. Coupled with many new great opensource tools 
-Making the leap to micro-services is not as daunting as it was even 10 years 
-ago. The abundance of information and case studies shared by many companies 
-that went through the trials and tribulations helped establish solid industry 
-best practices. Coupled with many new great open-source tools donated or 
-developed and supported by a great community of contributors took the mystery 
-out of the process. In this article, I am going to demonstrate two great 
-opensource tools that I am confident can make your adoption of micro-services 
-less challenging. Kubernetes, arguably the best open source container 
-orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes
-clusters.  
+solid industry best practices, coupled with many new great open-source tools 
+donated or developed and supported by a great community of contributors took a 
+lot of the mystery out of the process. 
+In this article, I am going to demonstrate two great opensource tools that I feel 
+confident can make your adoption of micro-services less challenging. Kubernetes, 
+arguably the best open source container orchestrator available and Rancher 2.0 to 
+bootstrap and manage custom Kubernetes clusters. 
+
 A Kubernetes Cluster is a great habitat for micro-services. The platform 
-provides a wealth of built in functionality and solutions and supported by
-a wonderful opensource community and a huge ecosystem. It also provides a great 
-API that you can leverage to customize your clusters or to use as a baseline for
-your own [extending Kubernetes]. 
-Rancher 2.0 as I will demonstrate makes customizing, bootstrapping, and managing
-Kubernetes clusters a breeze. It also cleans up nicely with a simple point and click.
-A very big plus in my opinion because if you're paying for resources outside of kubernetes control
-like load balances, floating/elastic IPs will not go away when you delete the kubernetes cluster. 
-They can linger around and incurs unecessary expenses until they are found and deleted.
+provides a wealth of built in functionality and solutions and backed by 
+wonderful opensource community.  
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four 
 different ways:
@@ -37,69 +27,6 @@ different ways:
 **3.  RKE on AWS**  
 
 **4.  Custom cluster using VMs**
-
-Many of the early adopters were thriving companies (Amazon, Google,
-Netflix, ...), growing fast and the outlook was great. They were having to 
-scale up their resources to meet demand, unfortunately most the scaling was 
-Vertical. It became apparent to them that adding more data centers to meet 
-demand was cost prohibitive, and logistically not practical. Furthermore, some 
-of these companies' own metrics were showing capacity usage hovering around 
-20% at peak. They realized they were heading towards a scalability nightmare, 
-and who wouldn't. Conceptually, it took them 5 data centers to service the same 
-number of requests as would a single data center where resources are managed 
-appropriately. The problem was clearly defined CPU core, and Memory need to be 
-managed better, simple, right? 
-To make a long story short, The problem was a direct result of the monolithic 
-architecture used to develop software. The way applications were developed, 
-built, packaged, and executed was at the heart of the problem. An application 
-was the end product of thousands of line of code developed over many years by 
-many developers, compiled, and built into an executable, and packaged together 
-with library files. When the application is installed and executed as a 
-monolith that runs and dies as a single entity, allocating resources for it 
-was the responsibility of OS and under the mercy of the quality of the source code. 
-Functions within the application, shared the same CPUs, Shared Memory, and Storage local 
-or remote. When whole systems were crashing because of a memory leak caused by some badly 
-written trivial function It became obvious that any solution selected had to include
-a new software design paradigm where applications are divided into smaller more managable 
-modules that could be managed independetly(containers) and the ability to assign resources 
-at a finer granularity to application modules directly.
-The current covention is as follows:
-   * A CPU core is divided into units of m (millicpu). The idea is quite simple, 
-     when a function foo is assigned 200m vCPU, all it means is that 
-     the underlying OS scheduler is supposed to service our function requests at 
-     least 20% of of the time while running. If foo runs for the 5 min we can be 
-     confident that foo received least one minute of CPU, if the system is not busy,
-     the OS might give foo more resources but that is not guaranteed. 
-   * Memory and Storage are straight forward with only one minor detail, the units are in bytes 
-     and you can specify exact number like 1G(billion bytes) E,P,T,G,M,K or in binary 
-     1Gi(gigabyte) Ei, Pi, Ti, Gi, Mi, Ki. The goal was the ability to assign exact 
-     dedicated resources to application functions vs all the functions sharing single 
-     resources. 
-The overall solution they each came up with shared similar concepts and directly 
-Containers and Container orchestration. Linux provided the tools necessary(NAMESPACES, 
-CGROUPS,) to provide separation of concerns one of the core principle in the 
-the micro-services architecture. Applications had to be divided into smaller 
-more manageable services that could be developed independently and communicate
-with each other using a common API. However, breaking up the monolith did not 
-simplify the situation, it complicated it enormously. With a monolith, you 
-install it configure it and run it. All the pieces are built and packaged 
-together (executables and libraries). interactions between application modules 
-was straight forward because all the pieces were installed together on the same 
-host and share the same OS resources such as RPC, thread management, message 
-queues, etc. The OS was also responsible for Scheduling and managing resources.
-Breaking down the monolith presented a different challenge. How are all these 
-newly packages pieces of my application are going to communicate and work with 
-each other to produce at least the same functionality and reliability my 
-monolith? if these micro-services can run independently and can be assign 
-resources why not go further and develop the ability to have them run on 
-different hosts, maybe even on different networks. The result is containers and 
-container orchestration. Kubernetes was devolopped by google to solve the 
-container orchestration puzzle. What I am hoping to accomplish here in this 
-article is to help you setup a Kubernetes cluster to help give you a test bed 
-where you can experiment with containers as you create them. You will have a 
-play ground where you can take your newly made containers on test drives. 
-The Diagram below highlights some of Kubernetes features and how it provides
-a solid platform for a successful migration to micro-services.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
