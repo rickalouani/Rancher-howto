@@ -264,11 +264,6 @@ sudo apt-key add -
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
-
-
-
-
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
