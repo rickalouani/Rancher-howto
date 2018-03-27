@@ -45,18 +45,13 @@ and if they vary kubelet(kubernetes agent on the nodes) will inform the API serv
 The API server will engage the appropriate controller to bring the current state in line with
 the desired state.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubedesign1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100000.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
-
+ 
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, kube-spray, and MINIKUBE are great tools for standing up 
-a cluster, and do make the process very easy. However, they are CLI based,  
-and do require Linux skills and configuration and scripts would have to be version controlled. 
-In this article I would love to demonstrate Rancher 2.0  you to give
-[Rancher 2.0]: http://rancher.com/rancher2-0/  a try as a tool to bootstrap new or import 
-existing Kubernetes clusters and Manage them through a friendly and very intuitive WebUI or 
-Rancher 2.0 CLI. 
+a cluster, and do make the process very easy. However, they are CLI based  
+and do require Linux and configuration management skills.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/addnodes.png)
 
