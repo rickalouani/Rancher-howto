@@ -41,6 +41,7 @@ state in line with the desired state.
 
  - Below is a comprehensive list of features that Kubernetes provides out of the box:
 
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
