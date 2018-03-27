@@ -268,8 +268,6 @@ sudo apt-key add -
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/ipaddress.png)
-
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
