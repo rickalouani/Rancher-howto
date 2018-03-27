@@ -28,6 +28,8 @@ different ways:
 
 **4.  Custom cluster using VMs**
 
+      Below is a comprehensive list of features that Kubernetes provides out of the box:
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 A Kubernetes cluster is a collection of resources(hosts, storage, and great 
