@@ -94,10 +94,19 @@ to host Kubernetes clusters is to implement the interfaces and datatypes.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
 
-Notice at how kubernetes is zones, clusters 
+Luckily all major Cloud provider have implemented the interface, so you're pretty much free
+to select the provider that suits your use case. Through the Cloud Provider Interface data types and methods
+Kubernetes will be able to communicate with the underlying infrastructure provider and allocate all the necessary 
+resources (load ballencers, volumes, etc) defined in you yaml manifests. Outside that interface, the cloud
+provider has no controll on the cluster, Administration such as upgrades, update, and scalling falls you.
+If you need more services, the only option right now is GCP. GCP is the only cloud provider that supports
+Kubernetes out of the box. It uses GKE a container management management solution built on Kubernetes to manage 
+your clusters. So you don't have to install Kubernetes on GCP, Kubernetes is a built-in part of GCP and will always be
+well integrated and well tested. Rancher 2.0 provides it's own Kubernetes Engine RKE that is also supported
+on GCP. 
 
-**# kops create cluster --cloud=aws --zones=eu-west-1b 
---dns-zone=k8s.tf1.com--name cluster1.k8s.tf1.com --yes**
+
+
 
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
