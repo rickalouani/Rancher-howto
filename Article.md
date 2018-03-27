@@ -94,7 +94,11 @@ to host Kubernetes clusters is to implement the interfaces and datatypes.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
 
-
+kops create cluster \ 
+--cloud = aws \ 
+--zones = eu-west-1b \ 
+--dns-zone = k8s.tf1. com \ 
+--name cluster1. k8s.tf1. com --yes
 
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
