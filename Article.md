@@ -275,6 +275,14 @@ We need a Node Template a token in this case from DigitalOcean
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
 
 
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
+
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
 
 
@@ -302,8 +310,4 @@ We need a Node Template a token in this case from DigitalOcean
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
