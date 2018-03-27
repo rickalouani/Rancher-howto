@@ -13,12 +13,37 @@ confident can make your adoption of micro-services less challenging. Kubernetes,
 arguably the best open source container orchestrator available and Rancher 2.0 to 
 bootstrap and manage custom Kubernetes clusters. 
 
-A Kubernetes Cluster is a great habitat for micro-services. The platform 
-provides a wealth of built in functionality and solutions and backed by 
-wonderful opensource community.  
 
-In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four 
-different ways:
+A Kubernetes Cluster is a great habitat for micro-services. The platform 
+provides a wealth of built in functionality and solutions, see table below,
+and is backed by wonderful opensource community.  
+  
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100000.png)
+
+At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
+storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
+all integrated together to give an abstraction layer one level above the container 
+run time. With this abstraction, a kubernetes cluster could be viewed as a number of 
+container run time connected together using an Overlay Network and presented to 
+PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and
+could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage 
+PODs not Containers.
+Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, 
+Kubernetes will abstract away the complexity of managing multiple hosts and present a 
+multinode cluster as a single entity. A user, or an SA(service account) would POST a 
+workload definition in the form of a yaml manifest(s) to the API server. The API server 
+would store the manifest in its data store(ETCD) as is. A Kubernetes control loop constantly
+comparing current state and desired state would notice the new desired state and engages 
+scheduled on that node.watch loop constantly compares the current state and the desired 
+state(stored in ETCD)and if they vary kubelet(kubernetes agent on the nodes) will inform  
+the API server. The API server will engage the appropriate controller to bring the current 
+state in line with the desired state.
+
+ - Below is a comprehensive list of features that Kubernetes provides out of the box:
+
+
+In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
+four different ways:
 
 **1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
@@ -28,40 +53,28 @@ different ways:
 
 **4.  Custom cluster using VMs**
 
-      Below is a comprehensive list of features that Kubernetes provides out of the box:
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
-
-A Kubernetes cluster is a collection of resources(hosts, storage, and great 
-technologies(docker, SDN, CNI, RESTful API design) integrated together 
-beautifully.Kubernetes emboddies the concept of the DATA CENTER as a computer. 
-Once provisioned, Kubernetes will abstract away the complexity of managing 
-multiple hosts and present a multinode cluster as a single entity. A user would 
-submit a desired state of workloads in the form of a yaml manifest and the API server 
-will store the manifest in it's data store ETCD. When the scheduler finds a node with 
-enough free resources to satisfy a request the workload would get scheduled on that node.
-A watch loop constantly compares the current state and the desired state(stored in ETCD)
-and if they vary kubelet(kubernetes agent on the nodes) will inform the API server.
-The API server will engage the appropriate controller to bring the current state in line with
-the desired state.
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100000.png)
 
  
 The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
 KUBEADM, conjure-up, kube-spray, and MINIKUBE are great tools for standing up 
 a cluster, and do make the process very easy. However, they are CLI based  
-and do require Linux and configuration management skills.
+and do require Linux and configuration management skills. 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/addnodes.png)
+Let's look at a hypothetical deployment of a Kubernetes cluster on AWS using KOPS:
+A minimum list of requirement would be inlcue:
+understanding of AWS fundamentals 
+  - setup AIM accounts with the proper permissions
+  - Setup Route43
+  - Setup an S3 bucket to host the cluster configuration
+  
+Install and configure the correct binary for your OS for:
+  - aws cli
+  - KOPS
+  - kubectl
+  
+Setup SSH keys
 
-provides the user with access to configuration variables, API endpoints, among other things
-its own Kuberentes Engine RKE(Rancher Kubernetes Engine), and allows the user 
-to create, manage, and monitor multiple kubernetes clusters across different cloud 
-providers from a single UI. It also allows a user to import existing Kubernetes clusters 
-as I will demonstrate later in the article.
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-2.0.png)
+Configure the cluster
 
 
 
@@ -76,13 +89,14 @@ Along the way, I will highlight some of the pros and cons of each method of depl
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
- 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run our microservices). 
+ 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads). 
  The basic architecture is bellow
  
  
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
 
-
+Before I start the demo, I want to point out a few important issue to understand about 
+kubernetes and Public clouds. In a great world, 
 
 From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as illustrated below:
 
