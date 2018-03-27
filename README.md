@@ -22,8 +22,13 @@ a wonderful opensource community and a huge ecosystem. It also provides a great
 API that you can leverage to customize your clusters or to use as a baseline for
 your own [extending Kubernetes]. 
 Rancher 2.0 as I will demonstrate makes customizing, bootstrapping, and managing
-a Kubernetes cluster a breeze. I will use it to deploy a Kubernetes cluster 
-four different ways:
+Kubernetes clusters a breeze. It also cleans up nicely with a simple point and click.
+A very big plus in my opinion because if you're paying for resources outside of kubernetes control
+like load balances, floating/elastic IPs will not go away when you delete the kubernetes cluster. 
+They can linger around and incurs unecessary expenses until they are found and deleted.
+
+In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four 
+different ways:
 
 **1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
