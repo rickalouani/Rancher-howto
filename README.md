@@ -254,6 +254,8 @@ sudo apt-key add -
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
 
+We need a Node Template a token in this case from DigitalOcean 
+
 **On digital Ocean Dashboard generate an access token**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
