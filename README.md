@@ -276,6 +276,61 @@ We need a Node Template a token in this case from DigitalOcean
 
 
 
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
+
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
+
+
 1. Log in to Rancher 2.0 server
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster-1.png)
