@@ -91,6 +91,7 @@ a cloud provider to host your Kubernetes cluster(s). Kubernetes works with all c
 cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well defined data 
 types and interfaces as shown in following code snapshot. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
 
 
