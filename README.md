@@ -46,8 +46,8 @@ demand was cost prohibitive, and logistically not practical. Furthermore, some
 of these companies' own metrics were showing capacity usage hovering around 
 20% at peak. They realized they were heading towards a scalability nightmare, 
 and who wouldn't. Conceptually, it took them 5 data centers to service the same 
-number of requests as would a single data center where resources are managed 
-appropriately. The problem was clearly defined CPU core, and Memory need to be 
+number of requests as would a well tuned single data center. 
+The problem was clearly defined CPU core, and Memory need to be 
 managed better, simple, right? 
 To make a long story short, The problem was a direct result of the monolithic 
 architecture used to develop software. The way applications were developed, 
