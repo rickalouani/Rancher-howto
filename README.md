@@ -247,28 +247,47 @@ sudo apt-key add -
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
 
-**clic Create Cluster**
+**Click Create Cluster**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/ipaddress.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
-
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
+
+**On digital Ocean Dashboard generate an access token**
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
 
+**Copy and paste the token**
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
+
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/ipaddress.png)
+
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
+
+
+
+
+
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
