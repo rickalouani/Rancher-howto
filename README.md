@@ -185,7 +185,7 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 
 Verify that your newly provisioned VM is ssh accessible.
 I will use the ssh private key we created in step  4
- **ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
+ - ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
 
@@ -198,13 +198,19 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
   
 
   **# sudo apt update -y**
+  
   **# sudo apt dist-upgrade -y**
+  
   **# sudo apt-get remove docker docker-engine docker.io**
 
   **# sudo apt-get install \**
+  
   **apt-transport-https \**
+  
   **ca-certificates \**
+  
   **curl \**
+  
   **software-properties-common**
 
  - Add Docker’s official GPG key
