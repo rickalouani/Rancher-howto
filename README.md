@@ -4,23 +4,19 @@
 
 Making the leap to microservices is not as daunting as it was even
 10 years ago. The abundance of information and case studies shared by many 
-companies that went through the trials and tribulations helped establish 
-solid industry best practices. Coupled with many new great opensource tools 
-Making the leap to micro-services is not as daunting as it was even 10 years 
-ago. The abundance of information and case studies shared by many companies 
-that went through the trials and tribulations helped establish solid industry 
+companies that went through the trials and tribulations helped establish solid industry 
 best practices. Coupled with many new great open-source tools donated or 
 developed and supported by a great community of contributors took the mystery 
 out of the process. In this article, I am going to demonstrate two great 
 opensource tools that I am confident can make your adoption of micro-services 
-less challenging. Kubernetes, arguably the best open source container 
-orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes
-clusters.  
+less challenging. 
+Kubernetes, arguably the best open source container orchestrator available 
+and Rancher 2.0 to bootstrap and manage custom Kubernetes clusters.  
 A Kubernetes Cluster is a great habitat for micro-services. The platform 
-provides a wealth of built in functionality and solutions and supported by
+provides a wealth of built in functionality and solutions and is supported by
 a wonderful opensource community and a huge ecosystem. It also provides a great 
 API that you can leverage to customize your clusters or to use as a baseline for
-your own [extending Kubernetes]. 
+your own API[extending Kubernetes]. 
 Rancher 2.0 as I will demonstrate makes customizing, bootstrapping, and managing
 Kubernetes clusters a breeze. It also cleans up nicely with a simple point and click.
 A very big plus in my opinion because if you're paying for resources outside of kubernetes control
