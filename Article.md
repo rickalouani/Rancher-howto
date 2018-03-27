@@ -273,3 +273,35 @@ We need a Node Template a token in this case from DigitalOcean
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
