@@ -120,7 +120,8 @@ your clusters. So you don't have to install Kubernetes on GCP, Kubernetes is a b
 well integrated and well tested. Rancher 2.0 provides it's own Kubernetes Engine RKE that is also supported
 on GCP and provides and provides similar features as GKE in managing Kubernetes clusters but
 on any support Cloud, not just GCP. So with RKE as your deployment tool you are free to choose 
-any provider supported, that is powerfull stuff!
+any provider supported, I don't know about you but that's powerfull stuff. Basically, Rancher 2.0 will allow you 
+to develop your application and design your kubernetes clusters VENDOR LOCK IN free.
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
@@ -136,7 +137,7 @@ any provider supported, that is powerfull stuff!
  
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
 
-Before I start the demo, I want to point out a few important issue to understand about 
+Before I start the demo, I want to point out a few key points  to understand about 
 kubernetes and Public clouds. In a great world, 
 
 From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as illustrated below:
