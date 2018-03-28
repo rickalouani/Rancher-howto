@@ -203,7 +203,7 @@ Now let's update the distribution, repositories and install Docker
     # sudo apt update -y
     # sudo apt dist-upgrade -y
     # sudo apt-get remove docker docker-engine docker.io**
-    # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common**
+    # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
  
 Add Docker’s official GPG key
 
@@ -214,10 +214,10 @@ Update the repository
      # sudo apt-get update
 Install docker-ce
 
-    # sudo apt-get install docker-ce -y**
+    # sudo apt-get install docker-ce -y
 Make sure that docker is running
 
-    # systemctl status docker**
+    # systemctl status docker
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
 
@@ -229,14 +229,14 @@ Run the Rancher server container as follows
  
 
 
-    **point you browser to the ip address of your Rancher 2.0 server**
-    **Accept the certificate and enter the default user name and password (admin admin)**
+    point you browser to the ip address of your Rancher 2.0 server
+    Accept the certificate and enter the default user name and password (admin admin)
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
 
 
-    **Click Create Cluster** 
+    Click Create Cluster 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
 
@@ -245,13 +245,13 @@ Run the Rancher server container as follows
 
 We need a Node Template a token in this case from DigitalOcean 
 
-    **On digital Ocean Dashboard generate an access token**
+    On digital Ocean Dashboard generate an access token
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
 
-    **Copy and paste the token**
+    Copy and paste the token
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
