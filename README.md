@@ -75,8 +75,9 @@ a cluster, and do make the process very easy. However, they are CLI based
 and do require Linux and configuration management skills. 
 
 Let's look at a hypothetical deployment of a Kubernetes cluster on AWS using KOPS:
-A minimum list of requirement would be inlcude:
-understanding of AWS fundamentals 
+A minimum list of requirement would inlcude:
+
+Understanding of AWS fundamentals 
   - setup AIM accounts with the proper permissions
   - Setup Route53
   - Setup an S3 bucket to host the cluster configuration  
@@ -87,8 +88,9 @@ for your Desktop OS:
   - kubectl
   - ssh keys
   - Configuration management to keep track of different
-    versions of your cluster including KOPS
+    versions of your cluster including KOPS 
   - Be able to Roleback a bad upgrade
+
 That's not too bad if you are building a single test Cluster, but if you're
 for instance building a production, staging, and test Clusters and for simplicity all three
 on AWS. Now you would have 3 different repositories, upgrades and patches have to be scheduled
