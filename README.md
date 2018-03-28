@@ -20,14 +20,21 @@ and is backed by wonderful opensource community.
 
  - Below is a comprehensive list of features that Kubernetes provides out 
    of the box to help with micro-services adoption
+   
+   
+   
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+
+
 
 
  - Kubernetes Master and Cluster Components
  
   
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+
+
 
 
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
@@ -48,21 +55,23 @@ scheduler and the different controller to bring the current state inline with th
 This mode is also refered to as a declarative model.
  
  
+ 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+
 
 
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
 
-**1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+    **1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
-**2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
+    **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
 
-**3.  RKE on AWS**  
+    **3.  RKE on AWS**  
 
-**4.  Custom cluster using VMs**
+    **4.  Custom cluster using VMs**
 
 
  
