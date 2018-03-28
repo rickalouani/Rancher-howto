@@ -109,6 +109,7 @@ on GCP.
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
 
 
+
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
