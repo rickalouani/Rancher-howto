@@ -190,8 +190,11 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
  **# sudo apt-get install \**
  
  **apt-transport-https \**
+ 
  **ca-certificates \**
+ 
  **curl \**   
+ 
  **software-properties-common**
   
 
