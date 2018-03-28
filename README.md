@@ -2,17 +2,15 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Making the leap to microservices is not as daunting as it was even
+Making the leap to microservices is not as daunting as it was even 10 years ago. 
 
-10 years ago. The abundance of information and case studies shared by many 
+The abundance of information and case studies shared by many companies that went 
 
-companies that went through the trials and tribulations helped establish 
+through the trials and tribulations helped establish solid industry best practices, 
 
-solid industry best practices, coupled with many new great open-source tools 
+coupled with many new great open-source tools donated or developed and supported by 
 
-donated or developed and supported by a great community of contributors took a 
-
-lot of the mystery out of the process. 
+a great community of contributors took a lot of the mystery out of the process. 
 
 In this article, I am going to demonstrate two great opensource tools that I feel 
 
