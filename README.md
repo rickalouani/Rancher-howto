@@ -161,22 +161,23 @@ application and not where and how to deploy it.
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
 
 
-From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as illustrated below:
+
+     From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 
+     server as illustrated below:
+
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
 
 
-2.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
 
-3.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
 
 
-**4. On a terminal on your desktop create a new ssh key pair** 
+    On a terminal on your desktop create a new ssh key pair
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
