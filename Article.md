@@ -2,23 +2,33 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Making the leap to microservices is not as daunting as it was even
-10 years ago. The abundance of information and case studies shared by many 
-companies that went through the trials and tribulations helped establish 
-solid industry best practices, coupled with many new great open-source tools 
-donated or developed and supported by a great community of contributors took a 
-lot of the mystery out of the process. 
-In this article, I am going to demonstrate two great opensource tools that I feel 
-confident can make your adoption of micro-services less challenging. Kubernetes, 
-arguably the best open source container orchestrator available and Rancher 2.0 to 
-bootstrap and manage custom Kubernetes clusters. 
+Making the leap to microservices is not as daunting as it was even 10 years ago. The abundance of 
+information and case studies shared by many companies that went through the trials and tribulations 
+helped establish solid industry best practices, coupled with many new great open-source tools donated 
+or developed and supported by a great community of contributors took a lot of the mystery out of the 
+process. In this article, I am going to demonstrate two great opensource tools that I feel confident 
+can make your adoption of micro-services less challenging. Kubernetes, arguably the best open source 
+container orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes clusters. 
+A Kubernetes Cluster is a great habitat for micro-services. The platform provides a wealth of built 
+in functionality and solutions, see table below, and is backed by wonderful opensource community.
+ - Below is a comprehensive list of features that Kubernetes provides out 
+   of the box to help with micro-services adoption
+   
+   
+   
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
-A Kubernetes Cluster is a great habitat for micro-services. The platform 
-provides a wealth of built in functionality and solutions, see table below,
-and is backed by wonderful opensource community.  
+
+
+ - Kubernetes Master and Cluster Components
+ 
   
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100000.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+
+
+
 
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
 storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
@@ -33,26 +43,29 @@ Kubernetes will abstract away the complexity of managing multiple hosts and pres
 multinode cluster as a single entity. A user, or an SA(service account) would POST a 
 workload definition in the form of a yaml manifest(s) to the API server. The API server 
 would store the manifest in its data store(ETCD) as is. A Kubernetes control loop constantly
-comparing current state and desired state would notice the new desired state and engages 
-scheduled on that node.watch loop constantly compares the current state and the desired 
-state(stored in ETCD)and if they vary kubelet(kubernetes agent on the nodes) will inform  
-the API server. The API server will engage the appropriate controller to bring the current 
-state in line with the desired state.
+comparing current state and desired state would notice the new definition and would engages 
+scheduler and the different controller to bring the current state inline with the desired state.
+This mode is also refered to as a declarative model.
+ 
+ 
+ 
 
- - Below is a comprehensive list of features that Kubernetes provides out of the box:
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+
+
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
 
-**1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
-**2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
-
-**3.  RKE on AWS**  
-
-**4.  Custom cluster using VMs**
+   **1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+   
+   **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
+   
+   **3.  RKE on AWS** 
+   
+   **4.  Custom cluster using VMs**
 
 
  
@@ -62,8 +75,9 @@ a cluster, and do make the process very easy. However, they are CLI based
 and do require Linux and configuration management skills. 
 
 Let's look at a hypothetical deployment of a Kubernetes cluster on AWS using KOPS:
-A minimum list of requirement would be inlcude:
-understanding of AWS fundamentals 
+A minimum list of requirement would inlcude:
+
+Understanding of AWS fundamentals 
   - setup AIM accounts with the proper permissions
   - Setup Route53
   - Setup an S3 bucket to host the cluster configuration  
@@ -74,8 +88,9 @@ for your Desktop OS:
   - kubectl
   - ssh keys
   - Configuration management to keep track of different
-    versions of your cluster including KOPS
+    versions of your cluster including KOPS 
   - Be able to Roleback a bad upgrade
+
 That's not too bad if you are building a single test Cluster, but if you're
 for instance building a production, staging, and test Clusters and for simplicity all three
 on AWS. Now you would have 3 different repositories, upgrades and patches have to be scheduled
@@ -268,7 +283,9 @@ We need a Node Template a token in this case from DigitalOcean
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
 
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
+
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
@@ -278,18 +295,24 @@ We need a Node Template a token in this case from DigitalOcean
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
 
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
+
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
 
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
+
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
 
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
