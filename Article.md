@@ -167,7 +167,8 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 
 
 Verify that your newly provisioned VM is ssh accessible.
-I will use the ssh private key we created in step  4
+I will use the ssh private key we created in step  4 
+
  **ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
@@ -181,36 +182,53 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
   
 
   **# sudo apt update -y**
+  
   **# sudo apt dist-upgrade -y**
+  
   **# sudo apt-get remove docker docker-engine docker.io**
-
+  
   **# sudo apt-get install \**
+  
   **apt-transport-https \**
+  
   **ca-certificates \**
+  
   **curl \**
+  
   **software-properties-common**
+  
 
  - Add Docker’s official GPG key
 
-# curl -fsSL \
-https://download.docker.com/linux/ubuntu/gpg | \
-sudo apt-key add -
+**# curl -fsSL \**
+
+**https://download.docker.com/linux/ubuntu/gpg | \**
+
+**sudo apt-key add -**
 
 - Update the repository
 **# sudo add-apt-repository \**
+
 **"deb [arch=amd64] https://download.docker.com/linux/ubuntu \**
+
 **$(lsb_release -cs) \**
+
 **stable"**
 
 **# sudo apt-get update**
+
 - Install docker-ce
+
 **# sudo apt-get install docker-ce -y**
 
 - Make sure that docker is running
+
 **# systemctl status docker**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
+
 - Run the Rancher server container as follows
+
 **# sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:preview**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
@@ -220,7 +238,9 @@ sudo apt-key add -
 **point you browser to the ip address of your Rancher 2.0 server**
 **Accept the certificate and enter the default user name and password (admin admin)**
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
+
 
 **Click Create Cluster**
 
