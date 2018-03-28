@@ -148,6 +148,8 @@ application and not where and how to deploy it.
  
  
  
+ 
+ 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
 
