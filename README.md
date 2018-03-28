@@ -325,6 +325,128 @@ We need a Node Template a token in this case from DigitalOcean
 
 
 
+ **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
+ 
+ In this demo, I will migrate a cluster with live workloads. The am going through the process
+ of setting up a Kubernetes cluster on GCP using GKE. Just to make the demo a little interesting
+ I install a stable/wordpress HELM(another great tool for installing micro-services, think of it
+ as APT or YUM for Kubernetes). Use kubectl to confirm that the pods are running, lookup the
+ services, and find the ip address of the Loadbalancer assigned by GKE upon request from 
+ Kubernetes on your behal. I will point a browser to the loadbalancer address and confirm that 
+ Wordpress is up and running.
+ 
+ Next I will migrate the Cluster to Rancher 2.0, Confirm that all the workloads are still 
+ running. Show of some of the awesomeness of Rancher 2.0, scalling up, deleting, ... you get 
+ the point. 
+ The screenshots are self explanatory please enjoy.
+ 
+ 
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6001.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6002.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6003.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6004.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6005.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6006.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6007.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6008.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6009.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6010.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6011.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6012.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6013.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6014.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6015.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6016.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6017.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6018.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6019.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6020.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6021.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6022.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6023.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6024.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6025.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6026png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6027.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6028.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6029.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6030.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6031.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6032.png)
+
+
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6033.png)
+
+
+
+
+
+
+
+
 
 
 
