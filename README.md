@@ -202,7 +202,7 @@ Now let's update the distribution, repositories and install Docker
 
     # sudo apt update -y
     # sudo apt dist-upgrade -y
-    # sudo apt-get remove docker docker-engine docker.io**
+    # sudo apt-get remove docker docker-engine docker.io
     # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
  
 Add Docker’s official GPG key
@@ -212,9 +212,11 @@ Update the repository
 
      # sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
      # sudo apt-get update
+     
 Install docker-ce
 
     # sudo apt-get install docker-ce -y
+    
 Make sure that docker is running
 
     # systemctl status docker
@@ -237,21 +239,27 @@ Run the Rancher server container as follows
 
 
     Click Create Cluster 
+    
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
 
+
 We need a Node Template a token in this case from DigitalOcean 
 
     On digital Ocean Dashboard generate an access token
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
 
+
     Copy and paste the token
+    
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
@@ -271,7 +279,9 @@ We need a Node Template a token in this case from DigitalOcean
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
 
+
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
 
