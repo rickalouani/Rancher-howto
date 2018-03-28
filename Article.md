@@ -187,9 +187,9 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
   
 **# sudo apt-get remove docker docker-engine docker.io**
 
-**# sudo apt-get install \**
+**# sudo apt-get install \
  
-**apt-transport-https \**
+**apt-transport-https \
  
 **ca-certificates \**
  
