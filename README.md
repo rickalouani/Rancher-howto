@@ -2,28 +2,23 @@
 
 **Four ways to build Kubernetes clusters with Rancher 2.0**
 
-Making the leap to microservices is not as daunting as it was even 10 years ago. 
+Making the leap to microservices is not as daunting as it was even 10 years ago. The abundance of 
 
-The abundance of information and case studies shared by many companies that went 
+information and case studies shared by many companies that went through the trials and tribulations 
 
-through the trials and tribulations helped establish solid industry best practices, 
+helped establish solid industry best practices, coupled with many new great open-source tools donated 
 
-coupled with many new great open-source tools donated or developed and supported by 
+or developed and supported by a great community of contributors took a lot of the mystery out of the 
 
-a great community of contributors took a lot of the mystery out of the process. 
+process. In this article, I am going to demonstrate two great opensource tools that I feel confident 
 
-In this article, I am going to demonstrate two great opensource tools that I feel 
+can make your adoption of micro-services less challenging. Kubernetes, arguably the best open source 
 
-confident can make your adoption of micro-services less challenging. Kubernetes, 
+container orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes clusters. 
 
-arguably the best open source container orchestrator available and Rancher 2.0 to 
+A Kubernetes Cluster is a great habitat for micro-services. The platform provides a wealth of built 
 
-bootstrap and manage custom Kubernetes clusters. 
-
-
-A Kubernetes Cluster is a great habitat for micro-services. The platform 
-provides a wealth of built in functionality and solutions, see table below,
-and is backed by wonderful opensource community.
+in functionality and solutions, see table below, and is backed by wonderful opensource community.
 
  - Below is a comprehensive list of features that Kubernetes provides out 
    of the box to help with micro-services adoption
