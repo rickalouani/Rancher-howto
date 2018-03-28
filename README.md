@@ -65,10 +65,10 @@ This mode is also refered to as a declarative model.
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
 
-   1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
-   3. RKE on AWS      
-   4. Custom cluster using VMs
+   1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
+   3.  RKE on AWS      
+   4.  Custom cluster using VMs
 
 
  
