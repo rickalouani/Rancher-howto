@@ -191,46 +191,45 @@ From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 server as il
 Verify that your newly provisioned VM is ssh accessible.
 I will use the ssh private key we created in step  4 
 
- **ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>**
+     ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
 
-Now let's update the distribution, repositories and install Docker
 
- **Note:** I am going to use docker community edition but you are free to use any of the versions supported by Rancher 2.0)
-supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#supported-docker-versions
+
+    Note: I am going to use docker community edition but you are free to use any of the versions supported by Rancher 2.0)
+    supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#supported-docker-versions
   
+Now let's update the distribution, repositories and install Docker
 
     # sudo apt update -y
     # sudo apt dist-upgrade -y
     # sudo apt-get remove docker docker-engine docker.io**
     # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common**
  
- - Add Docker’s official GPG key
+Add Docker’s official GPG key
 
- **# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -**
+    # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -**
 
-- Update the repository
+Update the repository
 
- **# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"**
+     # sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"**
+     # sudo apt-get update
+Install docker-ce
 
- **# sudo apt-get update**
+    # sudo apt-get install docker-ce -y**
 
- - Install docker-ce
+Make sure that docker is running
 
- **# sudo apt-get install docker-ce -y**
-
- - Make sure that docker is running
-
- **# systemctl status docker**
+    # systemctl status docker**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
 
-- Run the Rancher server container as follows
+Run the Rancher server container as follows
 
- **# sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:preview**
+    # sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:preview**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
  
@@ -243,7 +242,7 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
 
 
-**Click Create Cluster**
+    Click Create Cluster 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
 
@@ -252,13 +251,13 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 
 We need a Node Template a token in this case from DigitalOcean 
 
-**On digital Ocean Dashboard generate an access token**
+    On digital Ocean Dashboard generate an access token
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
 
-**Copy and paste the token**
+    Copy and paste the token
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
