@@ -40,15 +40,12 @@ Kubernetes will abstract away the complexity of managing multiple hosts and pres
 multinode cluster as a single entity. A user, or an SA(service account) would POST a 
 workload definition in the form of a yaml manifest(s) to the API server. The API server 
 would store the manifest in its data store(ETCD) as is. A Kubernetes control loop constantly
-comparing current state and desired state would notice the new desired state and engages 
-scheduled on that node.watch loop constantly compares the current state and the desired 
-state(stored in ETCD)and if they vary kubelet(kubernetes agent on the nodes) will inform  
-the API server. The API server will engage the appropriate controller to bring the current 
-state in line with the desired state.
+comparing current state and desired state would notice the new definition and would engages 
+scheduler and the different controller to bring the current state inline with the desired state.
+This mode is also refered to as a declarative model.
+ 
 
- - Below is a comprehensive list of features that Kubernetes provides out of the box:
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
