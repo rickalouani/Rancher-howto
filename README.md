@@ -21,11 +21,11 @@ and is backed by wonderful opensource community.
  - Below is a comprehensive list of features that Kubernetes provides out 
    of the box to help with micro-services adoption
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
  - Kubernetes Cluster at a glance
   
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
 storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
