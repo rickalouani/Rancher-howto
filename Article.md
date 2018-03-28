@@ -106,6 +106,7 @@ well integrated and well tested. Rancher 2.0 provides it's own Kubernetes Engine
 on GCP. 
 
 
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
 
 
 **RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
