@@ -218,19 +218,19 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 
  **# sudo apt-get update**
 
-- Install docker-ce
+ - Install docker-ce
 
-**# sudo apt-get install docker-ce -y**
+ **# sudo apt-get install docker-ce -y**
 
-- Make sure that docker is running
+ - Make sure that docker is running
 
-**# systemctl status docker**
+ **# systemctl status docker**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
 
 - Run the Rancher server container as follows
 
-**# sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:preview**
+ **# sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:preview**
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
  
