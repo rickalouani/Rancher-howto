@@ -23,9 +23,12 @@ and is backed by wonderful opensource community.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
+
  - Kubernetes Master and Cluster Components
+ 
   
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+
 
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
 storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
@@ -44,8 +47,11 @@ comparing current state and desired state would notice the new definition and wo
 scheduler and the different controller to bring the current state inline with the desired state.
 This mode is also refered to as a declarative model.
  
+ 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+
+
 
 In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
 four different ways:
