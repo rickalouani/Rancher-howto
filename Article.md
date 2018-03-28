@@ -89,7 +89,7 @@ healthchecks, and more all presented as selectable options in the UI.
 Before I start the demo, I make a few point incase you're in the process of selecting
 a cloud provider to host your Kubernetes cluster(s). Kubernetes works with all current 
 cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well defined data 
-types and interfaces as shown in following code snapshot. All cloud provider have to do 
+types and interfaces as shown in following code snippet. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
