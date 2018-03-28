@@ -21,7 +21,7 @@ and is backed by wonderful opensource community.
  - Below is a comprehensive list of features that Kubernetes provides out 
    of the box to help with micro-services adoption
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)(https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
  - Kubernetes Cluster at a glance
   
