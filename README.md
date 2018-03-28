@@ -140,7 +140,7 @@ application and not where and how to deploy it.
 
 **#kubectl patch deploy --namespace kube-system tiller-deploy -p \** 
 
-**'{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'**
+ **'{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'**
 
   
   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
