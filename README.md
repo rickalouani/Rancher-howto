@@ -132,18 +132,20 @@ keeping up with release notes. This applies to your deployments as well as manif
 helm to access kube-system namespace. The moral of the storie is, you need to focus most of your efforts developing your
 application and not where and how to deploy it.
  if you run into an issue where helm complains about a release not found or something similar enable RBAC for helm as follows:
-**# kubectl create serviceaccount --namespace kube-system tiller**
+ 
+    # kubectl create serviceaccount --namespace kube-system tiller
 
-**#kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \**
+    # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
 
-**--serviceaccount=kube-system:tiller**
+      --serviceaccount=kube-system:tiller**
 
-**#kubectl patch deploy --namespace kube-system tiller-deploy -p \** 
+    # kubectl patch deploy --namespace kube-system tiller-deploy -p \
 
- **'{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'**
+      '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
   
-  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
+ ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
+ 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
 
