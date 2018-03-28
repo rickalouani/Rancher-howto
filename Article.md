@@ -197,7 +197,7 @@ supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#suppor
 
 - Update the repository
 
- **# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable**
+ **# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"**
 
  **# sudo apt-get update**
 
