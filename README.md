@@ -119,10 +119,13 @@ If you need more services, the only option right now is GCP. GCP is the only clo
 Kubernetes out of the box. It uses GKE a container management management solution built on Kubernetes to manage 
 your clusters. So you don't have to install Kubernetes on GCP, Kubernetes is a built-in part of GCP and will always be
 well integrated and well tested. Rancher 2.0 provides it's own Kubernetes Engine RKE that is also supported
-on GCP and provides and provides similar features as GKE in managing Kubernetes clusters but
-on any support Cloud, not just GCP. So with RKE as your deployment tool you are free to choose 
-any provider supported, I don't know about you but that's powerfull stuff. Basically, Rancher 2.0 will allow you 
-to develop your application and design your kubernetes clusters VENDOR LOCK IN free.
+on GCP and provides and provides similar features as GKE in managing Kubernetes clusters but on any supported 
+Cloud, not just GCP. So with RKE as your deployment tool you are free to choose any provider supported, 
+I don't know about you but that's powerfull stuff. Basically, Rancher 2.0 will allow you to develop your 
+application and design your kubernetes clusters VENDOR LOCK IN free. Also, Rancher 2.0 would handle for you 
+some of the tricky configurations such as ABAC vs RBAC, User space vs IPTABLES, the later two are current
+Kubernetes defaults, the first two are old defaults. If you are using KOPS, KUBEADM or any of the other 
+CLI based tools you would have to manage the repositories and or branches for all the different configurations.
 
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
