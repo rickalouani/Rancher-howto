@@ -25,7 +25,7 @@ and is backed by wonderful opensource community.
 
  - Kubernetes Cluster at a glance
   
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
 
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
 storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
