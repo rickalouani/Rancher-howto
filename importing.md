@@ -121,7 +121,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
-#### RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+#### RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
@@ -138,20 +138,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
  ##### 2. Click Create Droplet
  - Select OS Distribution, Size and Region
- - Click on # New SSH Key 
-
-   
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-
-
-   
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+ - Click on  New SSH Key
 
 
    
@@ -161,14 +148,14 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
-    On a terminal on your desktop create a new ssh key pair
+- On a terminal on your desktop create a new ssh key pair
 
 
   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
- Copy and paste your Public key
+- Copy and paste your Public key
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
