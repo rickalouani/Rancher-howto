@@ -12,26 +12,6 @@ container orchestrator available and Rancher 2.0 to bootstrap and manage custom 
 A Kubernetes Cluster is a great habitat for micro-services. The platform provides a wealth of built 
 in functionality that combined could provide limitless solutions to your micro-services design and 
 deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
-
-   Comprehensive list of features that Kubernetes provides out of the box 
-               to help with micro-services adoption
-               
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-
-
-
-    - Kubernetes Master and Cluster Components -
-    
- 
-  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
 At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
 storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
 all integrated together to give an abstraction layer one level above the container 
@@ -52,13 +32,7 @@ in the case of a ReplicaSets. That is everything requested in the yaml manifest 
 are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, 
 endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template 
 all pass. This mode is also refered to as a declarative model. 
-
-    - Kubernetes Master Components
  
-
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
@@ -70,9 +44,6 @@ four different ways:
    
    **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
    
-   **3.  RKE on AWS** 
-   
-   **4.  Custom cluster using VMs**
 
 
  
@@ -112,75 +83,7 @@ Before I start the demo, I make a few point incase you're in the process of sele
 a cloud provider to host your Kubernetes cluster(s). Kubernetes works with all current 
 cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well defined data 
 types and interfaces as shown in following code snippet. All cloud provider have to do 
-to host Kubernetes clusters is to implement the interfaces and datatypes.
-
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-Luckily all major Cloud provider have implemented the interface, so you're pretty much free
-to select the provider that suits your use case. Through the Cloud Provider Interface data types and methods
-Kubernetes will be able to communicate with the underlying infrastructure provider and allocate all the necessary 
-resources (load ballencers, volumes, etc) defined in you yaml manifests. Outside that interface, the cloud
-provider has no controll on the cluster, Administration such as upgrades, update, and scalling falls you.
-If you need more services, the only option right now is GCP. GCP is the only cloud provider that supports
-Kubernetes out of the box. It uses GKE a container management management solution built on Kubernetes to manage 
-your clusters. So you don't have to install Kubernetes on GCP, Kubernetes is a built-in part of GCP and will always be
-well integrated and well tested. Rancher 2.0 provides it's own Kubernetes Engine RKE that is also supported
-on GCP and provides and provides similar features as GKE in managing Kubernetes clusters but on any supported 
-Cloud, not just GCP. So with RKE as your deployment tool you are free to choose any provider supported, 
-I don't know about you but that's powerfull stuff. Basically, Rancher 2.0 will allow you to develop your 
-application and design your kubernetes clusters VENDOR LOCK IN free. Also, Rancher 2.0 would handle for you 
-some of the tricky configurations such as ABAC vs RBAC, User space vs IPTABLES. For instance, Kubernetes 
-uses RBAC as the defaul access mode and KUBE-PROXY uses IPTABLES as its default mode for PODs to communicate
-accress nodes(see figure below). Unfortunately  you are using KOPS, KUBEADM or any of the other 
-CLI based tool you would have to keep track of all the changes both by managing the repositories and branches, and
-keeping up with release notes. This applies to your deployments as well as manifests or helm charts you use 
-to deploy your workloads. Recently I tried running helm on Version 1.9 of Kuberenetes and couldn't because of the 
-change to default RBAC. I had to create and deploy the roles and rolebindings to allow tiller to access 
-kube-system namespace. The moral of the storie is, you need to focus most of your efforts developing your
-application and not what version goes where, and pulling your hair trying to figure out why it worked here 
-and not there.
-
-       HELM is a great opensource tool that allows packaging of kubernetes yaml manifests in a standard 
-       format. It among other things defines a standard directory structure, and uses GO templating to render 
-       and dynamically customize all of the yaml manifests included in the chart and their associated 
-       labels, secrets, configmaps, etc. To ploy your application you simply type 
-       helm install CHART-NAME        
-       
-         FYI:
-          if helm returns the following error:
-          
-             - Error: configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
-               cannot list configmaps in the namespace "kube-system" -
-               
-          setup Tiller Roles and Rolebindings as shown bellow:
-          
-             # kubectl create serviceaccount --namespace kube-system tiller
-             # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
-               --serviceaccount=kube-system:tiller
-             # kubectl patch deploy --namespace kube-system tiller-deploy -p \
-               '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
-
-
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-  
-   
-   
- 
- 
- 
- 
- 
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-I made this statement earlier in the article and to be fair to GKE, I am going to highlight
-some of the pros and cons of GKE as your Kubernetes Deployment method. Throughout the article,
-I will try to highlight how RKE compares:
+to host Kubernetes clusters is to implement the interfaces and datatypes
 
 
   Google Kubernetes Engine:
@@ -198,8 +101,7 @@ I will try to highlight how RKE compares:
         * Vendor Lockin
 
    Rancher Kubernetes Engine
-
-       How to: 
+   
     *  Abstracts away and manages Kubernetes master nodes
         Nodes use
     *   Management of Adminssion rules, Network Policies, ... 
