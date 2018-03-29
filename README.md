@@ -134,11 +134,11 @@ kube-system namespace. The moral of the storie is, you need to focus most of you
 application and not what version goes where, and pulling your hair trying to figure out why it worked here 
 and not there.
 
-       FYI: HELM is a tools that allows packaging of kubernetes yaml manifest in a uniform way called a Chart.
-       It use to use go templating to generate consistant correctly labels, comfigmaps, releases, etc.
-       For instance when your deployments, secrets, configmaps are design and written you can easily package them as 
-       a helm chart. that in theory you should be able to install anywhere kubernetes is running 
-       [helm install CHART-NAME]
+       HELM is a great opensource tool that allows packaging of kubernetes yaml manifest in a standard format.
+       It defines the directory structure, and uses GO templating to render and generate consitant names for
+       labels, labels, comfigmaps, releases, etc.
+       For instance when your deployment yaml manifests written you can easily package them as a chart, 
+       that you can install in any Kubernetes cluster with helm installed by running helm install CHART-NAME
        
          FYI:
           if helm returns the following error:
