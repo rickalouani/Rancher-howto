@@ -25,6 +25,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
 
 
     - Kubernetes Master and Cluster Components
+    
  
   
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
