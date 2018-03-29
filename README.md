@@ -15,8 +15,11 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
 
    Comprehensive list of features that Kubernetes provides out of the box 
                to help with micro-services adoption
- 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+               
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 
 
