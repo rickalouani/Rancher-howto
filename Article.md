@@ -11,13 +11,13 @@ Inline-style:
     Reference-style: 
     ![alt text][logo]
 
-    [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 2"
+    [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-6.png "Logo Title Text 2"
 
 
 Reference-style: 
 ![alt text][logo]
 
-[logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 2"
+[logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-6.png "Microservices"
 
 
 
