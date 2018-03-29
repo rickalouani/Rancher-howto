@@ -1,13 +1,28 @@
 
+      1. [I'm an inline-style link](https://www.google.com)
 [I'm an inline-style link](https://www.google.com)
 
+     2. [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+     
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
+     3. [I'm a reference-style link][Arbitrary case-insensitive reference text]
+     
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
+     
+     
+     4. [I'm a relative reference to a repository file](../blob/master/LICENSE) 
 
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
+     5. [You can use numbers for reference-style link definitions][1]
+ 
 [You can use numbers for reference-style link definitions][1]
+
+    6. [You can use numbers for reference-style link definitions][1]
+    
+[You can use numbers for reference-style link definitions][1]
+
 
 Or leave it empty and use the [link text itself].
 
