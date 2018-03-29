@@ -24,7 +24,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
 
 
 
-    - Kubernetes Master and Cluster Components
+    - Kubernetes Master and Cluster Components -
     
  
   
