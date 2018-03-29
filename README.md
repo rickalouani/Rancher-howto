@@ -142,9 +142,12 @@ and not there.
        
          FYI:
           if helm returns the following error:
+          
              - Error: configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
                cannot list configmaps in the namespace "kube-system" -
+               
           setup Tiller Roles and Rolebindings as shown bellow:
+          
              # kubectl create serviceaccount --namespace kube-system tiller
              # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
                --serviceaccount=kube-system:tiller
