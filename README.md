@@ -178,8 +178,38 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
- 
+I made this statement earlier in the article and to be fair to GKE, I am going to highlight
+some of the pros and cons of GKE as your Kubernetes Deployment method. Throughout the article,
+I will try to highlight how RKE compares:
 
+
+  Google Kubernetes Engine:
+  Pros:
+  *  Abstracts away and manages Kubernetes master nodes
+     Nodes use
+  *  container optimized image
+  *  Upgrades to Kubernetes Master through GCP management console
+  *  Upgrade, add, or remove worker nodes through GCP management console
+  *  Global spanning load balancer built-in
+  *  Easy deployment and automation
+  *  Optional support for Kops
+ Cons:
+  * Vendor Lockin
+
+Rancher Kubernetes Engine
+How to: 
+ *  Abstracts away and manages Kubernetes master nodes
+     Nodes use
+ *   Management of Adminssion rules, Network Policies, ... 
+ *  container optimized image
+ *  Upgrades to Kubernetes Master through GCP management console
+ *  Upgrade, add, or remove worker nodes through GCP management console
+ *  Global spanning load balancer built-in
+ *  Easy deployment and automation
+ 
+ Cons:
+  * Not as stable as GKE currently but it's still early in alpha.
+  
 
 
 
