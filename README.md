@@ -114,7 +114,7 @@ cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well def
 types and interfaces as shown in following code snippet. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
 
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
