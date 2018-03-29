@@ -39,6 +39,7 @@ four different ways:
 
 
    ####      1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   
    ####      2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
    
 
@@ -115,14 +116,13 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
 
 
 
-**RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+#### RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
- 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads). 
- The basic architecture is bellow
+ 1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
  
+    Basic architecture
  
-   
  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
