@@ -17,8 +17,10 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
    of the box to help with micro-services adoption
    
    
-   
+   ![alt text][logo][logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
+
+       iii
 ![List](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
@@ -57,7 +59,7 @@ all pass. This mode is also refered to as a declarative model.
     - Kubernetes Master Components
  
 
- ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+  ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
 
 
 
