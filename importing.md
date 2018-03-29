@@ -131,11 +131,17 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
+    
+- Log on to DigitalOcean Dashboard create 
+     
+    
+    
+     
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-     From the DigitalOcean Dashboard create a VM to host the Rancher 2.0 
-     server as illustrated below:
-
-
+      Click Create Droplet
 
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
