@@ -8,10 +8,19 @@ Inline-style:
     ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 1")
     
     
+    Reference-style: 
+    ![alt text][logo]
+
+    [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 2"
+
+
 Reference-style: 
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 2"
+
+
+
 
       1. [I'm an inline-style link](https://www.google.com)
 [I'm an inline-style link](https://www.google.com)
