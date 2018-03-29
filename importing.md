@@ -38,9 +38,8 @@ In this article I am going to demonstrate Both tools by deploying a Kubernetes c
 four different ways:
 
 
-   ####      1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   
-   ####      2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
+   #### 1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   #### 2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
    
 
 
