@@ -127,11 +127,22 @@ some of the tricky configurations such as ABAC vs RBAC, User space vs IPTABLES. 
 uses RBAC as the defaul access mode and KUBE-PROXY uses IPTABLES as its default mode for PODs to communicate
 accress nodes(see figure below). Unfortunately  you are using KOPS, KUBEADM or any of the other 
 CLI based tool you would have to keep track of all the changes both by managing the repositories and branches, and
-keeping up with release notes. This applies to your deployments as well as manifests. I just running helm on
-1.9 and couldn't because of the change to RBAC. I had to create and install the roles and rolebindings to allow
-helm to access kube-system namespace. The moral of the storie is, you need to focus most of your efforts developing your
-application and not where and how to deploy it.
- if you run into an issue where helm complains about a release not found or something similar enable RBAC for helm as follows:
+keeping up with release notes. This applies to your deployments as well as manifests or helm charts you use 
+to deploy your workloads. Recently I tried running helm on Version 1.9 of Kuberenetes and couldn't because of the 
+change to default RBAC. I had to create and deploy the roles and rolebindings to allow tiller to access 
+kube-system namespace. The moral of the storie is, you need to focus most of your efforts developing your
+application and not what version goes where, and pulling your hair trying to figure out why it worked here 
+and not there.
+
+       FYI: HELM is a tools that allows packaging of kubernetes yaml manifest in a uniform way called a Chart.
+       It use to use go templating to generate consistant correctly labels, comfigmaps, releases, etc.
+       For instance when your deployments, secrets, configmaps are design and written you can easily package them as 
+       a helm chart. that in theory you should be able to install anywhere kubernetes is running 
+       [helm install CHART-NAME]
+       
+       
+         if you run into an issue where helm complains about a release not found or something similar enable 
+         RBAC for helm as follows:
  
     # kubectl create serviceaccount --namespace kube-system tiller
     # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
@@ -360,16 +371,13 @@ We need a Node Template a token in this case from DigitalOcean
  
  In this demo, I will migrate a cluster with live workloads. The am going through the process
  of setting up a Kubernetes cluster on GCP using GKE. Just to make the demo a little interesting
- I install a stable/wordpress HELM(another great tool for installing micro-services, think of it
- as APT or YUM for Kubernetes). Use kubectl to confirm that the pods are running, lookup the
- services, and find the ip address of the Loadbalancer assigned by GKE upon request from 
- Kubernetes on your behal. I will point a browser to the loadbalancer address and confirm that 
+ I will install a stable/wordpress HELM CHART. Use kubectl to confirm that the pods are 
+ running, lookup the services, and find the ip address of the Loadbalancer assigned by GKE upon request 
+ from Kubernetes on your behalf. I will point a browser to the loadbalancer address and confirm that 
  Wordpress is up and running.
- 
  Next I will migrate the Cluster to Rancher 2.0, Confirm that all the workloads are still 
  running. Show of some of the awesomeness of Rancher 2.0, scalling up, deleting, ... you get 
- the point. 
- The screenshots are self explanatory please enjoy.
+ the point. I hope the illustrations are self explanatory please enjoy.
  
  
 
