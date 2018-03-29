@@ -114,7 +114,9 @@ cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well def
 types and interfaces as shown in following code snippet. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 Luckily all major Cloud provider have implemented the interface, so you're pretty much free
 to select the provider that suits your use case. Through the Cloud Provider Interface data types and methods
@@ -160,16 +162,23 @@ and not there.
              # kubectl patch deploy --namespace kube-system tiller-deploy -p \
                '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
-  
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
- 
- 
- 
- 
- 
- 
 
-    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+  
+   
+   
+ 
+ 
+ 
+ 
+ 
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+ 
 
 
 
@@ -182,7 +191,10 @@ and not there.
  The basic architecture is bellow
  
  
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
+   
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
@@ -191,26 +203,52 @@ and not there.
 
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
+
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 
     On a terminal on your desktop create a new ssh key pair
 
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 **5. Copy and paste your Public key**
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 
 Verify that your newly provisioned VM is ssh accessible.
@@ -218,9 +256,16 @@ I will use the ssh private key we created in step  4
 
      # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
+   
+    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 
 
@@ -250,7 +295,9 @@ Make sure that docker is running
 
     # systemctl status docker
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 Run the Rancher server container as follows
 
