@@ -112,6 +112,12 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
         * Not as stable as GKE currently but it's still early in alpha.
   
 
+   ##### Basic Kubernetes Cluster Architecture
+ 
+ 
+ <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
@@ -119,26 +125,20 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
- 
-    Basic architecture
- 
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 #### Create a VM to host Rancher 2.0 Server
 
-##### 1. Log on to DigitalOcean account password
+##### 1. Log on to DigitalOcean Dashboard
      
-    
-    
      
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/digitalocean1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-      Click Create Droplet
+ ##### 2. Click Create Droplet
+ - Select OS Distribution, Size and Region
+ - Click on # New SSH Key 
 
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
