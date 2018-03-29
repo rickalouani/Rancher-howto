@@ -11,9 +11,9 @@
 
 Colons can be used to align columns.
 
-| Micro-services Core Needs             |          Kubernetes offerings  |
-| ---------------------------------------------------------------------- |
-| col 3 is                              |                                |  
+| Micro-services Core Needs             |          Kubernetes offerings   |
+| --------------------------------------|:-------------------------------:|
+| col 3 is                              |                                 |  
 | 
 Markdown | Less | Pretty
 --- | --- | ---
