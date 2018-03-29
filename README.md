@@ -16,7 +16,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
    Comprehensive list of features that Kubernetes provides out of the box 
                to help with micro-services adoption
  
-   ![List](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
 
@@ -25,7 +25,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
     
  
   
-![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
 
 
 
@@ -54,7 +54,7 @@ all pass. This mode is also refered to as a declarative model.
     - Kubernetes Master Components
  
 
-  ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
 
 
 
@@ -110,7 +110,7 @@ cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well def
 types and interfaces as shown in following code snippet. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
 
-![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
 
 Luckily all major Cloud provider have implemented the interface, so you're pretty much free
 to select the provider that suits your use case. Through the Cloud Provider Interface data types and methods
@@ -157,7 +157,7 @@ and not there.
                '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
   
- ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
  
  
  
@@ -165,7 +165,7 @@ and not there.
  
  
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
+    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png)
 
 
 
@@ -178,7 +178,7 @@ and not there.
  The basic architecture is bellow
  
  
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png)
 
 
 
@@ -187,26 +187,26 @@ and not there.
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png)
 
 
     On a terminal on your desktop create a new ssh key pair
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
 
 **5. Copy and paste your Public key**
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
 
 
 Verify that your newly provisioned VM is ssh accessible.
@@ -214,9 +214,9 @@ I will use the ssh private key we created in step  4
 
      # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png)
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png)
 
 
 
@@ -246,13 +246,13 @@ Make sure that docker is running
 
     # systemctl status docker
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png)
 
 Run the Rancher server container as follows
 
     # sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
  
 
 
@@ -260,16 +260,16 @@ Run the Rancher server container as follows
     Accept the certificate and enter the default user name and password (admin admin)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
 
 
     Click Create Cluster 
     
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
 
 
 We need a Node Template a token in this case from DigitalOcean 
@@ -277,94 +277,94 @@ We need a Node Template a token in this case from DigitalOcean
     On digital Ocean Dashboard generate an access token
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
 
 
     Copy and paste the token
     
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
-
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
-
-
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
 
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
 
 
 
@@ -384,103 +384,103 @@ We need a Node Template a token in this case from DigitalOcean
  
  
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6001.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6001.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6002.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6002.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6003.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6003.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6004.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6004.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6005.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6005.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6006.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6006.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6007.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6007.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6008.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6008.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6009.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6009.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6010.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6010.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6011.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6011.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6012.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6012.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6013.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6013.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6014.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6014.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6015.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6015.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6016.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6016.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6017.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6017.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6018.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6018.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6019.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6019.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6020.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6020.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6021.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6021.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6022.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6022.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6023.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6023.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6024.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6024.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6025.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6025.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6026png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6026png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6027.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6027.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6028.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6028.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6029.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6029.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6030.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6030.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6031.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6031.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6032.png)
+  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6032.png)
 
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6033.png)
+  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6033.png)
 
 
 
