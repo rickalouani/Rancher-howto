@@ -140,18 +140,16 @@ and not there.
        a helm chart. that in theory you should be able to install anywhere kubernetes is running 
        [helm install CHART-NAME]
        
-       
-         if you run into an issue where helm complains about a release not found or something similar enable 
-         RBAC for helm as follows:
- 
-    # kubectl create serviceaccount --namespace kube-system tiller
-    # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
-      --serviceaccount=kube-system:tiller
-    # kubectl patch deploy --namespace kube-system tiller-deploy -p \
-      '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
-
-
-
+         FYI:
+          if helm returns the following error:
+             - Error: configmaps is forbidden: User "system:serviceaccount:kube-system:default" 
+               cannot list configmaps in the namespace "kube-system" -
+          setup Tiller Roles and Rolebindings as shown bellow:
+             # kubectl create serviceaccount --namespace kube-system tiller
+             # kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin \
+               --serviceaccount=kube-system:tiller
+             # kubectl patch deploy --namespace kube-system tiller-deploy -p \
+               '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
   
  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/700001.png)
