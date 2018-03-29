@@ -131,8 +131,8 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
-    
-1. Log on to DigitalOcean Dashboard create 
+ # Create    
+1. Log on to DigitalOcean account password
      
     
     
