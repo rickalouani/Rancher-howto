@@ -236,7 +236,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/first1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
@@ -244,13 +244,13 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-7.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/createssh2.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
@@ -259,23 +259,17 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
     On a terminal on your desktop create a new ssh key pair
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-5.png)
-   
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
+  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 **5. Copy and paste your Public key**
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen3.png)
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png)
    
     <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png" 
@@ -289,12 +283,12 @@ I will use the ssh private key we created in step  4
      # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>
 
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    
-    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
