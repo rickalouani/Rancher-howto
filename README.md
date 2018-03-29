@@ -17,7 +17,8 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
    of the box to help with micro-services adoption
    
    
-   ![alt text][logo][logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png "Logo Title Text 2"
+   ![alt text][logo]
+   [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png "Logo Title Text 2"
 
 
        iii
