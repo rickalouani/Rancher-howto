@@ -200,7 +200,7 @@ I will try to highlight how RKE compares:
    Rancher Kubernetes Engine
 
        How to: 
-    *  Abstracts away and manages Kubernetes master nodes\
+    *  Abstracts away and manages Kubernetes master nodes
         Nodes use
     *   Management of Adminssion rules, Network Policies, ... 
     *  container optimized image
@@ -259,8 +259,8 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
     On a terminal on your desktop create a new ssh key pair
 
 
-  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
+  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
  Copy and paste your Public key
