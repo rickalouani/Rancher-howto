@@ -1,6 +1,5 @@
-**** This is a work in progress ****
 
-**Four ways to build Kubernetes clusters with Rancher 2.0**
+ # 2 ways to build Kubernetes clusters with Rancher 2.0
 
 Making the leap to microservices is not as daunting as it was even 10 years ago. The abundance of 
 information and case studies shared by many companies that went through the trials and tribulations 
@@ -40,9 +39,9 @@ In this article I am going to demonstrate Both tools by deploying a Kubernetes c
 four different ways:
 
 
-   **1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean**
+   #1.  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
    
-   **2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0**
+   #2.  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
    
 
 
