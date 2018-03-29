@@ -39,9 +39,9 @@ In this article I am going to demonstrate Both tools by deploying a Kubernetes c
 four different ways:
 
 
-   ##  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   ###  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
    
-   ##  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
+   ###  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
    
 
 
@@ -85,7 +85,7 @@ types and interfaces as shown in following code snippet. All cloud provider have
 to host Kubernetes clusters is to implement the interfaces and datatypes
 
 
-  Google Kubernetes Engine:
+  #### Google Kubernetes Engine:
   
     Pros:
     *  Abstracts away and manages Kubernetes master nodes
@@ -99,7 +99,7 @@ to host Kubernetes clusters is to implement the interfaces and datatypes
         Cons:
         * Vendor Lockin
 
-   Rancher Kubernetes Engine
+   ##### Rancher Kubernetes Engine
    
     *  Abstracts away and manages Kubernetes master nodes
         Nodes use
