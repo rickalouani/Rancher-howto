@@ -13,17 +13,9 @@ A Kubernetes Cluster is a great habitat for micro-services. The platform provide
 in functionality that combined could provide limitless solutions to your micro-services design and 
 deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
 
- - Below is a comprehensive list of features that Kubernetes provides out 
-   of the box to help with micro-services adoption
-   
-   
-   
-   ![alt text][logo]
-   
-   [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png "Logo Title Text 2"
-
-
-       iii
+     Comprehensive list of features that Kubernetes provides out 
+     of the box to help with micro-services adoption
+ 
    ![List](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
