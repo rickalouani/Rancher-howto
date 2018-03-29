@@ -3,7 +3,7 @@
 
 
 
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png&v=YOUTUBE_VIDEO_ID_HERE
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
