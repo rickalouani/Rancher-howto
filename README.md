@@ -53,10 +53,10 @@ are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigne
 endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template 
 all pass. This mode is also refered to as a declarative model. 
 
- - Kubernetes Master Components
+    - Kubernetes Master Components
  
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+     ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
 
 
 
