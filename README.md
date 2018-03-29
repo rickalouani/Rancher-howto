@@ -44,14 +44,16 @@ Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisio
 Kubernetes will abstract away the complexity of managing multiple hosts and present a 
 multinode cluster as a single entity. A user, or an SA(service account) would POST a 
 workload definition in the form of a yaml manifest(s) to the API server. The API server 
-would store the manifest in its data store(ETCD) as is. A Kubernetes control loop constantly
-comparing current state and desired state would notice the new definition and would engage the
-scheduler and the different controllers to bring the current state inline with the desired state.
+would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control 
+loop constantly comparing current state and desired state would notice the new definition and would 
+engage the scheduler and the different controllers to bring the current state inline with the desired state.
 The desired state is reached when the number of running pods matches the number of replicas 
 in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any 
 are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, 
 endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template 
 all pass. This mode is also refered to as a declarative model. 
+
+ - Kubernetes Master Components
  
 
 ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
