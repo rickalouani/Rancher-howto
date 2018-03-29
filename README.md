@@ -19,7 +19,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
    
    
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
 
@@ -28,7 +28,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
     
  
   
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
+![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearch2.png)
 
 
 
@@ -57,7 +57,7 @@ all pass. This mode is also refered to as a declarative model.
     - Kubernetes Master Components
  
 
-  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
+ ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubearchi2.png)
 
 
 
