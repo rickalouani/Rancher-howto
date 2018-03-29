@@ -19,7 +19,7 @@ deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
    
    
 
-![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
+![List](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png)
 
 
 
@@ -113,7 +113,7 @@ cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well def
 types and interfaces as shown in following code snippet. All cloud provider have to do 
 to host Kubernetes clusters is to implement the interfaces and datatypes.
 
-![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
+![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100001.png)
 
 Luckily all major Cloud provider have implemented the interface, so you're pretty much free
 to select the provider that suits your use case. Through the Cloud Provider Interface data types and methods
