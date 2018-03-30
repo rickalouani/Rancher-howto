@@ -1,239 +1,144 @@
 
-<a id="catalog"></a>
+<p>In this guide, you’ll learn how to get started with Rancher v2.0, including:</p>
 
-### Launching Catalog Applications
+<ul>
+  <li>Preparing a Linux Host</li>
+  <li>Launching Rancher Server and Accessing the Rancher UI</li>
+  <li>Creating Clusters through the Rancher UI</li>
+  <li>Importing an Existing Kubernetes Cluster</li>
+  <li>Adding a Pod through the Rancher UI</li>
+  <li>Using Kubeconfig file</li>
+</ul>
 
-To help you deploy complex stacks, Rancher offers a catalog of application templates.
+<p><a id="prepare-host"></a></p>
 
-#### To Launch a Catalog Application:
+<h3 id="preparing-a-linux-host">Preparing a Linux Host</h3>
 
-1. On the Rancher UI menu, click **Apps**. The Applications page displays.
-2. Click **Launch from Catalog**. The Catalog displays the available application templates.
-3. Search for the template you want to launch, and then click **View Details**.
-4. Complete the required fields.
-
-   > **Note:** To review the `docker-compose.yml` and `rancher-compose.yml` files used to generate the stacks, click **Preview** before launching the stack.
-
-5. Click **Launch**. On the Applications page, you'll see Rancher is creating a stack based on your new application. This process might take a few minutes.
-
-Once its services are up and running, the state of your new stack displays in green.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
-<p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
-Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
-Cluster __Vendor-lockin__ free</p>    
-<p> Deciding between the different tools available to  to stand up Kubernetes clusters should not be trivial task. 
-the 3 most widely used installers  <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
-<a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>, and 
-<a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm" target="_blank" rel="noopener">Kubeadm</a>
-are great tools for standing up a cluster, and do make the process very easy. However, they are CLI based and do require 
-intermediate Linux and configuration management skills, and I neither is 100% cloud agnostic. below is a brief summary
-of each tool offerings and shortcomings</p>
 <ol>
-<li><strong>Kops</strong> is perhaps the most widely used Kubernetes installer. It is in fact much more than an installer. Kops prepares all required cloud resources, installs Kubernetes, and then wires up cloud monitoring services to ensure the continuing operation of the Kubernetes cluster. Kops is closely integrated with the underlying cloud infrastructure. Kops works the best on AWS. Support for other infrastructure platforms like GCE and vSphere is a work in progress.</li>
-<li><strong>Kubespray</strong> is a popular standalone Kubernetes installer written in Ansible. It can install a Kubernetes cluster on any servers. Even though Kubespray has some degree of integration with various cloud APIs, it is fundamentally cloud independent and can, therefore, work with any cloud, virtualization clusters, or bare-metal servers. Kubespray has grown to be a sophisticated project with participation from a large community of developers.</li>
-<li><strong>Kubeadm</strong> is another Kubernetes setup tool that comes with upstream Kubernetes. Kubeadm, however, does not yet support capabilities like HA clusters. Even though pieces of kubeadm code are used in projects like kops and Kubespray, kubeadm is not ready as a production-grade Kubernetes installer.</li>
+  <li>Prepare a Linux host with 64-bit Ubuntu 16.04, at least 4GB of memory.</li>
+  <li>Install a supported version of Docker on the host, supported Docker versions are <code class="highlighter-rouge">1.12.6</code>, <code class="highlighter-rouge">1.13.1</code> or <code class="highlighter-rouge">17.03.2</code>. To install Docker on the server, follow the instructions from <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Docker</a>.</li>
 </ol>
-<p> At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores, storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design all integrated together to give an abstraction layer one level above the container run time. With this abstraction, a kubernetes cluster could be viewed as a number of container run time connected together using an Overlay Network and presented to PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage PODs not Containers. Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, Kubernetes will abstract away the complexity of managing multiple hosts and present a multinode cluster as a single entity. A user, or an SA(service account) would POST a workload definition in the form of a yaml manifest(s) to the API server. The API server would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control loop constantly comparing current state and desired state would notice the new definition and would engage the scheduler and the different controllers to bring the current state inline with the desired state. The desired state is reached when the number of running pods matches the number of replicas in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template all pass. This mode is also refered to as a declarative model.</p>
 
-<p>In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four different ways.</p>
+<p><a id="launch-rancher"></a></p>
 
+<h3 id="launching-rancher-server">Launching Rancher Server</h3>
 
+<p>It only takes one command and less than a minute to install and launch Rancher Server. Once installed, you can open a web browser to access the Rancher UI.</p>
 
-<h2>How RKE Works</h2>
-<p>RKE is a standalone executable that reads from a cluster configuration file and brings up, brings down, or upgrades a Kubernetes cluster. Here is a sample configuration file:</p>
-<pre>---
+<h4 id="to-launch-rancher-server">To Launch Rancher Server:</h4>
 
-<p>In the last two years, Rancher has become one of the most popular ways to stand up and manage Kubernetes clusters. Users love Rancher as a Kubernetes installer because it is very easy to use. Rancher fully automates etcd, the Kubernetes master, and worker node operations. Rancher 1.x, however, also implements container networking. Therefore, a failure of the Rancher management plane could disrupt the operation of the Kubernetes cluster.</p>
-<p>Users who want to stand up Kubernetes clusters today have many choices of installers. Two of the most popular installers we have encountered are <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a> and <a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>:</p>
 <ol>
-<li><strong>Kops</strong> is perhaps the most widely used Kubernetes installer. It is in fact much more than an installer. Kops prepares all required cloud resources, installs Kubernetes, and then wires up cloud monitoring services to ensure the continuing operation of the Kubernetes cluster. Kops is closely integrated with the underlying cloud infrastructure. Kops works the best on AWS. Support for other infrastructure platforms like GCE and vSphere is a work in progress.</li>
-<li><strong>Kubespray</strong> is a popular standalone Kubernetes installer written in Ansible. It can install a Kubernetes cluster on any servers. Even though Kubespray has some degree of integration with various cloud APIs, it is fundamentally cloud independent and can, therefore, work with any cloud, virtualization clusters, or bare-metal servers. Kubespray has grown to be a sophisticated project with participation from a large community of developers.</li>
+  <li>
+    <p>Run this Docker command on your host:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>To access the Rancher UI, go to <code class="highlighter-rouge">https://&lt;SERVER_IP&gt;</code>, replacing <code class="highlighter-rouge">&lt;SERVER_IP&gt;</code> with the IP address of your host. Rancher is automatically authenticated with a default admin. You will need to log in with this user (<code class="highlighter-rouge">admin</code>) and password (<code class="highlighter-rouge">admin</code>). Upon logging in the first time, you will be asked to change the default admin’s password.</p>
+
+    <blockquote>
+      <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
+
+    <ul>
+      <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
+      <li><strong>Creating a <a href="https://github.com/rancher/rke">RKE</a> Cluster</strong> – Select this option to have Rancher deploy and automatically manage a Kubernetes cluster for you. To create a RKE cluster, go to <a href="#creating-rke-clusters"><strong>Creating RKE Clusters</strong></a>.</li>
+      <li><strong>Import an Existing Kubernetes Cluster</strong> – Select this option if you want the cluster provider to manage hosts outside Rancher. To import an existing Kubernetes installation, go to <a href="#importing-kuberentes-clusters"><strong>Importing Kubernetes Clusters</strong></a>.</li>
+    </ul>
+  </li>
 </ol>
-<p><a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/" target="_blank" rel="noopener">Kubeadm</a> is another Kubernetes setup tool that comes with upstream Kubernetes. Kubeadm, however, does not yet support capabilities like HA clusters. Even though pieces of kubeadm code are used in projects like kops and Kubespray, kubeadm is not ready as a production-grade Kubernetes installer.</p>
-<p><a href="http://rancher.com/rancher2-0/" target="_blank" rel="noopener">Rancher 2.0</a> is designed to work with any Kubernetes clusters. We encourage users to leverage cloud-hosted Kubernetes services like GKE and AKS. For users who want to set up their own clusters, we considered incorporating either kops or Kubespray into our product lineup. Kops does not suit our needs because it does not work with all cloud providers. Kubespray is in fact very close to what we want. We especially like how Kubespray can install Kubernetes anywhere. In the end, we decided not to use Kubespray and instead build our own lightweight installer for two reasons:</p>
+
+<h3 id="creating-cloud-clusters">Creating Cloud Clusters</h3>
+
+<p>In Rancher v2.0, you can create new Kubernetes clusters from hosted services like Google Container Engine (GKE).</p>
+
 <ol>
-<li>We can have a simpler system by starting from scratch and take advantage of many advances in Kubernetes itself.</li>
-<li>We can have a faster installer by going with a container-based approach, just like how we installed Kubernetes in Rancher 1.6.</li>
+  <li>
+    <p>Click on the <strong>Add Cluster</strong> button and in “Create a Cloud Cluster”, click on <strong>Select</strong>.</p>
+  </li>
+  <li>
+    <p>Follow the instructions in the Rancher UI to create and add your cluster. The provisioning process might take a few minutes to complete. Once your cluster is ready, you can view its status on the Clusters page. Once your cluster is running, Rancher creates a <code class="highlighter-rouge">Default</code> project and a <code class="highlighter-rouge">default</code> namespace. Once the cluster is active, you can start adding pods into your namespace.</p>
+  </li>
 </ol>
-<h2>How RKE Works</h2>
-<p>RKE is a standalone executable that reads from a cluster configuration file and brings up, brings down, or upgrades a Kubernetes cluster. Here is a sample configuration file:</p>
-<pre>---
 
+<h3 id="creating-rke-clusters">Creating RKE Clusters</h3>
 
+<p>You can create a cluster using <a href="https://github.com/rancher/rke">RKE</a>, which will install Kubernetes on any nodes that you bring into your cluster. You can add node(s) from various cloud providers that Rancher v2.0 support and specify the role for each node for the Kubernetes cluster.</p>
 
+<blockquote>
+  <p><strong>Note:</strong> Currently in the tech preview, only Digital Ocean and AWS nodes are supported, but support for all the cloud providers and adding custom nodes will be added.</p>
+</blockquote>
 
+<!--
+If you're adding a custom host, note these requirements:
 
+* Typically, Rancher automatically detects the IP address to register the host.
+  * If the host is behind a NAT or the same machine that is running the `rancher/server` container, you might need to explicitly specify its IP address. To do so, click **Show advanced options**, and then enter the **Registration IP Address**.
+* The host agent initiates a connection to the server, so make sure firewalls or security groups allow it to reach the URL in the command.
+* All hosts in the environment must to allow traffic between each other for cross-host networking
+  * IPSec: `500/udp` and `4500/udp`
+  * VXLAN: `4789/udp`
+-->
 
+<ol>
+  <li>
+    <p>Follow the instructions in the Rancher UI to create and add your RKE cluster.</p>
+  </li>
+  <li>
+    <p>In the Nodes section, click on <strong>Add a new node</strong> to select which type of node you want to add. You can configure a new node template to launch nodes or select from an existing node template (i.e. if you had previously launched a node). When launching any new nodes, a node template is saved with your configuration to allow you to re-use this configuration for adding additional nodes.</p>
+  </li>
+  <li>
+    <p>After selecting your node(s) to be created, select which roles you want the node(s) to act in the Rancher managed Kubernetes cluster.</p>
 
-<p>You can download RKE from <a href="https://github.com/rancher/rke/releases" target="_blank" rel="noopener">GitHub</a>. I encourage you to read the <a href="http://rancher.com/an-introduction-to-rke/" target="_blank" rel="noopener">blog post</a> by Hussein Galal, who wrote a significant portion of RKE code, for a more in-depth introduction to RKE.</p>
+    <p>Select from the following roles:</p>
 
+    <ul>
+      <li><strong>etcd</strong> – On this node, <code class="highlighter-rouge">etcd</code> is launched. Etcd is a distributed reliable key-value store which stores all Kubernetes state. We recommend running 1, 3, or 5 nodes with the etcd role.</li>
+      <li><strong>management</strong> – On this node, master components will run (<code class="highlighter-rouge">kube-api</code>, <code class="highlighter-rouge">kube-scheduler</code>, <code class="highlighter-rouge">kube-controller</code>) as well as <code class="highlighter-rouge">kubelet</code> and <code class="highlighter-rouge">kubeproxy</code>. These nodes are used to help manage the Kubernetes cluster as well as where your applications (i.e. pods) can be launched.</li>
+      <li><strong>worker node</strong> – On these nodes, only worker components (<code class="highlighter-rouge">kubelet</code>, <code class="highlighter-rouge">kubeproxy</code>, <code class="highlighter-rouge">nginx-proxy</code>) are launched and these nodes will only have your applications (i.e. pods) running.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Finish creating your cluster by clicking <strong>Create</strong>. This process might take a few minutes to complete. Once your cluster is ready, you can view its status on the Clusters page. Once the cluster is active, you can start adding pods into your namespace.</p>
+  </li>
+</ol>
 
+<h3 id="importing-kubernetes-clusters">Importing Kubernetes Clusters</h3>
 
+<p>In Rancher v2.0, you can import an existing, external installation of Kubernetes v1.8. In this scenario, the cluster provider manages your hosts outside of Rancher.</p>
 
+<h4 id="to-import-a-kubernetes-cluster">To Import a Kubernetes Cluster:</h4>
 
+<ol>
+  <li>Follow the instructions in the Rancher UI to import an existing Kubernetes cluster. Import the <em>kubeconfig</em> file of your existing cluster.</li>
+  <li>Click <strong>Import</strong>. Once your cluster is ready, you can view its status on the Clusters page. Once the cluster is active, you can start adding pods into your namespace.</li>
+</ol>
 
+<h3 id="rancher-concepts">Rancher Concepts</h3>
 
+<p>Rancher supports grouping resources into multiples clusters, projects and namespaces.</p>
 
+<p>A <strong>cluster</strong> is a group of physical (or virtual) compute resources. Each project is tied to one cluster and runs its pods on the cluster’s nodes. You can share a cluster with more than one project as well as give different users access to manage the various resources of a cluster.</p>
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+<p>A <strong>project</strong> is a group of namespaces where workloads are defined. The pods in a project can communicate with each other over a shared managed network, and you can give different users access to manage the various resources of a project.</p>
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+<h3 id="adding-pods">Adding Pods</h3>
 
-       Strong emphasis, aka bold, with **asterisks** or __underscores__.
+<p>After at least one cluster with nodes is created and active, you’re ready to create your first pod. You can check on your cluster status by clicking on the cluster or viewing the status on the Global view of all clusters.</p>
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+<h4 id="to-add-a-pod">To Add a Pod:</h4>
 
-      Combined emphasis with **asterisks and _underscores_**.
+<ol>
+  <li>Click into the <code class="highlighter-rouge">Default</code> project of a cluster.</li>
+  <li>Click <strong>Deploy</strong>. The Add Pod page displays.</li>
+  <li>Enter a <strong>Name</strong>, such as “first-pod.”</li>
+  <li>Enter a <strong>Docker Image</strong> hosted on Docker Hub.</li>
+  <li>Click <strong>Launch</strong>. This process might take a few minutes to complete. Once your pod starts running, you can view its status on the Workloads page.</li>
+</ol>
 
-Combined emphasis with **asterisks and _underscores_**.
-
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-
-
-
-
-
-
-
-
-
-
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/microservice1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-
-
-
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.  
-  
-  
-  
-  
-  
-  
-  
-  
-  Colons can be used to align columns.
-
-    | Tables        | Are           | Cool  |
-    | ------------- |:-------------:| -----:|
-    | col 3 is      | right-aligned | $1600 |
-    | col 2 is      | centered      |   $12 |
-    | zebra stripes | are neat      |    $1 |
-
-
-
-
-Colons can be used to align columns.
-
-| Micro-services Core Needs             |          Kubernetes offerings   |
-| --------------------------------------|:-------------------------------:|
-| col 3 is                              |                                 |  
-| 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-
-
-
-
-
-
-Here's our logo (hover to see the title text):
-
-    Inline-style: 
-    ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Inline-style: 
-    ![alt text](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-12.png "Logo Title Text 1")
-    
-    
-    Reference-style: 
-    ![alt text][logo]
-
-    [logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-6.png "Logo Title Text 2"
-
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-6.png "Microservices"
-
-
-
-
-      1. [I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link](https://www.google.com)
-
-     2. [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-     
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-     3. [I'm a reference-style link][Arbitrary case-insensitive reference text]
-     
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-     
-     
-     4. [I'm a relative reference to a repository file](../blob/master/LICENSE) 
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-     5. [You can use numbers for reference-style link definitions][1]
- 
-[You can use numbers for reference-style link definitions][1]
-
-    6. [You can use numbers for reference-style link definitions][1]
-    
-[You can use numbers for reference-style link definitions][1]
-
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+<p>Now that you’ve added nodes and your first pod is up and running, you can check out the rest of our new features in Rancher v2.0.</p>
