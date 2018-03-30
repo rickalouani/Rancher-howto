@@ -99,12 +99,12 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
    <li>Select DigitalOcean (default is GKE)</li>
    <li>Select Create 3 Node Pools As show below</li>
    <li>Click Add Node Template</li>
- </ol>   
+   
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-
+   <li> done</li>
 #### We need a Node Template a token in this case from DigitalOcean 
 
     On digital Ocean Dashboard generate an access token
