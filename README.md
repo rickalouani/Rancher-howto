@@ -114,30 +114,6 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
-#### Click 2
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-#### Click 4
-
-
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-#### Click 5
-
-    Copy and paste the token
-    
-
-#### Click 6
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
-
-#### Click 7
 
   
 
@@ -352,6 +328,8 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/6033.png)
+
+
 
 
 
