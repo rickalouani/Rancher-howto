@@ -152,10 +152,11 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
       # ssh-keygen -t rsa
 
-      Copy and paste your Public key, Give it a name and click Create
-      Name your VM and click create
-   
-
+- Copy your public key and Paste it on the window still open
+  on the dashboard
+  
+- Give the key a name and click Add SSH Key
+    
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png" 
