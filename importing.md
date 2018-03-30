@@ -76,7 +76,6 @@ Make sure that docker is running
  <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
 </code></pre>
     </div>
-    # sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
  
