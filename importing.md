@@ -152,17 +152,9 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
       # ssh-keygen -t rsa
 
-
-
-  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/sshkeygen1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-- Copy and paste your Public key
+      Copy and paste your Public key, Give it a name and click Create
+      Name your VM and click create
    
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/100005.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
