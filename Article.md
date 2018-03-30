@@ -103,9 +103,9 @@ If you're adding a custom host, note these requirements:
   <li>
     <p>After selecting your node(s) to be created, select which roles you want the node(s) to act in the Rancher managed Kubernetes cluster.</p>
 
-    <p>Select from the following roles:</p>
+   <p>Select from the following roles:</p>
 
-    <ul>
+   <ul>
       <li><strong>etcd</strong> – On this node, <code class="highlighter-rouge">etcd</code> is launched. Etcd is a distributed reliable key-value store which stores all Kubernetes state. We recommend running 1, 3, or 5 nodes with the etcd role.</li>
       <li><strong>management</strong> – On this node, master components will run (<code class="highlighter-rouge">kube-api</code>, <code class="highlighter-rouge">kube-scheduler</code>, <code class="highlighter-rouge">kube-controller</code>) as well as <code class="highlighter-rouge">kubelet</code> and <code class="highlighter-rouge">kubeproxy</code>. These nodes are used to help manage the Kubernetes cluster as well as where your applications (i.e. pods) can be launched.</li>
       <li><strong>worker node</strong> – On these nodes, only worker components (<code class="highlighter-rouge">kubelet</code>, <code class="highlighter-rouge">kubeproxy</code>, <code class="highlighter-rouge">nginx-proxy</code>) are launched and these nodes will only have your applications (i.e. pods) running.</li>
