@@ -71,12 +71,11 @@ Make sure that docker is running
 
     # systemctl status docker
 
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/dockerstatus.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+ <p>Start Rancher 2.0 Server by executing the command below on your host:</p>
 
-Run the Rancher server container as follows
-
+ <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
+</code></pre>
+    </div>
     # sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
