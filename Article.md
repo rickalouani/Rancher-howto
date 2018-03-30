@@ -1,4 +1,72 @@
-       Emphasis, aka italics, with *asterisks* or _underscores_.
+  Jenkins can be launched in much the same way. Because it is deployable in a Docker container, you can construct a similar deployment file and launch on Kubernetes. Here’s an example below. This file was taken from the GCE examples repo for the Jenkins CI server.
+
+
+yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+name: jenkins
+namespace: jenkins
+spec:
+replicas: 1
+template:
+metadata:
+labels:
+app: master
+spec:
+containers:
+- name: master
+image: jenkins/jenkins:2.67
+ports:
+- containerPort: 8080
+- containerPort: 50000
+readinessProbe:
+httpGet:
+path: /login
+port: 8080
+periodSeconds: 10
+timeoutSeconds: 5
+successThreshold: 2
+failureThreshold: 5
+env:
+- name: JENKINS_OPTS
+valueFrom:
+secretKeyRef:
+name: jenkins
+key: options
+- name: JAVA_OPTS
+value: '-Xmx1400m'
+volumeMounts:
+- mountPath: /var/jenkins_home
+name: jenkins-home
+resources:
+limits:
+cpu: 500m
+memory: 1500Mi
+requests:
+cpu: 500m
+memory: 1500Mi
+volumes:
+- name: jenkins-home
+gcePersistentDisk:
+pdName: jenkins-home
+fsType: ext4
+partition: 1
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
