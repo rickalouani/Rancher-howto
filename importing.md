@@ -17,57 +17,17 @@ of each tool offerings and shortcomings</p>
 <p> At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores, storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design all integrated together to give an abstraction layer one level above the container run time. With this abstraction, a kubernetes cluster could be viewed as a number of container run time connected together using an Overlay Network and presented to PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage PODs not Containers. Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, Kubernetes will abstract away the complexity of managing multiple hosts and present a multinode cluster as a single entity. A user, or an SA(service account) would POST a workload definition in the form of a yaml manifest(s) to the API server. The API server would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control loop constantly comparing current state and desired state would notice the new definition and would engage the scheduler and the different controllers to bring the current state inline with the desired state. The desired state is reached when the number of running pods matches the number of replicas in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template all pass. This mode is also refered to as a declarative model.</p>
 
 <p>In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four different ways.</p>
- 
-
-
-
-In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster 
-four different ways:
-
 
    #### 1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   #### 2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2.0
-   
+   #### 2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2   
 
-
- 
-The tools avaialbe for bootstraping a Kubernetes cluster such as KOPS, 
-KUBEADM, conjure-up, kube-spray, and MINIKUBE are great tools for standing up 
-a cluster, and do make the process very easy. However, they are CLI based  
-and do require Linux and configuration management skills. 
-
-Let's look at a hypothetical deployment of a Kubernetes cluster on AWS using KOPS:
-A minimum list of requirement would inlcude:
-
-Understanding of AWS fundamentals 
-  - setup AIM accounts with the proper permissions
-  - Setup Route53
-  - Setup an S3 bucket to host the cluster configuration  
-Ability to install and or configure the correct binaries 
-for your Desktop OS:
-  - aws cli
-  - KOPS
-  - kubectl
-  - ssh keys
-  - Configuration management to keep track of different
-    versions of your cluster including KOPS 
-  - Be able to Roleback a bad upgrade
-
-That's not too bad if you are building a single test Cluster, but if you're
-for instance building a production, staging, and test Clusters and for simplicity all three
-on AWS. Now you would have 3 different repositories, upgrades and patches have to be scheduled
-separately. 
-Rancher 2.0 is a Kubernetes management platform. As I will demonstrate, will do all the heavy
-lifting required to deploy, customize, import and manage Kubernetes clusters. Rancher 2.0 is 
-cloud provider agnostic and can manage and deploy clusters on any supported cloud provider all
-from a single UI or CLI. As I will demonstrate later,  scalling up or down, upgrades, rolebacks, 
-healthchecks, and more all presented as selectable options in the UI.
 
 Before I start the demo, I make a few point incase you're in the process of selecting
 a cloud provider to host your Kubernetes cluster(s). Kubernetes works with all current 
-cloud providers thanks to the CLOUD PROVIDER INTERFACE, a collection of well defined data 
-types and interfaces as shown in following code snippet. All cloud provider have to do 
-to host Kubernetes clusters is to implement the interfaces and datatypes
+cloud providers. Kubernetes defines a CLOUD PROVIDER INTERFACE, a collection of well defined 
+data types and interfaces and All cloud provider have to do to host Kubernetes clusters is to 
+implement the interfaces and datatypes, currently all the popular Cloud provider have implemented
+it, and can all host Kubernetes Clusters. However, Google Cloud Platform GCP is the only 
 
 
   #### Google Kubernetes Engine:
