@@ -47,6 +47,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
  The Rancher Host will be running on an Ubuntu 16.04 VM with at least 4G RAM. 
+ 
  <lo>
    <li>Update the VM that will host the Rancher Server as follows:</li>
 
