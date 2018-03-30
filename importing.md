@@ -40,6 +40,8 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
+
+
 #### RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
