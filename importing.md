@@ -175,19 +175,20 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
+- When the VM is provisioned Note the IP address assigned to it as illustrated
+
+
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
 
 - From your Desktop Terminal ssh to New provisioned VM
 
-      # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM_1>
-
-   
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11110.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
+      # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM>
+      
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png" 
