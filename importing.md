@@ -76,8 +76,15 @@ Make sure that docker is running
  <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
 </code></pre>
     </div>
+    <p>To access the Rancher UI, go to <code class="highlighter-rouge">https://&lt;SERVER_IP&gt;</code>, replacing <code class="highlighter-rouge">&lt;SERVER_IP&gt;</code> with the IP address of your host. Rancher is automatically authenticated with a default admin. You will need to log in with this user (<code class="highlighter-rouge">admin</code>) and password (<code class="highlighter-rouge">admin</code>). Upon logging in the first time, you will be asked to change the default admin’s password.</p>
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/serverrunning.png)
+    <blockquote>
+      <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
+
  
 
 
