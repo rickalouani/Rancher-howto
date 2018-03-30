@@ -155,14 +155,29 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 - Copy your public key and Paste it on the window still open
   on the dashboard
   
-- Give the key a name and click Add SSH Key
-    
-   
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png" 
+  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
+- Give the key a name and click Add SSH Key
+    
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new2.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new2.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+- Give the key a name and click Add SSH Key
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/3.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+- Give your Server a host name and click Create
+
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/10000-9.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 Verify that your newly provisioned VM is ssh accessible.
 I will use the ssh private key we created in step  4 
