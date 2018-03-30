@@ -43,16 +43,6 @@
       <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
     </blockquote>
   </li>
-  <li>
-    <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
-
-   <ul>
-     <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
-      <li><strong>Creating a <a href="https://github.com/rancher/rke">RKE</a> Cluster</strong> – Select this option to have Rancher deploy and automatically manage a Kubernetes cluster for you. To create a RKE cluster, go to <a href="#creating-rke-clusters"><strong>Creating RKE Clusters</strong></a>.</li>
-      <li><strong>Import an Existing Kubernetes Cluster</strong> – Select this option if you want the cluster provider to manage hosts outside Rancher. To import an existing Kubernetes installation, go to <a href="#importing-kuberentes-clusters"><strong>Importing Kubernetes Clusters</strong></a>.</li>
-    </ul>
-  </li>
-</ol>
 
 <h3 id="creating-cloud-clusters">Creating Cloud Clusters</h3>
 
