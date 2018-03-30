@@ -115,16 +115,14 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
       # ssh -i ~/.ssh/id_rsa root@<IP_ADDRESS_OF_VM>
       
    
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/11111.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+<p><a id="prepare-host"></a></p>
 
+<h3 id="preparing-a-linux-host">Preparing a Linux Host</h3>
 
-
-
-    Note: I am going to use docker community edition but you are free to use any of the versions supported by Rancher 2.0)
-    supported docker versions: http://rancher.com/docs/rancher/v1.6/en/hosts/#supported-docker-versions
-  
+<ol>
+  <li>Prepare a Linux host with 64-bit Ubuntu 16.04, at least 4GB of memory.</li>
+  <li>Install a supported version of Docker on the host, supported Docker versions are <code class="highlighter-rouge">1.12.6</code>, <code class="highlighter-rouge">1.13.1</code> or <code class="highlighter-rouge">17.03.2</code>. To install Docker on the server, follow the instructions from <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Docker</a>.</li>
+</ol> 
 Now let's update the distribution, repositories and install Docker
 
     # sudo apt update -y
