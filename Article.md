@@ -1,9 +1,14 @@
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
+<p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
+Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
+Cluster __Vendor-lockin__ free</p>    
 <p> Deciding between the different tools available to  to stand up Kubernetes clusters is not a trivial task. 
 the 3 most widely used installers  <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
 <a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>, and 
 <a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm" target="_blank" rel="noopener">Kubeadm</a>
-</p>
+are great tools for standing up a cluster, and do make the process very easy. However, they are CLI based and do require 
+intermediate Linux and configuration management skills, and I neither is 100% cloud agnostic. below is a brief summary
+of each tool offerings and shortcomings</p>
 <ol>
 <li><strong>Kops</strong> is perhaps the most widely used Kubernetes installer. It is in fact much more than an installer. Kops prepares all required cloud resources, installs Kubernetes, and then wires up cloud monitoring services to ensure the continuing operation of the Kubernetes cluster. Kops is closely integrated with the underlying cloud infrastructure. Kops works the best on AWS. Support for other infrastructure platforms like GCE and vSphere is a work in progress.</li>
 <li><strong>Kubespray</strong> is a popular standalone Kubernetes installer written in Ansible. It can install a Kubernetes cluster on any servers. Even though Kubespray has some degree of integration with various cloud APIs, it is fundamentally cloud independent and can, therefore, work with any cloud, virtualization clusters, or bare-metal servers. Kubespray has grown to be a sophisticated project with participation from a large community of developers.</li>
