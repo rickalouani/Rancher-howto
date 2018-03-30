@@ -21,6 +21,14 @@
 
 <p><a id="launch-rancher"></a></p>
 
+<h3 id="creating-rke-clusters">Creating RKE Clusters</h3>
+
+<p>You can create a cluster using <a href="https://github.com/rancher/rke">RKE</a>, which will install Kubernetes on any nodes that you bring into your cluster. You can add node(s) from various cloud providers that Rancher v2.0 support and specify the role for each node for the Kubernetes cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Currently in the tech preview, only Digital Ocean and AWS nodes are supported, but support for all the cloud providers and adding custom nodes will be added.</p>
+</blockquote>
+
 <h3 id="launching-rancher-server">Launching Rancher Server</h3>
 
 <p>It only takes one command and less than a minute to install and launch Rancher Server. Once installed, you can open a web browser to access the Rancher UI.</p>
