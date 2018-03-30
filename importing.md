@@ -95,6 +95,12 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
+
+<p>On a terminal on your desktop create a new ssh key pair:</p>
+
+   <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo ssh-keygen -t rsa<span class="o">=</span>                   
+</code></pre>
+    </div>
 - On a terminal on your desktop create a new ssh key pair
 
       # ssh-keygen -t rsa
