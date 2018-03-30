@@ -1,7 +1,34 @@
+<h2>Why a new Kubernetes installer?</h2>
+<p>In the last two years, Rancher has become one of the most popular ways to stand up and manage Kubernetes clusters. Users love Rancher as a Kubernetes installer because it is very easy to use. Rancher fully automates etcd, the Kubernetes master, and worker node operations. Rancher 1.x, however, also implements container networking. Therefore, a failure of the Rancher management plane could disrupt the operation of the Kubernetes cluster.</p>
+<p>Users who want to stand up Kubernetes clusters today have many choices of installers. Two of the most popular installers we have encountered are <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a> and <a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>:</p>
+<ol>
+<li><strong>Kops</strong> is perhaps the most widely used Kubernetes installer. It is in fact much more than an installer. Kops prepares all required cloud resources, installs Kubernetes, and then wires up cloud monitoring services to ensure the continuing operation of the Kubernetes cluster. Kops is closely integrated with the underlying cloud infrastructure. Kops works the best on AWS. Support for other infrastructure platforms like GCE and vSphere is a work in progress.</li>
+<li><strong>Kubespray</strong> is a popular standalone Kubernetes installer written in Ansible. It can install a Kubernetes cluster on any servers. Even though Kubespray has some degree of integration with various cloud APIs, it is fundamentally cloud independent and can, therefore, work with any cloud, virtualization clusters, or bare-metal servers. Kubespray has grown to be a sophisticated project with participation from a large community of developers.</li>
+</ol>
+<p><a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/" target="_blank" rel="noopener">Kubeadm</a> is another Kubernetes setup tool that comes with upstream Kubernetes. Kubeadm, however, does not yet support capabilities like HA clusters. Even though pieces of kubeadm code are used in projects like kops and Kubespray, kubeadm is not ready as a production-grade Kubernetes installer.</p>
+<p><a href="http://rancher.com/rancher2-0/" target="_blank" rel="noopener">Rancher 2.0</a> is designed to work with any Kubernetes clusters. We encourage users to leverage cloud-hosted Kubernetes services like GKE and AKS. For users who want to set up their own clusters, we considered incorporating either kops or Kubespray into our product lineup. Kops does not suit our needs because it does not work with all cloud providers. Kubespray is in fact very close to what we want. We especially like how Kubespray can install Kubernetes anywhere. In the end, we decided not to use Kubespray and instead build our own lightweight installer for two reasons:</p>
+<ol>
+<li>We can have a simpler system by starting from scratch and take advantage of many advances in Kubernetes itself.</li>
+<li>We can have a faster installer by going with a container-based approach, just like how we installed Kubernetes in Rancher 1.6.</li>
+</ol>
+<h2>How RKE Works</h2>
+<p>RKE is a standalone executable that reads from a cluster configuration file and brings up, brings down, or upgrades a Kubernetes cluster. Here is a sample configuration file:</p>
+<pre>---
+
+
+
+
 
 
 
 <p>You can download RKE from <a href="https://github.com/rancher/rke/releases" target="_blank" rel="noopener">GitHub</a>. I encourage you to read the <a href="http://rancher.com/an-introduction-to-rke/" target="_blank" rel="noopener">blog post</a> by Hussein Galal, who wrote a significant portion of RKE code, for a more in-depth introduction to RKE.</p>
+
+
+
+
+
+
+
 
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
