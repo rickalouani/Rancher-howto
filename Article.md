@@ -1,3 +1,39 @@
+<!--
+<a id="catalog"></a>
+
+### Launching Catalog Applications
+
+To help you deploy complex stacks, Rancher offers a catalog of application templates.
+
+#### To Launch a Catalog Application:
+
+1. On the Rancher UI menu, click **Apps**. The Applications page displays.
+2. Click **Launch from Catalog**. The Catalog displays the available application templates.
+3. Search for the template you want to launch, and then click **View Details**.
+4. Complete the required fields.
+
+   > **Note:** To review the `docker-compose.yml` and `rancher-compose.yml` files used to generate the stacks, click **Preview** before launching the stack.
+
+5. Click **Launch**. On the Applications page, you'll see Rancher is creating a stack based on your new application. This process might take a few minutes.
+
+Once its services are up and running, the state of your new stack displays in green.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
 <p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
 Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
