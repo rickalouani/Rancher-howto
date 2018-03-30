@@ -1,6 +1,6 @@
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
 <p> Deciding between the different tools available to  to stand up Kubernetes clusters is not a trivial task. 
-the 3 most widely used installers  <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
+the 3 most widely used installers  <a> href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
 <a> href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>, and 
 <a> href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm" target="_blank" rel="noopener">Kubeadm</a>
 </p>
