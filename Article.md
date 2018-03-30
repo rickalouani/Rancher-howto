@@ -32,22 +32,22 @@
   <li>
     <p>Run this Docker command on your host:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview
+   <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview
 </code></pre>
     </div>
   </li>
   <li>
     <p>To access the Rancher UI, go to <code class="highlighter-rouge">https://&lt;SERVER_IP&gt;</code>, replacing <code class="highlighter-rouge">&lt;SERVER_IP&gt;</code> with the IP address of your host. Rancher is automatically authenticated with a default admin. You will need to log in with this user (<code class="highlighter-rouge">admin</code>) and password (<code class="highlighter-rouge">admin</code>). Upon logging in the first time, you will be asked to change the default admin’s password.</p>
 
-    <blockquote>
+   <blockquote>
       <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
     </blockquote>
   </li>
   <li>
     <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
 
-    <ul>
-      <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
+   <ul>
+     <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
       <li><strong>Creating a <a href="https://github.com/rancher/rke">RKE</a> Cluster</strong> – Select this option to have Rancher deploy and automatically manage a Kubernetes cluster for you. To create a RKE cluster, go to <a href="#creating-rke-clusters"><strong>Creating RKE Clusters</strong></a>.</li>
       <li><strong>Import an Existing Kubernetes Cluster</strong> – Select this option if you want the cluster provider to manage hosts outside Rancher. To import an existing Kubernetes installation, go to <a href="#importing-kuberentes-clusters"><strong>Importing Kubernetes Clusters</strong></a>.</li>
     </ul>
@@ -96,9 +96,8 @@ If you're adding a custom host, note these requirements:
   <li>
     <p>After selecting your node(s) to be created, select which roles you want the node(s) to act in the Rancher managed Kubernetes cluster.</p>
 
-    <p>Select from the following roles:</p>
-
-    <ul>
+   <p>Select from the following roles:</p>
+   <ul>
       <li><strong>etcd</strong> – On this node, <code class="highlighter-rouge">etcd</code> is launched. Etcd is a distributed reliable key-value store which stores all Kubernetes state. We recommend running 1, 3, or 5 nodes with the etcd role.</li>
       <li><strong>management</strong> – On this node, master components will run (<code class="highlighter-rouge">kube-api</code>, <code class="highlighter-rouge">kube-scheduler</code>, <code class="highlighter-rouge">kube-controller</code>) as well as <code class="highlighter-rouge">kubelet</code> and <code class="highlighter-rouge">kubeproxy</code>. These nodes are used to help manage the Kubernetes cluster as well as where your applications (i.e. pods) can be launched.</li>
       <li><strong>worker node</strong> – On these nodes, only worker components (<code class="highlighter-rouge">kubelet</code>, <code class="highlighter-rouge">kubeproxy</code>, <code class="highlighter-rouge">nginx-proxy</code>) are launched and these nodes will only have your applications (i.e. pods) running.</li>
