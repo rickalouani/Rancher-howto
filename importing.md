@@ -167,7 +167,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new2.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-- Give the key a name and click Add SSH Key
+
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new3.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/new3.png" 
