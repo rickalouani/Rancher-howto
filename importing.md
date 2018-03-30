@@ -18,8 +18,8 @@ of each tool offerings and shortcomings</p>
 
 <p>In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four different ways.</p>
 
-   #### 1. RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   #### 2. Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2   
+   ####  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+   ####  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2   
 
 
 Before I start the demo, I make a few point incase you're in the process of selecting
@@ -30,35 +30,7 @@ implement the interfaces and datatypes, currently all the popular Cloud provider
 it, and can all host Kubernetes Clusters. However, Google Cloud Platform GCP is the only 
 
 
-  #### Google Kubernetes Engine:
   
-    Pros:
-    *  Abstracts away and manages Kubernetes master nodes
-       Nodes use
-    *  container optimized image
-    *  Upgrades to Kubernetes Master through GCP management console
-    *  Upgrade, add, or remove worker nodes through GCP management console
-    *  Global spanning load balancer built-in
-    *  Easy deployment and automation
-    *  Optional support for Kops
-        Cons:
-        * Vendor Lockin
-
-   ##### Rancher Kubernetes Engine
-   
-    *  Abstracts away and manages Kubernetes master nodes
-        Nodes use
-    *   Management of Adminssion rules, Network Policies, ... 
-    *  container optimized image
-    *  Upgrades to Kubernetes Master through GCP management console
-    *  Upgrade, add, or remove worker nodes through GCP management console
-    *  Global spanning load balancer built-in
-    *  Easy deployment and automation
-
-    Cons:
-        * Not as stable as GKE currently but it's still early in alpha.
-  
-
    ##### Basic Kubernetes Cluster Architecture
  
  
