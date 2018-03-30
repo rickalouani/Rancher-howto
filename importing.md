@@ -94,9 +94,12 @@ Make sure that docker is running
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-   
-#### Click 1   
-    
+
+<ol>   
+   <li>Select DigitalOcean (default is GKE)</li>
+   <li>Select Create 3 Node Pools As show below</li>
+   <li>Click Add Node Template</li>
+ </ol>   
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
