@@ -47,15 +47,15 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
 <ol>
-  <li>Prepare a Linux host with 64-bit Ubuntu 16.04, at least 4GB of memory.</li>
-  <li>Install a supported version of Docker on the host, supported Docker versions are <code class="highlighter-rouge">1.12.6</code>, <code class="highlighter-rouge">1.13.1</code> or <code class="highlighter-rouge">17.03.2</code>. To install Docker on the server, follow the instructions from <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Docker</a>.</li>
-</ol> 
-Now let's update the distribution, repositories and install Docker
+  <p>Prepare a Linux host with 64-bit Ubuntu 16.04, at least 4GB of memory.</p>
+  <li> let's update the distribution, repositories and install Docker
 
     # sudo apt update -y
     # sudo apt dist-upgrade -y
     # sudo apt-get remove docker docker-engine docker.io
     # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+ </li>   
+    <li>Install a supported version of Docker on the host, supported Docker versions are <code class="highlighter-rouge">1.12.6</code>, <code class="highlighter-rouge">1.13.1</code> or <code class="highlighter-rouge">17.03.2</code>. To install Docker on the server, follow the instructions from <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Docker</a>.</li>
  
 Add Docker’s official GPG key
 
