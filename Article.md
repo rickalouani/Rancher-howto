@@ -2,7 +2,7 @@
 <p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
 Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
 Cluster __Vendor-lockin__ free</p>    
-<p> Deciding between the different tools available to  to stand up Kubernetes clusters is not a trivial task. 
+<p> Deciding between the different tools available to  to stand up Kubernetes clusters should not be trivial task. 
 the 3 most widely used installers  <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
 <a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>, and 
 <a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm" target="_blank" rel="noopener">Kubeadm</a>
