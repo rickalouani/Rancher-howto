@@ -1,4 +1,4 @@
-<!--
+
 <a id="catalog"></a>
 
 ### Launching Catalog Applications
@@ -17,7 +17,7 @@ To help you deploy complex stacks, Rancher offers a catalog of application templ
 5. Click **Launch**. On the Applications page, you'll see Rancher is creating a stack based on your new application. This process might take a few minutes.
 
 Once its services are up and running, the state of your new stack displays in green.
--->
+
 
 
 
