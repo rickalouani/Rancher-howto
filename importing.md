@@ -90,12 +90,10 @@ Make sure that docker is running
  <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
  
 <p>Click Create Cluster as show below</p>
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png" 
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30001.png)
-
-
+   
     Click Create Cluster 
     
 
