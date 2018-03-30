@@ -1,4 +1,24 @@
  <h2><a href="https://rancher.com/adding-custom-nodes-kubernetes-cluster-rancher-2-0-tech-preview-2/">Adding custom nodes to your Kubernetes cluster in Rancher 2.0 Tech Preview 2</a></h2>
+ 
+ 
+ 
+ <p>The agent image can be retrieved from the <code>settings</code> endpoint in the API:</p>
+<pre>AGENTIMAGE=`curl -s -H "Authorization: Bearer $APITOKEN" <a href="https://medium.com/r/?url=https%3A%2F%2F127.0.0.1%2Fv3%2Fsettings%2Fagent-image" target="_blank" rel="nofollow noopener">https://127.0.0.1/v3/settings/agent-image</a> --insecure | jq -r .value`</pre>
+<p>The roles for the node, you can decide for yourself. (For this example, we’ll be using all three roles):</p>
+<pre>ROLEFLAGS="--etcd --controlplane --worker"</pre>
+<p>The address where the <code>rancher/server</code> container can be reached, should be self explanatory. The <code>rancher/agent</code> will connect to that endpoint.</p>
+<pre>RANCHERSERVER="https://rancher_server_address"</pre>
+<p>The cluster token can be retrieved from the created cluster. We saved the created clusterid in <code>CLUSTERID</code> , which we can now use to generate a token.</p>
+<pre># Generate token (clusterRegistrationToken)
+AGENTTOKEN=`curl -s 'https://127.0.0.1/v3/clusterregistrationtoken' -H 'content-type: application/json' -H "Authorization: Bearer $APITOKEN" --data-binary '{"type":"clusterRegistrationToken","clusterId":"'$CLUSTERID'"}' --insecure | jq -r .token`</pre>
+<p>The generated CA certificate is stored in the API as well, and can be retrieved as shown below. We append <code>sha256sum</code> to generate the checksum we need to join the cluster.</p>
+<pre># Retrieve CA certificate and generate checksum
+CACHECKSUM=`curl -s -H "Authorization: Bearer $APITOKEN" https://127.0.0.1/v3/settings/cacerts --insecure | jq -r .value | sha256sum | awk '{ print $1 }'`</pre>
+<p>All data needed to join the cluster is now available, we only need to assemble the command.</p>
+<pre># Assemble the docker run command
+AGENTCOMMAND="docker run -d --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock --net=host $AGENTIMAGE $ROLEFLAGS --server $RANCHERSERVER --token $AGENTTOKEN --ca-checksum $CACHECKSUM"</pre>
+<pre># Show the command
+echo $AGENTCOMMAND</pre>
   
   
   
