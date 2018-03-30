@@ -1,35 +1,22 @@
-## 2 ways to build Kubernetes clusters with Rancher 2.0
+<h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
+<p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
+Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
+Cluster Vendor-lockin free</p>    
+<p> Deciding between the different tools available to  to stand up Kubernetes clusters should not be trivial task. 
+the 3 most widely used installers  <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a>, 
+<a href="https://github.com/kubernetes-incubator/kubespray" target="_blank" rel="noopener">Kubespray</a>, and 
+<a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm" target="_blank" rel="noopener">Kubeadm</a>
+are great tools for standing up a cluster, and do make the process very easy. However, they are CLI based and do require 
+intermediate Linux and configuration management skills, and I neither is 100% cloud agnostic. below is a brief summary
+of each tool offerings and shortcomings</p>
+<ol>
+<li><strong>Kops</strong> is perhaps the most widely used Kubernetes installer. It is in fact much more than an installer. Kops prepares all required cloud resources, installs Kubernetes, and then wires up cloud monitoring services to ensure the continuing operation of the Kubernetes cluster. Kops is closely integrated with the underlying cloud infrastructure. Kops works the best on AWS. Support for other infrastructure platforms like GCE and vSphere is a work in progress.</li>
+<li><strong>Kubespray</strong> is a popular standalone Kubernetes installer written in Ansible. It can install a Kubernetes cluster on any servers. Even though Kubespray has some degree of integration with various cloud APIs, it is fundamentally cloud independent and can, therefore, work with any cloud, virtualization clusters, or bare-metal servers. Kubespray has grown to be a sophisticated project with participation from a large community of developers.</li>
+<li><strong>Kubeadm</strong> is another Kubernetes setup tool that comes with upstream Kubernetes. Kubeadm, however, does not yet support capabilities like HA clusters. Even though pieces of kubeadm code are used in projects like kops and Kubespray, kubeadm is not ready as a production-grade Kubernetes installer.</li>
+</ol>
+<p> At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores, storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design all integrated together to give an abstraction layer one level above the container run time. With this abstraction, a kubernetes cluster could be viewed as a number of container run time connected together using an Overlay Network and presented to PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage PODs not Containers. Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, Kubernetes will abstract away the complexity of managing multiple hosts and present a multinode cluster as a single entity. A user, or an SA(service account) would POST a workload definition in the form of a yaml manifest(s) to the API server. The API server would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control loop constantly comparing current state and desired state would notice the new definition and would engage the scheduler and the different controllers to bring the current state inline with the desired state. The desired state is reached when the number of running pods matches the number of replicas in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template all pass. This mode is also refered to as a declarative model.</p>
 
-Making the leap to microservices is not as daunting as it was even 10 years ago. The abundance of 
-information and case studies shared by many companies that went through the trials and tribulations 
-helped establish solid industry best practices, coupled with many new great opensource tools donated 
-or developed, and supported by a great community of contributors took a lot of the mystery out of the 
-process. In this article, I am going to demonstrate two great opensource tools that I feel confident 
-can make your adoption of micro-services less challenging. Kubernetes, arguably the best open source 
-container orchestrator available and Rancher 2.0 to bootstrap and manage custom Kubernetes clusters.
-A Kubernetes Cluster is a great habitat for micro-services. The platform provides a wealth of built 
-in functionality that combined could provide limitless solutions to your micro-services design and 
-deployments. Furthermore it is backed by wonderful and ambitious ecosystem.
-At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores,
-storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design
-all integrated together to give an abstraction layer one level above the container 
-run time. With this abstraction, a kubernetes cluster could be viewed as a number of 
-container run time connected together using an Overlay Network and presented to 
-PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and
-could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage 
-PODs not Containers.
-Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, 
-Kubernetes will abstract away the complexity of managing multiple hosts and present a 
-multinode cluster as a single entity. A user, or an SA(service account) would POST a 
-workload definition in the form of a yaml manifest(s) to the API server. The API server 
-would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control 
-loop constantly comparing current state and desired state would notice the new definition and would 
-engage the scheduler and the different controllers to bring the current state inline with the desired state.
-The desired state is reached when the number of running pods matches the number of replicas 
-in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any 
-are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, 
-endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template 
-all pass. This mode is also refered to as a declarative model. 
+<p>In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four different ways.</p>
  
 
 
