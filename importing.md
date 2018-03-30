@@ -89,111 +89,145 @@ Make sure that docker is running
 
  <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
  
-<p>Click Create Cluster as show below</p>
+#### Click Create Cluster as shown below:
+
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
    
-    Click Create Cluster 
+#### Click 1   
     
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png)
-
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png)
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
-We need a Node Template a token in this case from DigitalOcean 
+#### We need a Node Template a token in this case from DigitalOcean 
 
     On digital Ocean Dashboard generate an access token
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png)
+
+#### Click 2
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png)
+#### Click 4
 
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+#### Click 5
 
     Copy and paste the token
     
 
+#### Click 6
+
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
 
+#### Click 7
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
+#### Click 8
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
 
+#### Click 9
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
 
+#### Click 10
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
 
+#### Click 11
 
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
 
+#### Click 12
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
 
 
+#### Click 13
+
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
 
+#### Click 14
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
 
+#### Click 15
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
 
+#### Click 17
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
 
+#### Click 18
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
 
+#### Click 19
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
 
+#### Click 20
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
 
+#### Click 21
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
 
 
+#### Click 22
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
 
 
+#### Click 23
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
 
 
+#### Click 24
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
 
 
+#### Click 25
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
 
 
+#### Click 26
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
 
 
+#### Click 27
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
 
-
+#### Click 28
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
 
-
+#### Click 29
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
 
+#### Click 30
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
 
