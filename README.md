@@ -108,14 +108,8 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    <li> done</li>
 </ol>
-#### We need a Node Template a token in this case from DigitalOcean 
 
-    On digital Ocean Dashboard generate an access token
-
- ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
-
-
-  
+#  On digital Ocean Dashboard generate an access token  --- link to procedure.
 
 #### Click 8
 
