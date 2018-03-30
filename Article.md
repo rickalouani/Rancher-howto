@@ -1,3 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quick Start Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentation for Rancher">
+    <link href="/docs/favicon.png" rel="shortcut icon" type="image/png" sizes="16x16">
+    <link href="/docs/css/syntax.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+    <link href="/docs/vendor/font-awesome/css/font-awesome.min.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+    <link href="/docs/vendor/lato/lato.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+    <link href="/docs/css/lacsso.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+    <link href="/docs/css/slicknav.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+    <link href="/docs/css/rancher-docs.css?t=2018-03-28 17:25:14 -0500" rel="stylesheet">
+</head>
+
+<body class="bg-default">
+    <div class="row body">
+    <header class="page-header">
+      <div class="wrap clearfix">
+        <nav role="navigation" id="js-responsive-nav" class="clearfix responsive-nav"><a class="nav-toggle"></a>
+          <a class="nav-logo logo-caas btn bg-transparent"><img src="/docs/img/rancher-logo-nopadding.svg" class="img-responsive" alt="Rancher" data-pin-nopin="true"></a>
+          <ul class="nav-main nav-list">
+            <li><a href="http://rancher.com/">Back to Rancher.com</a></li>
+
+            <ul class="nav navbar-nav pull-right">
+              <li><a href="https://github.com/rancher/rancher#installation" id="rnchrdm-nav-download" title="Download Rancher" target="_blank"><img src="/docs/img/header-download.svg" alt="Download Rancher" height="12" width="14"> Download Rancher</a></li>
+              <li><a href="http://rancher.com/support" id="rnchrdm-nav-reqsupport" title="Request Support"><i class="fa fa-question-circle" aria-hidden="true"></i>
+ Request Support</a></li>
+            </ul>
+          </ul>
+      </nav>
+    </div>
+    <h1>Rancher Docs</h1>
+  </header>
+  <div class="clearfix"></div>
+  <div class="wrap clearfix">
+        <div class="col span-3 mt-0 mr-0 sidebar">
+        <!--Start Google Search-->
+              <div class="gcse-search" id="google-search"></div>
+              <script>
+              var match = window.location.pathname.match(/\/rancher\/([^\/]+)/);
+              if (match) {
+                  document.getElementById('google-search').setAttribute('data-defaultToRefinement', match[1]);
+              }
+
+              (function() {
+                  var cx = '007896692384436596364:60akf3bfmxm';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+              })();
+              </script>
+              <!--End Google Search-->
+
+<ul id="menu">
+    <li><a href="#">Quick Start Guide</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#prepare-host">Preparing a Linux Host</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#launch-rancher">Launching Rancher Server</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#creating-cloud-clusters">Creating Cloud Clusters</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#creating-rke-clusters">Creating RKE Clusters</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#importing-kubernetes-clusters">Importing Existing Kubernetes Clusters</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#adding-pods">Adding Pods</a></li>
+    <li><a href="/docs/rancher/v2.0/en/quick-start-guide/#using-kubeconfig-file">Using Kubeconfig File</a></li>
+    <li><a href="/docs/rancher/v2.0/en/faq/">FAQ</a></li>
+</ul>
+
+</div>
+<div class="col span-9">
+    <div class="content-container">
+        <h2 id="quick-start-guide">Quick Start Guide</h2>
+<hr />
 
 <p>In this guide, you’ll learn how to get started with Rancher v2.0, including:</p>
 
@@ -21,14 +97,6 @@
 
 <p><a id="launch-rancher"></a></p>
 
-<h3 id="creating-rke-clusters">Creating RKE Clusters</h3>
-
-<p>You can create a cluster using <a href="https://github.com/rancher/rke">RKE</a>, which will install Kubernetes on any nodes that you bring into your cluster. You can add node(s) from various cloud providers that Rancher v2.0 support and specify the role for each node for the Kubernetes cluster.</p>
-
-<blockquote>
-  <p><strong>Note:</strong> Currently in the tech preview, only Digital Ocean and AWS nodes are supported, but support for all the cloud providers and adding custom nodes will be added.</p>
-</blockquote>
-
 <h3 id="launching-rancher-server">Launching Rancher Server</h3>
 
 <p>It only takes one command and less than a minute to install and launch Rancher Server. Once installed, you can open a web browser to access the Rancher UI.</p>
@@ -39,22 +107,22 @@
   <li>
     <p>Run this Docker command on your host:</p>
 
-   <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview                    khxckjxkjckjhxcjkhxcjkhxjhkz
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview
 </code></pre>
     </div>
   </li>
   <li>
     <p>To access the Rancher UI, go to <code class="highlighter-rouge">https://&lt;SERVER_IP&gt;</code>, replacing <code class="highlighter-rouge">&lt;SERVER_IP&gt;</code> with the IP address of your host. Rancher is automatically authenticated with a default admin. You will need to log in with this user (<code class="highlighter-rouge">admin</code>) and password (<code class="highlighter-rouge">admin</code>). Upon logging in the first time, you will be asked to change the default admin’s password.</p>
 
-   <blockquote>
+    <blockquote>
       <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
     </blockquote>
   </li>
   <li>
     <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
 
-  <ul>
-    <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
+    <ul>
+      <li><strong>Creating a Cloud Cluster</strong> – Select this option to create and use a new cluster and nodes managed by a cloud Kubernetes provider. To create a new cloud cluster, go to <a href="#creating-cloud-clusters"><strong>Creating Cloud Clusters</strong></a>.</li>
       <li><strong>Creating a <a href="https://github.com/rancher/rke">RKE</a> Cluster</strong> – Select this option to have Rancher deploy and automatically manage a Kubernetes cluster for you. To create a RKE cluster, go to <a href="#creating-rke-clusters"><strong>Creating RKE Clusters</strong></a>.</li>
       <li><strong>Import an Existing Kubernetes Cluster</strong> – Select this option if you want the cluster provider to manage hosts outside Rancher. To import an existing Kubernetes installation, go to <a href="#importing-kuberentes-clusters"><strong>Importing Kubernetes Clusters</strong></a>.</li>
     </ul>
@@ -103,9 +171,9 @@ If you're adding a custom host, note these requirements:
   <li>
     <p>After selecting your node(s) to be created, select which roles you want the node(s) to act in the Rancher managed Kubernetes cluster.</p>
 
-   <p>Select from the following roles:</p>
+    <p>Select from the following roles:</p>
 
-   <ul>
+    <ul>
       <li><strong>etcd</strong> – On this node, <code class="highlighter-rouge">etcd</code> is launched. Etcd is a distributed reliable key-value store which stores all Kubernetes state. We recommend running 1, 3, or 5 nodes with the etcd role.</li>
       <li><strong>management</strong> – On this node, master components will run (<code class="highlighter-rouge">kube-api</code>, <code class="highlighter-rouge">kube-scheduler</code>, <code class="highlighter-rouge">kube-controller</code>) as well as <code class="highlighter-rouge">kubelet</code> and <code class="highlighter-rouge">kubeproxy</code>. These nodes are used to help manage the Kubernetes cluster as well as where your applications (i.e. pods) can be launched.</li>
       <li><strong>worker node</strong> – On these nodes, only worker components (<code class="highlighter-rouge">kubelet</code>, <code class="highlighter-rouge">kubeproxy</code>, <code class="highlighter-rouge">nginx-proxy</code>) are launched and these nodes will only have your applications (i.e. pods) running.</li>
@@ -150,3 +218,111 @@ If you're adding a custom host, note these requirements:
 </ol>
 
 <p>Now that you’ve added nodes and your first pod is up and running, you can check out the rest of our new features in Rancher v2.0.</p>
+
+<!--
+<a id="catalog"></a>
+
+### Launching Catalog Applications
+
+To help you deploy complex stacks, Rancher offers a catalog of application templates.
+
+#### To Launch a Catalog Application:
+
+1. On the Rancher UI menu, click **Apps**. The Applications page displays.
+2. Click **Launch from Catalog**. The Catalog displays the available application templates.
+3. Search for the template you want to launch, and then click **View Details**.
+4. Complete the required fields.
+
+   > **Note:** To review the `docker-compose.yml` and `rancher-compose.yml` files used to generate the stacks, click **Preview** before launching the stack.
+
+5. Click **Launch**. On the Applications page, you'll see Rancher is creating a stack based on your new application. This process might take a few minutes.
+
+Once its services are up and running, the state of your new stack displays in green.
+-->
+
+<h3 id="using-kubeconfig-file">Using Kubeconfig File</h3>
+
+<p>You can generate a Kubernetes configuration file to use <code class="highlighter-rouge">kubectl</code> on your desktop. A Kubernetes configuration file, i.e. <em>kubeconfig</em>, lets you configure access to one or more clusters from your desktop.</p>
+
+<ol>
+  <li>On the Rancher UI menu, select the cluster.</li>
+  <li>In the <strong>Dashboard</strong>, click on the <strong>Kubeconfig File</strong> button. A <em>kubeconfig</em> file will be generated so you can use <code class="highlighter-rouge">kubectl</code> on your desktop. Copy and paste the code that displays into your <code class="highlighter-rouge">~/.kube/config</code> file, and then start using <code class="highlighter-rouge">kubectl</code>. Click <strong>Close</strong> to return to the Rancher UI.</li>
+</ol>
+
+<h3 id="deploying-on-ubuntu">Deploying on Ubuntu</h3>
+
+<p>It is possible to use Rancher to control Canonical Kubernetes (cdk) clusters running on Ubuntu. A full set of instructions has been provided by Canonical for doing this here: <a href="https://kubernetes.io/docs/getting-started-guides/ubuntu/rancher/">https://kubernetes.io/docs/getting-started-guides/ubuntu/rancher/</a>.</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="row wrap">
+<a class="btn btn-primary pull-right" href="https://github.com/rancher/rancher.github.io/tree/master/rancher/v2.0/en/quick-start-guide/index.md">Edit this page <i class="fa fa-pencil"></i></a>
+</div>
+
+<footer class="clearfix">
+  <div class="wrap">
+    <div class=""><!--bottom footer-->
+      <div class="row">
+          <div class="col span-6">
+              <ul id="menu-footer" class="list-inline">
+                  <li id="menu-item-14151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14151"><a title="About Rancher Labs" href="http://rancher.com/about/">About Rancher Labs</a></li>
+                  <li id="menu-item-11352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11352"><a title="Contact" href="http://rancher.com/contact/">Contact</a></li>
+                  <li id="menu-item-14152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14152"><a title="Privacy" href="http://rancher.com/privacy/">Privacy</a></li>
+                  <li id="menu-item-15635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15635"><a title="Careers" href="http://rancher.com/careers/">Careers</a></li>
+                  
+                  <li id="menu-item-14151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14151"><a title="中文文档" href="https://rancher.com/docs/rancher/latest/zh/">中文文档</a></li>
+                  
+              </ul>
+              <p>Copyright &copy; 2014-2017 <a href="http://rancher.com">Rancher Labs</a>. All Rights Reserved.</p>
+          </div>
+          <div class="col span-6 text-right">
+              <ul class="list-inline">
+                  <li><a href="https://github.com/rancher/rancher" target="_blank"><img src="http://rancher.com/wp-content/themes/rancher-2016/assets/images/social-white-github.png" alt="Rancher Labs GitHub"></a></li>
+                  <li><a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="http://rancher.com/wp-content/themes/rancher-2016/assets/images/social-white-twitter.png" alt="Rancher Labs Twitter"></a></li>
+                  <li><a href="https://slack.rancher.io/" target="_blank"><img src="http://rancher.com/wp-content/themes/rancher-2016/assets/images/social-white-slack.png" alt="Rancher Labs Slack"></a></li>
+                  <li><a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="http://rancher.com/wp-content/themes/rancher-2016/assets/images/social-white-linkedin.png" alt="Rancher Labs LinkedIn"></a></li>
+                  <li><a href="https://www.facebook.com/rancherlabs/" target="_blank"><img src="http://rancher.com/wp-content/themes/rancher-2016/assets/images/social-white-fb.png" alt="Rancher Labs Facebook"></a></li>
+              </ul>
+          </div>
+      </div>
+    </div><!--bottom footer-->
+    </div>
+</footer>
+<script src="/docs/vendor/jquery.js?t=2018-03-28 17:25:14 -0500"></script>
+<script src="/docs/js/jquery.slicknav.min.js?t=2018-03-28 17:25:14 -0500"></script>
+<script src="/docs/js/rancher-docs.js?t=2018-03-28 17:25:14 -0500"></script>
+<!-- Start of Google Analytics -->
+<script>
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-56382716-3', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End of Google Analytics -->
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d, s, i, r) {
+    if (d.getElementById(i)) { return; }
+    var n = d.createElement(s),
+        e = d.getElementsByTagName(s)[0];
+    n.id = i;
+    n.src = '//js.hs-analytics.net/analytics/' + (Math.ceil(new Date() / r) * r) + '/468859.js';
+    e.parentNode.insertBefore(n, e);
+})(document, "script", "hs-analytics", 300000);
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+</body>
+
+</html>
