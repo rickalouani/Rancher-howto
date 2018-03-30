@@ -85,17 +85,21 @@ Make sure that docker is running
     </blockquote>
   </li>
   <li>
-    <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
+   
+  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
- <p>Start adding clusters into your Rancher server. Select one of the options for adding clusters, and continue to the relevant section below:</p>
- 
+
+<ol>
+   
 #### Click Create Cluster as shown below:
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-<ol>   
+   
    <li>Select DigitalOcean (default is GKE)</li>
    <li>Select Create 3 Node Pools As show below</li>
    <li>Click Add Node Template</li>
@@ -109,7 +113,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
     On digital Ocean Dashboard generate an access token
 
-
+ ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
 #### Click 2
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
@@ -136,7 +140,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 #### Click 7
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
+  
 
 #### Click 8
 
