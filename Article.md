@@ -39,7 +39,7 @@
   <li>
     <p>Run this Docker command on your host:</p>
 
-   <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview
+   <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:preview                    khxckjxkjckjhxcjkhxcjkhxjhkz
 </code></pre>
     </div>
   </li>
