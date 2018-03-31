@@ -110,9 +110,16 @@ alt="IMAGE ALT TEXT HERE" width="540" height="300" border="50" /></a>
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+ <li>Click Add Node Template (token from DigitalOcean)</li>
+ 
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
    
 
-<li>On the DigitalOcean Dashboard generate a token as shown below<\li> 
+<li>On the DigitalOcean Dashboard generate The token<\li> 
    
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
@@ -120,12 +127,9 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
  
 
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
-
-
-#### Click 4
+<li>Paste the Token on the widow still open in Rancher 2.0 Dashboard<\li>
+<li>Click Create<\li>
+  
 
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png
@@ -135,23 +139,6 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 
 
-
-
-
-
-
-#### Click 5
-
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-#### Click 8
-
-   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 #### Click 9
 
