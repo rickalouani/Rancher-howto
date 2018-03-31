@@ -4,9 +4,8 @@
  defaults as shown below. 
       - Note that GKE enables Kubernetes Dashboard, Heapster, and, Fuentd by default. 
       
-      <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png" alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
  
 ### 1. _Log on to the Rancher Server UI
