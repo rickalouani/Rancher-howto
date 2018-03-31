@@ -84,64 +84,71 @@ Make sure that docker is running
   <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
     </blockquote>
   </li>
-  <li>
-   
+  <li>   
 
 <ol>
-<li>Click Create Cluster as shown below:
    
-   
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+<li>Click Create Cluster:
+   
+   
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="300" border="50" /></a>
 
    
    <li>Select DigitalOcean (default is GKE)</li>
    <li>Select Create 3 Node Pools As show below</li>
    <li>Click Add Node Template</li>
    
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launchcluster1.png" 
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+   
 
-   <li> done</li>
+
 </ol>
 #### We need a Node Template a token in this case from DigitalOcean 
 
-    On digital Ocean Dashboard generate an access token
-
  
 
-#### Click 2
-
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 
 #### Click 4
 
 
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nametoken.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
+
+
+
+
+
+
+
 
 
 #### Click 5
 
-    Copy and paste the token
-    
-
-#### Click 6
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/tokenlast.png)
-
-#### Click 7
-
-  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 #### Click 8
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch3.png)
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 #### Click 9
 
@@ -169,71 +176,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
 
-#### Click 15
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
-
-#### Click 17
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
-
-#### Click 18
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
-
-#### Click 19
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
-
-#### Click 20
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
-
-#### Click 21
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
-
-
-#### Click 22
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
-
-
-#### Click 23
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
-
-
-#### Click 24
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
-
-
-#### Click 25
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
-
-
-#### Click 26
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
-
-
-#### Click 27
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
-
-#### Click 28
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
-
-#### Click 29
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
-
-#### Click 30
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
 
 
 
