@@ -15,7 +15,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-   ### 3. Select _Add Cluster_                                                                          
+   ### 3. Select **IMPORT                                                                         
 Select Import .                                                                                                     picture.png
 Select a Name for the cluster and click create
 for this demo I am using a self-signed SSL certificate please copy one of the 2 options as shown below options.png    
