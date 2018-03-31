@@ -127,9 +127,9 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
  
 
-<li>Paste the Token on the widow still open in Rancher 2.0 Dashboard<\li>
-<li>Click Create<\li>
-  
+<li>Paste the Token on the widow still open in Rancher 2.0 Dashboard</li>
+<li>Click Create</li>
+<li> when the cluster is ready click on the cluster to see the dashboard</li>
 
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png
