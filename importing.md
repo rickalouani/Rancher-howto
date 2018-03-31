@@ -57,7 +57,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 ### 9. Copy and Paste the file to ~/.kube/config on a host with kubectl _INSTALLED_ 
 
 #### Please notice the extra namespace and Pods that Rancher 2.0 added to the cluster.
-#### more about that later.
+       more about that later.
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png" 
