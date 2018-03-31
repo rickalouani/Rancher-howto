@@ -84,15 +84,20 @@ Make sure that docker is running
   <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
     </blockquote>
   </li>
-  <li>
-   
+  <li>   
 
 <ol>
-<li>Click Create Cluster as shown below:
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+<li>Click Create Cluster:
    
    
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/30002.png" 
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    
