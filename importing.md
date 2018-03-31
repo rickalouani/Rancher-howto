@@ -2,10 +2,13 @@
 
  The goal of this demonstration is to import a basic 3 Node GKE cluster with all GKE
  defaults as shown below. 
-      - Note that GKE enables Kubernetes Dashboard, Heapster, and, Fuentd by default. 
+       - Note that GKE enables Kubernetes Dashboard, Heapster, and, Fuentd by default. 
       
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png" /></a>
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/allpods-gke.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/allpods-gke.png" /></a>
 
  
 ### 1. _Log on to the Rancher Server UI
