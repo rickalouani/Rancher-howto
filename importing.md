@@ -9,13 +9,13 @@
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
  
-   ### 1. Log on to the Rancher Server UI
-   ### 2. Click Add Cluster
+   ### 1. _Log on to the Rancher Server UI_
+   ### 2. _Click Add Cluster_
    
  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-   ### 3. _Select_ Import                                                                         
+   ### 3. _Select Import_                                                                         
 Select Import .                                                                                                     picture.png
 Select a Name for the cluster and click create
 for this demo I am using a self-signed SSL certificate please copy one of the 2 options as shown below options.png    
