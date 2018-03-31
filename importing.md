@@ -24,17 +24,18 @@
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/add-cluster.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
-### 3. _Select Import_   
+### 3. Select _Import_   
 
-### 4. _Select a Name for the cluster and click _Create_                                                                                         
-### 5. for this demo I am using a self-signed SSL certificate please _Copy_ one of the 2 options_ as shown below 
+### 4. Select a Name for the cluster and click _Create_                                                                                         
+### 5. for this demo I am using a self-signed SSL certificate please 
+### _Copy_ one of the 2 options as shown below 
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/select-option.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/select-option.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
-### 6. Now on a terminal configure with GKE kubecfg and _Paste_ the command as shown below 
+### 6. Now on a terminal configure with GKE kubecfg and _Paste_ the command copied above: 
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-created.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-created.png" 
@@ -47,13 +48,13 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  /></a>
 
 
-### 8. Locate the cluster's _Kubeconfig file_ as show above and _Click on it_   
+### 8. Locate the cluster's _Kubeconfig_ file as show above and _Click_ on _it_   
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png" 
  /></a>
 
-### 9. Copy and Paste the file to ~/.kube/config on a host with _kubectl INSTALLED_ 
+### 9. Copy and Paste the file to ~/.kube/config on a host with kubectl _INSTALLED_ 
 
 #### Please notice the extra namespace and Pods that Rancher 2.0 added to the cluster.
 #### more about that later.
