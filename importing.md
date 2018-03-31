@@ -38,25 +38,25 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-created.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-created.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+ /></a>
 
 ### 7. Head on over to Rancher 2.0 UI to inspect the cluster
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-done.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-done.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+ /></a>
 
 
 ### 8. Locate the cluster's _Kubeconfig file_ as show above and click on it   
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+ /></a>
 
 ### 9. Copy and Paste the file to ~/.kube/config on your desktop with kubectl installed    
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+/></a>
 
 
