@@ -7,11 +7,12 @@
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png" /></a>
 
+
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/allpods-gke.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/allpods-gke.png" /></a>
 
  
-### 1. _Log on to the Rancher Server UI
+### 1. _Log on to the Rancher Server UI_
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/create-cluster.png" /></a>
@@ -24,6 +25,7 @@
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 ### 3. _Select Import_   
+
 ### 4. _Select a Name for the cluster and click create_                                                                                         
 ### 5. for this demo I am using a self-signed SSL certificate please _Copy_ one of the 2 options_ as shown below 
 
