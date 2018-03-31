@@ -24,8 +24,8 @@
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
  
-   **1. Log on to the Rancher Server UI**
-   **2. Click **Add Cluster
+   ### 1. Log on to the Rancher Server UI
+   ### 2. Click Add Cluster
 
 Click Add Cluster                                                                                    add-cluster.png
 Select Import .                                                                                                     picture.png
