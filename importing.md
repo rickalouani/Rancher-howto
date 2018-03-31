@@ -1,3 +1,185 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Import an existing GKE to Rancher 2.0
+
+ The goal of this demonstration is to import a basic 3 Node GKE cluster with all GKE
+ defaults as shown below. 
+      - Note that GKE enables Kubernetes Dashboard, Heapster, and, Fuentd by default. 
+      
+      <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+ 
+ <lo>
+   <li>**Log on to the Rancher Server UI**</li>
+
+    # sudo apt update -y
+    # sudo apt dist-upgrade -y
+    # sudo apt-get remove docker docker-engine docker.io
+    # sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+       
+   <li>Install a supported version of Docker on the host, supported Docker versions are <code class="highlighter-rouge">1.12.6</code>, <code class="highlighter-rouge">1.13.1</code> or <code class="highlighter-rouge">17.03.2</code>. To install Docker on the server, follow the instructions from <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Docker</a>.</li>
+ 
+Add Docker’s official GPG key
+
+    # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+Update the repository
+
+     # sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+     # sudo apt-get update
+     
+Install docker-ce
+
+    # sudo apt-get install docker-ce -y
+    
+Make sure that docker is running
+
+    # systemctl status docker
+
+ <p>Start Rancher 2.0 Server by executing the command below on your host:</p>
+
+ <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run -d --restart<span class="o">=</span>unless-stopped -p 80:80 -p 443:443 rancher/server:v2.0.0-alpha22
+</code></pre>
+</div>
+<p>To access the Rancher UI, go to <code class="highlighter-rouge">https://&lt;SERVER_IP&gt;</code>, replacing <code class="highlighter-rouge">&lt;SERVER_IP&gt;</code> with the IP address of your host. Rancher is automatically authenticated with a default admin. You will need to log in with this user (<code class="highlighter-rouge">admin</code>) and password (<code class="highlighter-rouge">admin</code>). Upon logging in the first time, you will be asked to change the default admin’s password</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Rancher only supports HTTPS and is configured, by default, with a self-signed cert.  The ability to replace this cert will be made available before GA.  Due to this, you will be prompted by your browser to trust this cert before continuing.</p>
+    </blockquote>
+  </li>
+  <li>   
+
+<ol>
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official1.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+<li>Click Create Cluster:
+   
+   
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official2.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="300" border="50" /></a>
+
+   
+   <li>Select DigitalOcean (default is GKE)</li>
+   <li>Select Create 3 Node Pools As show below</li>
+   <li>Click Add Node Template</li>
+   
+   
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
+
+ <li>Click Add Node Template (token from DigitalOcean)</li>
+ 
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
+   
+
+<li>On the DigitalOcean Dashboard generate The token<\li> 
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
+
+ 
+
+<li>Paste the Token on the widow still open in Rancher 2.0 Dashboard</li>
+<li>Click Create</li>
+<li> when the cluster is ready click on the cluster to see the dashboard</li>
+
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official6.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
+
+
+
+
+
+#### The 5 nodes that Rancher created on DigitalOcean for us:
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
+
+
+#### A view of the cluster from the UI
+
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
+
+#### Nodes with kubectl get nodes
+     # kubectl get nodes
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
+
+
+#### Pods, Services, Namespaces, and configmaps out of the box.
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
+
+#### Click 14
+
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
 <p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap, manage, Scaling 
 Kuberenetes clusters. Also, how consistent it is accross Cloud Providers and allows the user to deploy Kubernetes
