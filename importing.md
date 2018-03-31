@@ -53,7 +53,9 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png" 
  /></a>
 
-### 9. Copy and Paste the file to ~/.kube/config on your desktop with kubectl installed    
+### 9. Copy and Paste the file to ~/.kube/config on your desktop with kubectl installed 
+
+#### Please notice the extra namespace and Pods that Rancher 2.0 added to the cluster to better manage it
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png" 
