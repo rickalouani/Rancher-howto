@@ -106,14 +106,17 @@ alt="IMAGE ALT TEXT HERE" width="540" height="300" border="50" /></a>
    <li>Click Add Node Template</li>
    
    
+   
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official3.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
    
 
-
-</ol>
-#### We need a Node Template a token in this case from DigitalOcean 
+<li>On the DigitalOcean Dashboard generate a token as shown below<\li> 
+   
+   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
  
 
