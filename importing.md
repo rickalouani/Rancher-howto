@@ -26,7 +26,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 ### 3. _Select Import_   
 
-### 4. _Select a Name for the cluster and click create_                                                                                         
+### 4. _Select a Name for the cluster and click _Create_                                                                                         
 ### 5. for this demo I am using a self-signed SSL certificate please _Copy_ one of the 2 options_ as shown below 
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/select-option.png
@@ -47,15 +47,16 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  /></a>
 
 
-### 8. Locate the cluster's _Kubeconfig file_ as show above and click on it   
+### 8. Locate the cluster's _Kubeconfig file_ as show above and _Click on it_   
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/kubeconfig.png" 
  /></a>
 
-### 9. Copy and Paste the file to ~/.kube/config on your desktop with kubectl installed 
+### 9. Copy and Paste the file to ~/.kube/config on a host with _kubectl INSTALLED_ 
 
-#### Please notice the extra namespace and Pods that Rancher 2.0 added to the cluster to better manage it
+#### Please notice the extra namespace and Pods that Rancher 2.0 added to the cluster.
+#### more about that later.
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/added-pod.png" 
