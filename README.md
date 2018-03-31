@@ -113,9 +113,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
  ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch2.png)
 
 #### Click 2
-<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
+
 
 
 #### Click 4
@@ -137,7 +135,9 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 #### Click 7
 
-  
+  <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/generatetoken.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 #### Click 8
 
