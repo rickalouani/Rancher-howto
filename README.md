@@ -176,71 +176,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
 
-#### Click 15
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500003.png)
-
-#### Click 17
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50000.png)
-
-#### Click 18
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500001.png)
-
-#### Click 19
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500004.png)
-
-#### Click 20
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/50005.png)
-
-#### Click 21
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500006.png)
-
-
-#### Click 22
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500007.png)
-
-
-#### Click 23
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500008.png)
-
-
-#### Click 24
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60000.png)
-
-
-#### Click 25
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60001.png)
-
-
-#### Click 26
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60002.png)
-
-
-#### Click 27
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60003.png)
-
-#### Click 28
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60004.png)
-
-#### Click 29
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60005.png)
-
-#### Click 30
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/60006.png)
 
 
 
