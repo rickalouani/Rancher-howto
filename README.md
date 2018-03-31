@@ -140,25 +140,23 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 
 
-#### Click 9
+#### The 5 nodes that Rancher created on DigitalOcean for us:
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch4.png)
 
-#### Click 10
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/launch5.png)
-
-#### Click 11
+#### A view of the cluster from the UI
 
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes.png)
 
-#### Click 12
+#### Nodes with kubectl get nodes
+     # kubectl get nodes
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/cluster-nodes2.png)
 
 
-#### Click 13
+#### Pods, Services, Namespaces, and configmaps out of the box.
 
    ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
 
