@@ -1,15 +1,18 @@
 
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
 
-<p> In this article I an going to demonstrate the capabilities of Rancher 2.0 to bootstrap and manage Kuberenetes 
-clusters. It abstracts away all the major cloud providers and allows users to deploy Kubernetes clusters accross cloud providers homogeneously, insuring the user that worlads would be deployed using the same manifests accross Kubernetes 
-clusters regardless of the underlying cloud platform. And arguably Rancher 2.0's major strength, it's ability to create
-Highly available clusters accross cloud providers. 
-Standing up a cluster for testing or demos is fairly simple. However, standing up a production cluster is not a straight forward affair. Now the designers of the cluster have to factor in many variables pertaining to how reliable and consistent they want the underlying application to be. for instance the absolute maximum down time the business could handle.  or what to do if a microservice(s) is down shutdown everything and start disaster recovery procedures, or Keep just a set of prelabeled 
-core microservices running for a perceived better reliability from a user point of view. Ne
-In the most simplistic terms, Kubernetes will do its thing once up and running, it will make your workload fault tolerant
-and highly available, the problem is 1 level above kubernetes. To manage multiple clusters or to have redundant clusters
-would required another layer of control on top of Kubernetes. Kuberetes could be used to control Kubernetes clusters(cluster federation) but very complicated. And it's not a coincidense that Rancher 2.0 provides the ability to control multiple Kubernetes clusters out of the Box accross, is was built on Kubernetes.y 
+Standing up a cluster for testing or a demos is fairly simple. Tools such as KUBEADM, KOPS, KUBESPRAY make standing up such a cluster a relatively trivial task. However, standing up an ideal production cluster is a very tall task. Many guides and best practices and reference designs are available to help you if you decide to go that route. However, keep in mind that they are
+not simple guides and do require some level of proficiency. They require a deep understanding of Fault tolerance, High Availability, disaster recovery, and security principles and possibly more. In most cases it is not a practical aproach.
+An easy aproach is to use GKE (Google Kubernetes Engine) to standup your clusters. GKE offers a wealth of benefits including:
+
+<h3>Its key features include:</h3>
+<ul>
+<li>Security is handled by the Google security team.</li>
+<li>Compliance with HIPAA and PCI DSS is already managed.</li>
+<li>Kubernetes instances are fully clustered, and will auto scale.</li>
+<li>It’s based on the upstream Kubernetes project, which enables workload portability to other Kubernetes instances, whether they are another cloud provider or on-premises.</li>
+</ul>
+
 
 <p> At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores, storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design all integrated together to give an abstraction layer one level above the container run time. With this abstraction, a kubernetes cluster could be viewed as a number of container run time connected together using an Overlay Network and presented to PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage PODs not Containers. Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, Kubernetes will abstract away the complexity of managing multiple hosts and present a multinode cluster as a single entity. A user, or an SA(service account) would POST a workload definition in the form of a yaml manifest(s) to the API server. The API server would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control loop constantly comparing current state and desired state would notice the new definition and would engage the scheduler and the different controllers to bring the current state inline with the desired state. The desired state is reached when the number of running pods matches the number of replicas in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template all pass. This mode is also refered to as a declarative model.</p>
 
