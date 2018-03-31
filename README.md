@@ -131,7 +131,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
   <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/official4.png" 
-alt="IMAGE ALT TEXT HERE" width="696" height="600" border="50" /></a>
+alt="IMAGE ALT TEXT HERE" width="696" height="400" /></a>
 
 
 #### Click 4
