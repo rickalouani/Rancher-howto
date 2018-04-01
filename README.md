@@ -9,6 +9,11 @@ are very pervasive on the web. How they each aproach Kubernetes Cluster high ava
 
 Out of the box, a Kubernetes cluster would keep your workloads highly available and fault tolerant as long as its control plane and ETCD are running and resources are available, a given. But, if you are designing a production environment, that is an obvious single point of failure. What I am hoping to take a birds eye view at how GKE and Rancher 2.0 aproach Cluster high availabilty and fault tolerance and hopefully give you a basic understanding if you're in the process of selection a platform. The subject is fairly complex so please bear with me if I am not able to get my point accross and cause you more confusion. But I promise I will do my best.
 
+GKE is a managed Kubernetes service, and as the name suggests, Google manages the cluster control plane and the cluster store. Typically, you would select the number of nodes (x) click create. GKE will create 
+a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by Google. In other words, if your master and ETCD are down you are under the mercy of Google to bring them back up.  without getting of subject, workloads that were running will continue running until they die which happens a lot in micro-services. Furthermore, the GKE sla defines a service level objective of  99.5 which is not ideal for a lot of use-cases. Scaling your cluster on GKE only means adding or reducing worker nodes again no control over master components.  
+RKE allows you to truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI.
+
+
   
 
 
