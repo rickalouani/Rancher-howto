@@ -21,6 +21,11 @@ RKE allows you to truly customize your cluster, it allows you to design your clu
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
+#### Rancher 2.0 Also uses Kubernetes to Manage Kubernetes Clusters _Cluster_
+
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>rancher-highlevel.png
 
 
 ## RKE(Rancher Kubernetes Engine) to build a 5 node cluster on DigitalOcean
