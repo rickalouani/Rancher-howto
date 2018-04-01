@@ -14,7 +14,7 @@ a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by
 RKE allows you to truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI.
 
 
-# Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
+#### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
   
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
@@ -23,7 +23,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
-##  RKE(Rancher Kubernetes Engine) to build a 5 node cluster on DigitalOcean
+## RKE(Rancher Kubernetes Engine) to build a 5 node cluster on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
