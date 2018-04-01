@@ -1,48 +1,18 @@
 
 <h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
 
-Standing up a cluster for testing or a demos is fairly simple. Tools such as KUBEADM, KOPS, KUBESPRAY make standing up such a cluster a relatively trivial task. However, standing up an ideal production cluster is a very tall task. Many guides and best practices and reference designs are available to help you if you decide to go that route. However, keep in mind that they are
-not simple guides and do require some level of proficiency. They require a deep understanding of Fault tolerance, High Availability, disaster recovery, and security principles and possibly more. In most cases it is not a practical aproach.
-An easier aproach is to use GKE (Google Kubernetes Engine) to standup your clusters. GKE offers a wealth of benefits as shown below. Further, when you create a cluster, GKE pools the nodes you selected and creates Kubernetes worker node pools for each
-cluster you create. 
-as Kuberenetes worker nodes where you can run you workloads and that's what google charges you for, and the controll plane stay
+We all heard that standing up a Kubernetes cluster for testing or a demos like this one is fairly simple. Tools such as KUBEADM, KOPS, KUBESPRAY make standing up such a cluster a relatively trivial task. However, standing up a secure, highly available, and fault tolerant _production_ _cluster_ is a very tall task. Many guides and best practices and reference designs are available to help you if you decide to go that route. But, keep in mind that they are not simple guides and do require some level of proficiency. They require a good understanding of Fault tolerance, High Availability, disaster recovery, and security principles and possibly more. In most cases it is not a practical aproach.
+An easier aproach is to use GKE (Google Kubernetes Engine) to standup your clusters. GKE offers a wealth of benefits and handles all the security, provides an ok (99.5) high availability, and depending on your definition also faultolerance.
+the sla is here <put sla here>. But, GKE allow little to no control over the master components. When you create a cluster,
+GKE spins up a master and configures the nodes you defined as worker-nodes. Think about it, if you were to decide to switch cloud providers, I am not sure what the process is to get a copy of your clusters ETCD from google to use it to start a new cluster elsewhere. I don't know about you, but if I standup a Kubernetes cluster I want control over all components, the abilty to add more nodes on any cloud platform.
 
-#### Security is handled by the Google security team
-#### Compliance with HIPAA and PCI DSS is already managed
-#### Kubernetes instances are fully clustered, and will auto scale
-#### It’s based on the upstream Kubernetes project, which enables workload portability to other Kubernetes instances, whether they are another cloud provider or on-premises
+An Openstource tool that provides arguably all the services that GKE provides. It also provides controll over the whole cluster(s), and is cloud provider agnostic. It also gives you a single UI or a single CLI to manage all you clusters. 
+In this article, I want to demonstrate how easy it is to Standup or import existing Kubernetes clusters using Rancher 2.0, 
+and hopefully entice you to try it and experiment with it.
 
 
 
-<p> At a basic level a Kubernetes cluster is a collection of resources such as hosts, CPU cores, storage, and Memory and technologies such as Containerization, SDN/CNI, and RESTful API design all integrated together to give an abstraction layer one level above the container run time. With this abstraction, a kubernetes cluster could be viewed as a number of container run time connected together using an Overlay Network and presented to PODs as a single run time. A Pod is the smallest unit of scheduling in Kubernetes, and could be viewed as a packaged container(s) and a thin wrapper to allow Kubernetes to manage PODs not Containers. Kubernetes emboddies the concept of the DATA CENTER as a computer. Once provisioned, Kubernetes will abstract away the complexity of managing multiple hosts and present a multinode cluster as a single entity. A user, or an SA(service account) would POST a workload definition in the form of a yaml manifest(s) to the API server. The API server would store the manifest in its data store(ETCD) as is as a desired state. A Kubernetes control loop constantly comparing current state and desired state would notice the new definition and would engage the scheduler and the different controllers to bring the current state inline with the desired state. The desired state is reached when the number of running pods matches the number of replicas in the case of a ReplicaSets. That is everything requested in the yaml manifest including all PVCs if any are fullfilled, requested Memory, requested CPU cycles, IP addresses are assigned, DNS entries were created, endpoints if labels are matched with service labels, and Healthchecks if defined in your Pod template all pass. This mode is also refered to as a declarative model.</p>
-
-<p>In this article I am going to demonstrate Both tools by deploying a Kubernetes cluster four different ways.</p>
-
-   ####  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
-   ####  Import the management of an existing GKE(Google Kubernetes Engine) to Rancher 2   
-
-
-Before I start the demo, I make a few point incase you're in the process of selecting
-a cloud provider to host your Kubernetes cluster(s). Kubernetes works with all current 
-cloud providers. Kubernetes defines a CLOUD PROVIDER INTERFACE, a collection of well defined 
-data types and interfaces and All cloud provider have to do to host Kubernetes clusters is to 
-implement the interfaces and datatypes, currently all the popular Cloud provider have implemented
-it, and can all host Kubernetes Clusters. However, Google Cloud Platform GCP is the only 
-
-
-  
-   ##### Basic Kubernetes Cluster Architecture
- 
- 
- <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png
-" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/1000_1.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
-
-
-
-
-
-#### RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+[h1]  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
