@@ -129,7 +129,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 #### Pods, Services, Namespaces, and configmaps out of the box.
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
 
 
 
