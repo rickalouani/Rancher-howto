@@ -15,6 +15,9 @@ RKE allows you to truly customize your cluster, it allows you to design your clu
 
 
   
+<a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
+" target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 
