@@ -1,5 +1,5 @@
 
-<h2>2 ways to build Kubernetes clusters with Rancher 2.0</h2>
+# 2 ways to build Kubernetes clusters with Rancher 2.0
 
 We all heard that standing up a Kubernetes cluster for testing or a demos like this one is fairly simple. Tools such as KUBEADM, KOPS, KUBESPRAY make standing up such a cluster a relatively trivial task. However, standing up a secure, highly available, and fault tolerant _production_ _cluster_ is a very tall task. Many guides and best practices and reference designs are available to help you if you decide to go that route. But, keep in mind that they are not simple guides and do require some level of proficiency. They require a good understanding of Fault tolerance, High Availability, disaster recovery, and security principles and possibly more. In most cases it is not a practical aproach.
 An easier aproach is to use GKE (Google Kubernetes Engine) to standup your clusters. GKE offers a wealth of benefits and handles all the security, provides an ok (99.5) high availability, and depending on your definition also faultolerance.
@@ -12,7 +12,7 @@ and hopefully entice you to try it and experiment with it.
 
 
 
-[h1]  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
+##  RKE(Rancher Kubernetes Engine) to build a 5 node cluster from scratch on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
