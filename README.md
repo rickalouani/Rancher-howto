@@ -25,7 +25,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png" 
-alt="IMAGE ALT TEXT HERE" /></a>
+alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
 ## RKE(Rancher Kubernetes Engine) to build a 5 node cluster on DigitalOcean
