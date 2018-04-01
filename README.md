@@ -129,11 +129,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 #### Pods, Services, Namespaces, and configmaps out of the box.
 
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png)
-
-#### Click 14
-
-   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/500002.png)
+   ![](https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/clusterkubectl.png
 
 
 
@@ -141,7 +137,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
 
 
 
-#### Import an existing GKE to Rancher 2.0
+## Import an existing GKE to Rancher 2.0
 
  The goal of this demonstration is to import a basic 3 Node GKE cluster with all GKE
  defaults as shown below. 
