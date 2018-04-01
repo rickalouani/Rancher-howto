@@ -14,6 +14,7 @@ a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by
 RKE allows you to truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI.
 
 
+### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
   
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
