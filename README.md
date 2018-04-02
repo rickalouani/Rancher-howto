@@ -18,7 +18,7 @@ At a high level A Kubernetes API server is presented to the users as a single AP
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
-alt="IMAGE ALT TEXT HERE" width="640" height="320" border="50"/></a>
+alt="IMAGE ALT TEXT HERE" width="600" height="320" border="50"/></a>
 
 
 
