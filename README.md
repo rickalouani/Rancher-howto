@@ -167,7 +167,7 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
  defaults as shown below. 
        - Note that GKE enables Kubernetes Dashboard, Heapster, and, Fuentd by default. 
     
-   **Notice that only worker nodes are available to with GKE **
+   **Notice that only worker nodes are available to you with GKE **
       
    <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/nodes-and-config.png" /></a>
