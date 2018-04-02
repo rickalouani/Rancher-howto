@@ -22,7 +22,10 @@ At a high level A Kubernetes API server is presented to the users as a single AP
 alt="IMAGE ALT TEXT HERE" width="640" height="320" border="50"/></a>
 
 
+
 #### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
+
+
 
 Rancher 2.0 provides you with a platform where you can truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well accross any cloud provider. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI. Rancher 2.0 uses a similar aproach as seen in the illustration below. It also includes a Kubernetes API server, and controller in its solution. It also leverages Kubernetes CRD(custom resource definition formally know as thirdparthy resources) as part of it's solution.
  
