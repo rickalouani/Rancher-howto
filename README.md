@@ -26,9 +26,11 @@ alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50"/></a>
 
 
 
-Rancher 2.0 provides you with a platform where you can truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well accross any cloud provider. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI. Rancher 2.0 uses a similar aproach as seen in the illustration below. It also includes a Kubernetes API server, and controller in its solution. It also leverages Kubernetes CRD(custom resource definition formally know as thirdparthy resources) as part of its solution.
+Rancher 2.0 provides you with a platform where you can truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well accross any cloud provider. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI. Rancher 2.0 uses a similar aproach as seen in the illustration below. It also includes a Kubernetes API server, and controller in its solution. It also leverages Kubernetes CRD(custom resource definition formally know as thirdparthy resources) as part of its solution. In the illustration below, please note how Rancher 2.0 handles an imported GKE cluster. The second demo below will will walk you through the importing process. 
+
  
 ##### Rancher 2.0 also uses a Kubernetes API server for cluster management
+     
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png" width="540" height="320" border="50"/></a>
