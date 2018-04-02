@@ -19,7 +19,7 @@ At a high level A Kubernetes API server is presented to the users as a single AP
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
-alt="IMAGE ALT TEXT HERE" width="540" height="320" /></a>
+alt="IMAGE ALT TEXT HERE" width="640" height="320" border="50"/></a>
 
 
 #### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
