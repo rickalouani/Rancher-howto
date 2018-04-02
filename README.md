@@ -9,27 +9,21 @@ is a more involved task . Many guides and best practices are  available to help 
 Out of the box, a Kubernetes cluster would keep your workloads highly available and fault tolerant as long as its control plane and ETCD are running and resources are available, a given. But, if you are designing a production environment, that is an obvious single point of failure. I am hoping to take a birds eye view at how GKE and Rancher 2.0 aproach Cluster high availabilty and fault tolerance and hopefully give you a few pointers if you're in the process of selecting a platform. The subject is fairly complex so please bear with me if I am not able to get my points accross and cause you more confusion. But I promise I will do my best.
 
 GKE is a managed Kubernetes service, and as the name suggests, Google manages the cluster control plane and the cluster store. Typically, you would select the number of nodes (x) click create. GKE will create 
-a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by Google. In other words, if your master and ETCD are down you are under the mercy of Google to bring them back up.  without getting of subject, workloads that were running will continue running until they die which happens a lot in micro-services. Furthermore, the GKE sla defines a service level objective of  99.5 which is not ideal for a lot of use-cases. The second big drawback of GKE in my opinion is its proprietery nature. For many use cases  this is good for many use cases, but if your use case calls for scaling beyond a single cluster you'll be restricted to GCP. Let's look at a more flexible way!
+a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by Google. In other words, if your master and ETCD are down you are under the mercy of Google to bring them back up.  without getting of subject, workloads that were running will continue running until they die which happens a lot in micro-services. Furthermore, the GKE sla defines a service level objective of  99.5 which is not ideal for a lot of use-cases. The second big drawback of GKE in my opinion is its proprietery nature. For many use cases  this is good for many use cases, but if your use case calls for scaling beyond a single cluster you'll be restricted to GCP. 
 
-
-
- 
-RKE allows you to truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI.
-
-One of the popular methods of creating 
-You aggregate multiple Kubernetes clusters and treat them as a single logical cluster. There is a federation control plane that presents to clients a single unified view of the system. The federation control plane consists of a federation API server and a federation controller manager that collaborate. The federated API server forwards requests to all the clusters in the federation. In addition, the federated controller manager performs the duties of the controller manager across all clusters by routing requests to the individual federation cluster members' changes.
-
-
-
+A very popular method is to use Kubernetes to manage Kubernetes clusters see illustrated below.
+At a high level A Kubernetes API server is presented to the users as a single API front end to recieve all API requests and forwards, them to every cluster. A controller manager coordinates with the API server manages across all clusters and routes requests to the individual API servers.
 
 
 #### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
-  
+
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
 alt="IMAGE ALT TEXT HERE" width="540" height="320" border="50" /></a>
 
 
+Rancher 2.0 provides you with a platform where you can truly customize your cluster, it allows you to design your cluster using industry best practices. It also allows you to scale not only your worker nodes but control nodes as well accross any cloud provider. It allow more control over Kubernetes clusters than most of us need all from a single UI or CLI. Rancher 2.0 uses a similar aproach as seen in the illustration below. It also includes a Kubernetes API server, and controller in its solution. It also leverages Kubernetes CRD(custom resource definition formally know as thirdparthy resources) as part of it's solution.
+ 
 #### Rancher 2.0 a Kubernetes API server for cluster management
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/rancher-highlevel.png
