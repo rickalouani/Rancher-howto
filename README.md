@@ -35,7 +35,7 @@ Rancher 2.0 provides you with a platform where you can truly customize your clus
 
 
 
-## RKE(Rancher Kubernetes Engine) to build a 5 node cluster on DigitalOcean
+## Rancher 2.0 to build a cluster on DigitalOcean
 
  The goal of this demonstration is to build a Kubernetes cluster with 1 Master(control node), 
  1 etcd(to store cluster and workload configuration) and  3 worker nodes(to run worloads).
