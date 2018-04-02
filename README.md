@@ -14,8 +14,7 @@ a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by
 A very popular method is to use Kubernetes to manage Kubernetes clusters see illustrated below.
 At a high level A Kubernetes API server is presented to the users as a single API front end to recieve all API requests and forwards, them to every cluster. A controller manager coordinates with the API server manages across all clusters and routes requests to the individual API servers.
 
-
-
+##### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
 
 <a href="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png
 " target="_blank"><img src="https://github.com/rickalouani/Rancher-howto/blob/master/Rancher-screen-shots/federation.png" 
@@ -23,7 +22,7 @@ alt="IMAGE ALT TEXT HERE" width="640" height="320" border="50"/></a>
 
 
 
-#### Using Kubernetes to Manage Kubernetes Clusters _Cluster_ _Federation_
+
 
 
 
