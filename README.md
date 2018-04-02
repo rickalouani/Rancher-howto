@@ -1,7 +1,7 @@
 
 # 2 ways to build Kubernetes clusters with Rancher 2.0
 
-   In this article, I want to demonstrate how easy it is to Standup or import existing Kubernetes clusters using Rancher 2.0,
+   In this article, I want to demonstrate how easy it is to standup or import existing Kubernetes clusters using Rancher 2.0,
  
 Standing up a Kubernetes cluster for testing or demos like this one is simple. KUBEADM, KOPS, KUBESPRAY make standing up such a cluster a trivial task. Yet,  standing up  Secure, Highly-Available, and Fault-Tolerant production clusters 
 is a more involved task . Many guides and best practices are  available to help through the process. Unfortunately, they are not simple. To use them one has to possess a deep understanding of many concepts. Concepts such as Fault Tolerance, High Availability, Disaster Recovery, security principles, and more. In most cases it is not a practical approach.  An easier approach would be to use Google Kubernetes Engine(GKE). A better approach would be to use Rancher 2.0.  Both Platform will allow you to deploy production grade Kubernetes clusters with a mouse click. Both platforms are well documented and lists of pros and cons of each platform are pervasive on the web. How they each aproach Kubernetes Cluster high availabilty and fault tolerence is what I am hoping to disuss.
