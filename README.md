@@ -10,7 +10,8 @@ Out of the box, a Kubernetes cluster would keep your workloads highly available 
 
 GKE is a managed Kubernetes service, and as the name suggests, Google manages the cluster control plane and the cluster store. Typically, you would select the number of nodes (x) click create. GKE will create 
 a Kubernetes cluster with x worker nodes. Master node(s) and ETCD are managed by Google. In other words, if your master and ETCD are down you are under the mercy of Google to bring them back up. Workloads that were running will continue to run until they die which happens a lot in micro-services. Furthermore, the GKE sla defines a service level objective of  99.5 which is not ideal for a lot of use-cases. The second big drawback of GKE in my opinion is its proprietery nature. For many use cases  this is great, but if your use case calls for scaling beyond a single cluster you'll be restricted to GCP if you rely on GKE
-alone [**see second demo below on how Rancher 2.0 can allieviate some of those concerns.**] 
+alone.   
+[**see second demo below on how Rancher 2.0 can allieviate some of those concerns.**] 
 
 A very popular method is to use Kubernetes to manage Kubernetes clusters as illustrated below. It allows you to implement cluster redundancy accross cloud providers, cloud provider zones, or even on premises, a true geographical redundancy. At a high level A Kubernetes API server is presented to the users as a single API front end to recieve all API requests and forwards, them to every cluster. A controller manager coordinates with the API server to manages across all clusters including routing requests to the individual API servers.
 
