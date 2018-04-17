@@ -1,5 +1,4 @@
 
-# 2 ways to build Kubernetes clusters with Rancher 2.0
 
    In this article, I want to demonstrate how easy it is to standup or import existing Kubernetes clusters using Rancher 2.0,
  
